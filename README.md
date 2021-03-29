@@ -11,3 +11,6 @@ Hamid, Khaled, Anderson, Elahe, Jakob
 
 #Beispiel_2 : Wireframe von Jakob
 ![Screenshot from 2021-03-22 15-59-14](https://user-images.githubusercontent.com/65950252/112237601-4ac42c80-8c43-11eb-865e-552c4e5db9a5.png)
+
+#PLAN
+![Planung](https://user-images.githubusercontent.com/65950252/112838376-4a8dbc00-909d-11eb-8951-f87a8ead9f96.jpg)
