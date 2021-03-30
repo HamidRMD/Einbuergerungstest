@@ -16,4 +16,4 @@ Hamid, Khaled, Anderson, Elahe, Jakob
 ![Planung](https://user-images.githubusercontent.com/65950252/112838376-4a8dbc00-909d-11eb-8951-f87a8ead9f96.jpg)
 
 #Beispiel: Die Vorlage für die Startseite 
-*** https://github.com/Hamid404/Einbuergerungstest/issues/22#issue-844437401 ***
+![Wireframe-StartSeite](https://user-images.githubusercontent.com/66359480/112990241-1cc07a00-9166-11eb-9f61-60a7b891cfb9.png)
