@@ -6,13 +6,17 @@ Abschlussprojekt
 Hamid, Khaled, Anderson, Elahe, Jakob
 
 ## Beispiel: Die Vorlage für die Startseite von Anderson und Jakob.
-![Wireframe-StartSeite](https://user-images.githubusercontent.com/66359480/112990241-1cc07a00-9166-11eb-9f61-60a7b891cfb9.png)
+![Screenshot from 2021-03-31 15-08-40](https://user-images.githubusercontent.com/61413894/113150895-d4bc5880-9234-11eb-84b8-8012795d7cca.png)
+
+## Beispiel: Die Vorlage für die Über uns Startseite von Jakob.
+![Screenshot from 2021-03-31 15-19-11](https://user-images.githubusercontent.com/61413894/113150993-f4ec1780-9234-11eb-9bf0-3fce3d5afbd5.png)
 
 ## Beispiel: Die Vorlage von der Registrierung von Jakob.
 ![wireframe-loginseite](https://user-images.githubusercontent.com/66359480/112990398-4f6a7280-9166-11eb-8d40-a4b93e5893fa.png)
 
 ## Beispiel: Die Seite mit der Fragen von dem Quiz von Jakob.
-![Screenshot from 2021-03-30 17-21-27](https://user-images.githubusercontent.com/61413894/113136859-23adc200-9224-11eb-87db-76d1e040b32f.png)
+![Screenshot from 2021-03-31 15-24-04](https://user-images.githubusercontent.com/61413894/113151345-45637500-9235-11eb-8ff6-f66693f4b5a7.png)
+
 
 ## Beispiel: Die Seite mit der Fragen von dem Quiz,wenn man falsch beantwortet hat.By Jakob.
 ![Screenshot from 2021-03-31 04-43-10](https://user-images.githubusercontent.com/66359480/113106856-8773c300-9203-11eb-911e-4345c9a12cf7.png)
