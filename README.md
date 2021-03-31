@@ -11,9 +11,13 @@ Hamid, Khaled, Anderson, Elahe, Jakob
 #Beispiel: Die Vorlage von der Registrierung 
 ![wireframe-loginseite](https://user-images.githubusercontent.com/66359480/112990398-4f6a7280-9166-11eb-8d40-a4b93e5893fa.png)
 
-#Beispiel: Die Site mit der Fragen von dem Quiz 
+#Beispiel: Die Seite mit der Fragen von dem Quiz 
 Es wurde von Jakob gemacht 
 ![Screenshot from 2021-03-31 04-43-10](https://user-images.githubusercontent.com/66359480/113106856-8773c300-9203-11eb-911e-4345c9a12cf7.png)
+
+#Wenn man eine Frage beim Quiz richtig beantwortet hat.
+![Screenshot from 2021-03-30 15-55-53](https://user-images.githubusercontent.com/61413894/113135876-f7de0c80-9222-11eb-80b9-18982599e12e.png)
+
 
 #Das Testergebnis 
 ![Screenshot from 2021-03-31 04-43-30](https://user-images.githubusercontent.com/66359480/113112847-f18f6680-9209-11eb-8582-49a8561360f1.png)
