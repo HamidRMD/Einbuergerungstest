@@ -12,7 +12,10 @@ Hamid, Khaled, Anderson, Elahe, Jakob
 ![Screenshot from 2021-03-31 15-19-11](https://user-images.githubusercontent.com/61413894/113150993-f4ec1780-9234-11eb-9bf0-3fce3d5afbd5.png)
 
 ## Beispiel: Die Vorlage von der Registrierung von Jakob.
-![wireframe-loginseite](https://user-images.githubusercontent.com/66359480/112990398-4f6a7280-9166-11eb-8d40-a4b93e5893fa.png)
+![Screenshot from 2021-03-31 16-23-26](https://user-images.githubusercontent.com/61413894/113160856-261d1580-923e-11eb-956e-73b2df588a6a.png)
+
+## Beispiel: Die Vorlage von der Registrierung von Jakob.
+![Screenshot from 2021-03-31 16-23-37](https://user-images.githubusercontent.com/61413894/113160886-2d442380-923e-11eb-9cf9-331af5f8527a.png)
 
 ## Beispiel: Die Seite mit der Fragen von dem Quiz von Jakob.
 ![Screenshot from 2021-03-31 15-24-04](https://user-images.githubusercontent.com/61413894/113151345-45637500-9235-11eb-8ff6-f66693f4b5a7.png)
@@ -31,7 +34,10 @@ Hamid, Khaled, Anderson, Elahe, Jakob
 ![Screenshot from 2021-03-31 04-43-34](https://user-images.githubusercontent.com/66359480/113113282-6b275480-920a-11eb-98d8-a0c43f8bc630.png)
 
 ## Seite mit den 310 Fragen.By Elahe, Kahled und unterschtüzung von Jakob.
-![Screenshot from 2021-03-31 13-58-46](https://user-images.githubusercontent.com/61413894/113141104-8f465e00-9229-11eb-8bcb-cf20732b562b.png)
+![Screenshot from 2021-03-31 15-44-40](https://user-images.githubusercontent.com/61413894/113161277-86ac5280-923e-11eb-9ea1-0adca7f3e3d7.png)
+![Screenshot from 2021-03-31 15-49-02](https://user-images.githubusercontent.com/61413894/113161320-8f048d80-923e-11eb-8bea-d9da2830389c.png)
+![Screenshot from 2021-03-31 15-52-21](https://user-images.githubusercontent.com/61413894/113161335-94fa6e80-923e-11eb-8d18-32852f873b2f.png)
+
 
 
 ## PLAN
