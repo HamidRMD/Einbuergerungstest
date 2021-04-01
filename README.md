@@ -25,7 +25,7 @@ Hamid, Khaled, Anderson, Elahe, Jakob
 
 
 ## Beispiel: Die Seite mit der Fragen von dem Quiz,wenn man falsch beantwortet hat.By Jakob.
-![Screenshot from 2021-03-31 04-43-10](https://user-images.githubusercontent.com/66359480/113106856-8773c300-9203-11eb-911e-4345c9a12cf7.png)
+![Screenshot from 2021-04-01 10-49-52](https://user-images.githubusercontent.com/61413894/113269227-8791c280-92d8-11eb-80cf-23d621fc0600.png)
 
 ## Wenn man eine Frage beim Quiz richtig beantwortet hat.By Jakob.
 ![Screenshot from 2021-03-31 20-13-14](https://user-images.githubusercontent.com/61413894/113191948-74daa780-925e-11eb-89b1-90b606218aa7.png)
