@@ -35,7 +35,7 @@ Hamid, Khaled, Anderson, Elahe, Jakob
 ![Screenshot from 2021-04-01 09-54-31](https://user-images.githubusercontent.com/61413894/113263153-b6586a80-92d1-11eb-8082-8b9b049873c1.png)
 ![Screenshot from 2021-03-31 15-55-18](https://user-images.githubusercontent.com/61413894/113161970-279b0d80-923f-11eb-97be-1955d15a5fee.png)
 ![Screenshot from 2021-03-31 15-49-02](https://user-images.githubusercontent.com/61413894/113161320-8f048d80-923e-11eb-8bea-d9da2830389c.png)
-![Screenshot from 2021-03-31 15-52-21](https://user-images.githubusercontent.com/61413894/113161335-94fa6e80-923e-11eb-8d18-32852f873b2f.png)
+![Screenshot from 2021-04-01 10-14-04](https://user-images.githubusercontent.com/61413894/113264433-434ff380-92d3-11eb-861b-901c804f3959.png)
 
 
 ## Das Testergebnis von Elahe und Jakob.
