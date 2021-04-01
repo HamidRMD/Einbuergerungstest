@@ -32,19 +32,17 @@ Hamid, Khaled, Anderson, Elahe, Jakob
 
 
 ## Seite mit den 310 Fragen.By Elahe, Kahled und unterschtüzung von Jakob.
-![Screenshot from 2021-03-31 20-02-37](https://user-images.githubusercontent.com/61413894/113191981-7f953c80-925e-11eb-8a9e-49461a12c5dd.png)
+![Screenshot from 2021-04-01 09-54-31](https://user-images.githubusercontent.com/61413894/113263153-b6586a80-92d1-11eb-8082-8b9b049873c1.png)
 ![Screenshot from 2021-03-31 15-55-18](https://user-images.githubusercontent.com/61413894/113161970-279b0d80-923f-11eb-97be-1955d15a5fee.png)
 ![Screenshot from 2021-03-31 15-49-02](https://user-images.githubusercontent.com/61413894/113161320-8f048d80-923e-11eb-8bea-d9da2830389c.png)
 ![Screenshot from 2021-03-31 15-52-21](https://user-images.githubusercontent.com/61413894/113161335-94fa6e80-923e-11eb-8d18-32852f873b2f.png)
 
 
 ## Das Testergebnis von Elahe und Jakob.
-![Screenshot from 2021-03-31 04-43-30](https://user-images.githubusercontent.com/66359480/113112847-f18f6680-9209-11eb-8582-49a8561360f1.png)
+![Screenshot from 2021-04-01 09-54-41](https://user-images.githubusercontent.com/61413894/113263191-c07a6900-92d1-11eb-94a6-d01dc210b1b0.png)
 
 ## Das Testergebnis von Elahe und Jakob.
-![Screenshot from 2021-03-31 04-43-34](https://user-images.githubusercontent.com/66359480/113113282-6b275480-920a-11eb-98d8-a0c43f8bc630.png)
-
-
+![Screenshot from 2021-04-01 09-54-45](https://user-images.githubusercontent.com/61413894/113263211-c708e080-92d1-11eb-85c0-5792172db017.png)
 
 
 ## PLAN
