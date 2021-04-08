@@ -1,0 +1,24 @@
+body {
+    background-image: url("../../img/backgroundstartseite.jpeg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 950px;
+
+}
+
+.container {
+    height:700px;
+    width: 1000px;
+    background-color: rgba(43, 21, 21, 0.46);
+    padding: 0 80px;
+    
+}
+
+h1 {
+    color:white;
+    font-family: 'Roboto Slab', serif;
+    padding-top:40px;
+    padding-bottom: 5px;;
+    border-bottom: 1px solid white;
+}

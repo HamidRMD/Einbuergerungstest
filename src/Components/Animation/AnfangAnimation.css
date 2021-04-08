@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    align-items: center;
+    height:800px;
+
+}
+
+.LogoName {
+    position: relative;
+    text-align: center;
+    top: 250px;
+    font-size: 50px;
+    color: black;
+    font-family: 'Rammetto One', cursive;  
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 3px;
+    /* Adjust as needed */
+    animation:
+        typing 9s steps(40, end),
+        blink-caret .2s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+
+
+
