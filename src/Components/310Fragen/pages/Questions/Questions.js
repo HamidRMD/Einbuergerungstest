@@ -13,7 +13,19 @@ const QuestionsPage = () => {
     useEffect(() => {
         console.log(data)
     }, [])
-
+/*
+    useEffect(() => {    
+        if (data.length===0) {
+          fetch("/questions").then( (Response) => {
+            
+            Response.json().then( antwort => {
+              
+                setData(antwort);
+            })
+          }).catch( fehler => { console.error(fehler)});
+        }
+      });
+      */
     const handleLastQuestion = () => {
         if (questionIndex !== 0)
             setQuestionIndex(questionIndex - 1);
