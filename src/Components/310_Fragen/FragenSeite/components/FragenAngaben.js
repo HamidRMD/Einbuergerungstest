@@ -1,4 +1,5 @@
 import React, { useState ,useEffect} from 'react';
+import "../style.css"
 
 const FragenAngaben = ({ propsFrage, propsFragenLänge, propsFragenIndex }) => {
 
@@ -34,8 +35,8 @@ const FragenAngaben = ({ propsFrage, propsFragenLänge, propsFragenIndex }) => {
       }, [propsFragenIndex])
 
       return <div>
-            <h3>Frage {propsFragenIndex} / {propsFragenLänge}</h3>
-            <p>{propsFrage.question}</p>
+            <h3 className={"FragenAngabenText"}>Frage {propsFragenIndex} / {propsFragenLänge}</h3>
+            <p className={"FragenAngabenText"}>{propsFrage.question}</p>
             <ul>
                   {propsFrage.answers.map(item =>
                         <li>

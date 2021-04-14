@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FragenAngaben from './components/Fragen310';
+import FragenAngaben from './components/FragenAngaben';
 import FragenListe from './components/data.json';
 import { useHistory } from 'react-router-dom';
 
