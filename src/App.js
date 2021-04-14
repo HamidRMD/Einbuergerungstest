@@ -10,6 +10,7 @@ import Start from "./Components/310_Fragen/StartSeite/StartSeite";
 function App() {
   return (
     <div className="App">
+      <Uhr />
       <FragenBox />
       <Logo />
 

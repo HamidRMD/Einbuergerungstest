@@ -1,0 +1,28 @@
+.uhr-heading {
+    color:white;
+    position: absolute;
+    left: 1700px;
+    font-size:20px;
+    top:0px;
+    font-family: 'Rowdies', cursive;
+
+
+}
+
+.uhr {
+    position: relative;
+    background-color:rgba(182, 89, 122, 0.9);
+    height:110px;
+    width:110px;
+    border-radius:55%;
+    left:1335px;
+    top:5px;
+
+}
+
+.uhrZahlen {
+    font-size: 30px;
+    font-family: 'Rowdies', cursive;
+    padding-left: 35px;
+    padding-top:30px;
+}

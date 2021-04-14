@@ -15,10 +15,32 @@ body {
     
 }
 
-h1 {
-    color:white;
-    font-family: 'Roboto Slab', serif;
-    padding-top:40px;
-    padding-bottom: 5px;;
-    border-bottom: 1px solid white;
+.infoButton {
+   color: #fff;
+   border-radius: 50px;
+   padding: 20px;
+   font-size: 20px;
+   font-family: 'Rowdies', cursive;
+   background-color:rgba(182, 89, 122, 0.9);
+   border:none;
+
+
+
+}
+
+.nextAndLastButton {
+   color: #fff;
+   padding: 15px;
+   font-size: 20px;
+   font-family: 'Rowdies', cursive;
+   background-color:rgba(182, 89, 122, 0.9);
+   border:none;
+
+}
+
+.containerButtonUnten {
+   display: flex;
+   justify-content: space-between;
+   padding-top:30px;
+
 }

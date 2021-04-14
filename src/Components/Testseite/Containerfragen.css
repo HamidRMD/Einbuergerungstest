@@ -1,0 +1,69 @@
+h1 {
+    color:white;
+    font-family: 'Roboto Slab', serif;
+    padding-top:40px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+    word-spacing: 8px;
+    margin:0;
+}
+
+p {
+    margin: 0;
+    color:white;
+    font-family: 'Roboto Slab', serif;
+    font-size:20px;
+    font-weight:700;
+
+}
+
+.containerButton {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+
+}
+
+ul {
+
+    list-style-type: none;
+
+}
+
+li {
+    padding: 10px;
+    
+
+}
+
+.buttonFragen {
+    font-size: 20px;
+    padding:13px;
+    font-family: 'Roboto Slab', serif;
+    font-size:23px;
+    font-weight:800;
+    color:white;
+    background-color:rgba(182, 89, 122, 0.9);
+    border-radius: 35px;
+    border:none;
+    width:100%;
+}
+
+.fragenFeedback {
+    color:white;
+    padding-top: 5px;;
+    padding-left: 20px;
+    font-family: 'Rowdies', cursive;
+    
+}
+
+.fa-check-circle {
+    color: rgba(84, 189, 119, 0.99);
+    padding-left: 5px;
+
+}
+
+.greenBackground {
+    background-color:aqua;
+}
+
