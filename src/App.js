@@ -2,10 +2,10 @@ import './App.css';
 import AnfangAnimation from './Components/Animation/AnfangAnimation';
 import FragenBox from './Components/Testseite/FragenBox';
 import Logo from './Components/Testseite/Logo';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Home from "./Components/310Fragen/pages/home/Home";
-import QuestionsPage from "./Components/310Fragen/pages/Questions/Questions";
-import InfoPage from "./Components/310Fragen/pages/infoPage/InfoPage";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Fragen from "./310_Fragen/FragenSeite/FragenSeite";
+import Info from "./310_Fragen/InfoSeite/InfoSeite";
+import Start from "./310_Fragen/StartSeite/StartSeite";
 
 function App() {
   return (
@@ -15,9 +15,9 @@ function App() {
 
       <BrowserRouter>
         <Switch>
-          <Route path={"/questions"} component={QuestionsPage} />
-          <Route path={"/info"} component={InfoPage} />
-          <Route path={"/"} component={Home} />
+            <Route path={"/Fragen"} component={Fragen}></Route>
+                <Route path={"/Info"} component={Info}></Route>
+                <Route path={"/"} component={Start}></Route>
         </Switch>
       </BrowserRouter>
 
