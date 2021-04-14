@@ -1,0 +1,363 @@
+[
+    {
+        "question" : "Frage 1",
+        "answers" : [
+            {
+              "answer" : "Wahl 1",
+              "isAns" : true
+            }
+            ,
+            {
+                "answer" : "Wahl 2",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 3",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 4",
+                "isAns" : false
+              }   
+        ]
+    }
+    ,
+    {
+        "question" : "Frage 2",
+        "answers" : [
+            {
+              "answer" : "Wahl 1",
+              "isAns" : false
+            }
+            ,
+            {
+                "answer" : "Wahl 2",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 3",
+                "isAns" : true
+              }
+              ,
+              {
+                "answer" : "Wahl 4",
+                "isAns" : false
+              }   
+        ]
+    },
+    {
+        "question" : "Frage 3",
+        "answers" : [
+            {
+              "answer" : "Wahl 1",
+              "isAns" : false
+            }
+            ,
+            {
+                "answer" : "Wahl 2",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 3",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 4",
+                "isAns" : true
+              }   
+        ]
+    },
+    {
+        "question" : "Frage 4",
+        "answers" : [
+            {
+              "answer" : "Wahl 1",
+              "isAns" : true
+            }
+            ,
+            {
+                "answer" : "Wahl 2",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 3",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 4",
+                "isAns" : false
+              }   
+        ]
+    },
+    {
+        "question" : "Frage 5",
+        "answers" : [
+            {
+              "answer" : "Wahl 1",
+              "isAns" : false
+            }
+            ,
+            {
+                "answer" : "Wahl 2",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 3",
+                "isAns" : true
+              }
+              ,
+              {
+                "answer" : "Wahl 4",
+                "isAns" : false
+              }   
+        ]
+    },
+    {
+        "question" : "Frage 6",
+        "answers" : [
+            {
+              "answer" : "Wahl 1",
+              "isAns" : true
+            }
+            ,
+            {
+                "answer" : "Wahl 2",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 3",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 4",
+                "isAns" : false
+              }   
+        ]
+    },
+    {
+        "question" : "Frage 7",
+        "answers" : [
+            {
+              "answer" : "Wahl 1",
+              "isAns" : true
+            }
+            ,
+            {
+                "answer" : "Wahl 2",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 3",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 4",
+                "isAns" : false
+              }   
+        ]
+    },
+    {
+        "question" : "Frage 8",
+        "answers" : [
+            {
+              "answer" : "Wahl 1",
+              "isAns" : true
+            }
+            ,
+            {
+                "answer" : "Wahl 2",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 3",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 4",
+                "isAns" : false
+              }   
+        ]
+    },
+    {
+        "question" : "Frage 9",
+        "answers" : [
+            {
+              "answer" : "Wahl 1",
+              "isAns" : true
+            }
+            ,
+            {
+                "answer" : "Wahl 2",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 3",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 4",
+                "isAns" : false
+              }   
+        ]
+    },
+    {
+        "question" : "Frage 10",
+        "answers" : [
+            {
+              "answer" : "Wahl 1",
+              "isAns" : true
+            }
+            ,
+            {
+                "answer" : "Wahl 2",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 3",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 4",
+                "isAns" : false
+              }   
+        ]
+    },
+    {
+        "question" : "Frage 11",
+        "answers" : [
+            {
+              "answer" : "Wahl 1",
+              "isAns" : true
+            }
+            ,
+            {
+                "answer" : "Wahl 2",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 3",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 4",
+                "isAns" : false
+              }   
+        ]
+    },
+    {
+        "question" : "Frage 12",
+        "answers" : [
+            {
+              "answer" : "Wahl 1",
+              "isAns" : true
+            }
+            ,
+            {
+                "answer" : "Wahl 2",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 3",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 4",
+                "isAns" : false
+              }   
+        ]
+    },
+    {
+        "question" : "Frage 13",
+        "answers" : [
+            {
+              "answer" : "Wahl 1",
+              "isAns" : true
+            }
+            ,
+            {
+                "answer" : "Wahl 2",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 3",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 4",
+                "isAns" : false
+              }   
+        ]
+    },
+    {
+        "question" : "Frage 14",
+        "answers" : [
+            {
+              "answer" : "Wahl 1",
+              "isAns" : true
+            }
+            ,
+            {
+                "answer" : "Wahl 2",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 3",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 4",
+                "isAns" : false
+              }   
+        ]
+    },
+    {
+        "question" : "Frage 15",
+        "answers" : [
+            {
+              "answer" : "Wahl 1",
+              "isAns" : true
+            }
+            ,
+            {
+                "answer" : "Wahl 2",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 3",
+                "isAns" : false
+              }
+              ,
+              {
+                "answer" : "Wahl 4",
+                "isAns" : false
+              }   
+        ]
+    }
+]
