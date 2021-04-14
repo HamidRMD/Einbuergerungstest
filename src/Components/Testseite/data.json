@@ -1,0 +1,142 @@
+[
+    { "nr": "1",
+      "text":"In Deutschland dürfen Menschen offen etwas gegen die Regierung sagen, weil …",
+      "info": "info 1",
+      "options": [
+        {
+          "title": "hier Religionsfreiheit gilt.",
+          "isAns": false
+        },
+        {
+          "title": "die Menschen Steuern zahlen.",
+          "isAns": false
+        },
+        {
+          "title": "die Menschen das Wahlrecht haben.",
+          "isAns": false
+        },
+        {
+          "title": "hier Meinungsfreiheit gilt.",
+          "isAns": true
+        }
+      ]
+    },
+    {  
+      "nr": "2",
+      "text": "",
+      "info": "info 2",
+      "options": [
+        {
+          "title": "option 1",
+          "isAns": true
+        },
+        {
+          "title": "option 2",
+          "isAns": false
+        },
+        {
+          "title": "option 3",
+          "isAns": false
+        },
+        {
+          "title": "option 4",
+          "isAns": false
+        }
+      ]
+    },
+    {
+      "nr": "3",
+      "text": " ",
+      "info": "info 3",
+      "options": [
+        {
+          "title": "option 1",
+          "isAns": false
+        },
+        {
+          "title": "option 2",
+          "isAns": false
+        },
+        {
+          "title": "option 3",
+          "isAns": true
+        },
+        {
+          "title": "option 4",
+          "isAns": false
+        }
+        
+      ]
+    },
+    {
+      "nr": "4",
+      "text": " ",
+      "info": "info 4",
+      "options": [
+        {
+          "title": "option 1",
+          "isAns": false
+        },
+        {
+          "title": "option 2",
+          "isAns": false
+        },
+        {
+          "title": "option 3",
+          "isAns": true
+        },
+        {
+          "title": "option 4",
+          "isAns": false
+        }
+        
+      ]
+    },
+    { 
+      "nr": "5",
+      "text": " ",
+      "info": "info 5",
+      "options": [
+        {
+          "title": "option 1",
+          "isAns": true
+        },
+        {
+          "title": "option 2",
+          "isAns": false
+        },
+        {
+          "title": "option 3",
+          "isAns": false
+        },
+        {
+          "title": "option 4",
+          "isAns": false
+        }
+      ]
+    },
+    {
+      "nr": "6",
+      "text": " ",
+      "info": "info 6",
+      "options": [
+        {
+          "title": "option 1",
+          "isAns": false
+        },
+        {
+          "title": "option 2",
+          "isAns": false
+        },
+        {
+          "title": "option 3",
+          "isAns": true
+        },
+        {
+          "title": "option 4",
+          "isAns": false
+        }
+        
+      ]
+    }
+  ]
