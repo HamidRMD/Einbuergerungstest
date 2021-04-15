@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Fragen from "./Components/310_Fragen/FragenSeite/FragenSeite";
 import Info from "./Components/310_Fragen/InfoSeite/InfoSeite";
 import Start from "./Components/310_Fragen/StartSeite/StartSeite";
+import Uhr from "./Components/Testseite/Uhr";
 
 function App() {
   return (
