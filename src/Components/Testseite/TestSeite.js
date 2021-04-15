@@ -51,9 +51,11 @@ const Test = () => {
 
     return (
         <div>
+            
+      <div className="body-testSeite">
       <Uhr />
       <Logo />
-       <div className="container">
+       <div className="container-testSeite">
         <Containerfragen questionData={data[questionIndex]}/>
         <div>
             <div className="containerButtonUnten">
@@ -64,6 +66,7 @@ const Test = () => {
 
         </div>
        
+       </div>
        </div>
        
        </div>

@@ -1,4 +1,4 @@
-body {
+.body-testSeite {
     background-image: url("../../img/backgroundstartseite.jpeg");
     display: flex;
     justify-content: center;
@@ -7,7 +7,7 @@ body {
 
 }
 
-.container {
+.container-testSeite {
     height:700px;
     width: 1000px;
     background-color: rgba(43, 21, 21, 0.46);

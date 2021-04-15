@@ -1,0 +1,47 @@
+.bodyBewertung {
+    background-image: url("../../img/backgroundBewertung.jpeg");
+    background-repeat: no-repeat;
+    height: 1012px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.container-bewertung {
+    height:700px;
+    width: 800px;
+    background-color: rgba(43, 21, 21, 0.63);
+    padding: 0 80px;
+
+}
+
+.bewertung-paragraph {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size:25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+
+}
+
+.container-bewertung > h1 {
+    font-size:45px;
+    text-align: center;
+
+}
+
+.buttonBewertung {
+    color: #fff;
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'Rowdies', cursive;
+    background-color:rgba(182, 89, 122, 0.9);
+    border:none;
+    position: relative;
+    left:600px;
+    top:280px;
+}
+
+
