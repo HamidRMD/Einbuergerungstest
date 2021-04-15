@@ -4,7 +4,7 @@ import logo from '../../img/logo-einbuergerung.png';
 const Logo = () => {
     return (
         <div>
-        <img src={logo} className="logo" />;
+        <img src={logo} alt={"Foto von der Weltkuguel mit verschidene Flagge"} className="logo" />;
         
         </div>
     );

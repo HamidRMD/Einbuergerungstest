@@ -1,4 +1,6 @@
-import './FragenBox.css'
+import './TestSeite.css'
+import Logo from './Logo';
+import Uhr from "./Uhr";
 import Containerfragen from "./Containerfragen";
 import fragenList from './data.json';
 import {useEffect, useState} from "react";
@@ -6,7 +8,8 @@ import {useHistory} from 'react-router-dom'
 
 
 
-const FragenBox = () => {
+
+const Test = () => {
 
     const [data, setData] = useState(fragenList);
     const [questionIndex, setQuestionIndex] = useState(0)
@@ -47,16 +50,21 @@ const FragenBox = () => {
 
 
     return (
+        <div>
+      <Uhr />
+      <Logo />
        <div className="container">
         <Containerfragen questionData={data[questionIndex]}/>
         <div>
             <div className="containerButtonUnten">
-            {questionIndex !== 0 && <button className="nextAndLastButton" onClick={handleLastQuestion}>Vorherige Frage</button>}
+            <button className="nextAndLastButton" onClick={handleLastQuestion}>Vorherige Frage</button>
             <button className="infoButton" onClick={handleClickOnInfoButton}>Info</button>
-            {questionIndex < data.length - 1 && <button className="nextAndLastButton" onClick={handleNextQuestion}>Nächste Aufgabe</button>}
+            <button className="nextAndLastButton" onClick={handleNextQuestion}>Nächste Aufgabe</button>
             </div>
 
         </div>
+       
+       </div>
        
        </div>
        
@@ -64,4 +72,4 @@ const FragenBox = () => {
 
 }
 
-export default FragenBox;
+export default Test;
