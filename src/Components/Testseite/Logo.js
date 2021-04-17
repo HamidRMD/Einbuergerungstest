@@ -1,10 +1,12 @@
 import './Logo.css'
 import logo from '../../img/logo-einbuergerung.png';
+import {Link} from "react-router-dom";
+
 
 const Logo = () => {
     return (
         <div>
-        <img src={logo} alt={"Foto von der Weltkuguel mit verschidene Flagge"} className="logo" />;
+        <Link to={"/Start"}><img src={logo} alt={"Foto von der Weltkuguel mit verschidene Flagge"} className="logo"/> </Link>;
         
         </div>
     );

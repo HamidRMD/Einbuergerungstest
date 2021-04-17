@@ -1,6 +1,7 @@
 import './TestSeite.css'
 import Logo from './Logo';
 import Uhr from "./Uhr";
+import Punkte from "./Punktezaehler";
 import Containerfragen from "./Containerfragen";
 import fragenList from './data.json';
 import {useEffect, useState} from "react";
@@ -60,15 +61,17 @@ const Test = () => {
         <div>
             <div className="containerButtonUnten">
             <button className="nextAndLastButton" onClick={handleLastQuestion}>Vorherige Frage</button>
-            <button className="infoButton" onClick={handleClickOnInfoButton}>Info</button>
+            {/*<button className="infoButton" onClick={handleClickOnInfoButton}>Info</button>*/}
             <button className="nextAndLastButton" onClick={handleNextQuestion}>Nächste Aufgabe</button>
             </div>
 
         </div>
-       
        </div>
-       </div>
-       
+
+
+       </div>   
+       <Punkte />
+    
        </div>
        
     )

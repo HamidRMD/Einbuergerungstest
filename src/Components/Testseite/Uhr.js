@@ -34,7 +34,8 @@ render() {
         <div>
             <h3 className="uhr-heading">Uhrzeit</h3>
 
-            <div className="uhr"> <p className="uhrZahlen">{this.state.currentTime}</p> </div>
+            <div className="uhr"> <p className="uhrZahlen">{this.state.currentTime}</p> <p id={"uhrStr"}>Min</p> </div>
+
 
         </div>
 
