@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "../style.css"
 
-const FragenAngaben = ({ propsFrage, propsFragenLänge, propsFragenIndex }) => {
+const FragenAngaben = ({propsFrage, propsFragenLänge, propsFragenIndex } ) => {
 
       const [showAns, setshowAns] = useState({
             //damit die Antwort sehen
