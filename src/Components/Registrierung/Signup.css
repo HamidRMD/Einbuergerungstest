@@ -1,0 +1,17 @@
+.container-sign {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+  
+  }
+
+  input[type=text], input[type=password] {
+    display: inline-block;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    
+}
