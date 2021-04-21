@@ -1,8 +1,11 @@
 import React, { useState ,useEffect } from 'react';
 import FragenAngaben from './components/FragenAngaben';
-import FragenListe from './components/data.json';
+//import FragenListe from './components/data.json';
 import { useHistory } from 'react-router-dom';
 import { fetch310Fragen } from '../api/api310Fragen';
+import Logo from '../../Testseite/Logo';
+import "./style_1.css";
+
 
 const Fragen = () => {
 
@@ -47,12 +50,14 @@ const Fragen = () => {
          )
     }
 
-    return <div>
-        <h1 className={'FragenAngabenText'}>Fragen Seite</h1>
-        { data.length > 0 && <FragenAngaben  propsFrage={data[FragenIndex]} propsFragenLänge={data.length} propsFragenIndex={FragenIndex +1}></FragenAngaben>}
+    return <div className={"FragenStyle"}>
+        <Logo />
+        { data.length > 0 && <FragenAngaben   propsFrage={data[FragenIndex]} propsFragenLänge={data.length} propsFragenIndex={FragenIndex +1}></FragenAngaben>}
+        <div className={"FooterStyle"}>
         <button onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
         <button onClick={zurInfo}>Info</button>
         <button onClick={NächsteAufgabe}>Nächste Aufgabe</button>
+         </div>
     </div>
 }
 export default Fragen;
