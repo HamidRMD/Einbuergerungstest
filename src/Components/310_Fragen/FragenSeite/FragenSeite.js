@@ -7,7 +7,7 @@ import Logo from '../../Testseite/Logo';
 import "./style_1.css";
 
 
-const states = ["Alle Fragen","Baden-Württemberg","Bayern","Berlin","Brandenburg","Bremen","Hamburg","Hessen","Mecklenburg-Vorpommern","Niedersachsen","Nordrhein-Westfalen","Rheinland-Pfalz","Saarland","Sachsen","Sachsen-Anhalt","Schleswig-Holstein","Thüringen"]
+const states = ["Alle Fragen", "Baden-Württemberg", "Bayern", "Berlin", "Brandenburg", "Bremen", "Hamburg", "Hessen", "Mecklenburg-Vorpommern", "Niedersachsen", "Nordrhein-Westfalen", "Rheinland-Pfalz", "Saarland", "Sachsen", "Sachsen-Anhalt", "Schleswig-Holstein", "Thüringen"]
 
 
 const Fragen = () => {
@@ -21,7 +21,7 @@ const Fragen = () => {
     const Vergangenheit = useHistory()
     //für InfoSeite
 
-    const [filterData , setFilterData] = useState([]) 
+    const [filterData, setFilterData] = useState([])
 
 
 
@@ -59,42 +59,45 @@ const Fragen = () => {
         )
     }
 
-    const clickAlleFragen =()=>{
-         setFilterData(data)
+    const clickAlleFragen = () => {
+        setFilterData(data)
     }
 
-    const clickAlleStates =(event  )=>{
-          //console.log("event : ",event) 
-          //console.log("value", event.target.value);
+    const clickAlleStates = (event) => {
+        //console.log("event : ",event) 
+        //console.log("value", event.target.value);
 
-          if(event.target.value === "Alle Fragen")
-          setFilterData(data)
-          else
-          setFilterData(data.filter(item=>item.stats===event.target.value))
+        if (event.target.value === "Alle Fragen")
+            setFilterData(data)
+        else
+            setFilterData(data.filter(item => item.stats === event.target.value))
 
     }
 
     return <div className={"FragenStyle"}>
-    
-    <Logo />
-        <div className={"alleFargenStyle"}>
-        <button onClick={clickAlleFragen}>
-            {"Alle Fragen"}
-        </button>
 
-        <select onChange={clickAlleStates}>
-        {states.map(item=><option>{item}</option>)}   
-        </select>
+        <Logo />
+        <div className={"alleFargenStyle"}>
+            <button onClick={clickAlleFragen}>
+                {"Alle Fragen"}
+            </button>
+
+            <select onChange={clickAlleStates}>
+                {states.map(item => <option>{item}</option>)}
+            </select>
         </div>
-        
-        {filterData.length > 0 && <FragenAngaben propsFrage={filterData[FragenIndex]} propsFragenLänge={filterData.length} propsFragenIndex={FragenIndex + 1}></FragenAngaben>}
-        
-        <div className={"FooterStyle"}>
-            <button onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
-            <button onClick={zurInfo}>Info</button>
-            <button onClick={NächsteAufgabe}>Nächste Aufgabe</button>
-        </div>
-        
+
+        {filterData.length > 0 &&
+            <div>
+                <FragenAngaben propsFrage={filterData[FragenIndex]} propsFragenLänge={filterData.length} propsFragenIndex={FragenIndex + 1}></FragenAngaben>
+
+                <div className={"FooterStyle"}>
+                    <button className={"vorherigeAufgabe"} onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
+                    <button onClick={zurInfo}>Info</button>
+                    <button className={"nächsteAufgabe"} onClick={NächsteAufgabe}>Nächste Aufgabe</button>
+                </div>
+            </div>
+        }
     </div>
 }
 export default Fragen;

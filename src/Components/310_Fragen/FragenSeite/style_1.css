@@ -31,6 +31,14 @@
 .FooterStyle > button:hover {
     border-color: yellowgreen;
 }
+.vorherigeAufgabe:hover {
+    font-size: xx-large;
+    background-color:rgb(170, 37, 170);
+}
+.nächsteAufgabe:hover {
+    font-size: xx-large;
+    background-color:rgb(170, 37, 170);
+}
 .AngabenStyle {
     background-color: rgba(43, 21, 21, 0.46);
     margin: 0 auto;
@@ -97,6 +105,25 @@ span {
     justify-content: center;
     align-items: center;
     height: 30px;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+.alleFargenStyle > button {
+    font-weight: bold;
+    font-size: large;
+    font-family: serif;
+    margin: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.alleFargenStyle > select {
+    font-weight: bold;
+    font-size: large;
+    font-family: serif;
+    margin: 0.5rem;
+    padding-left: 0.5rem;
 }
 .stats_Style {
     background-color:rgb(170, 37, 170);
