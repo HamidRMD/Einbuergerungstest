@@ -44,7 +44,7 @@ const FragenAngaben = ({propsFrage, propsFragenLänge, propsFragenIndex } ) => {
       }, [propsFragenIndex])
 
       return <div className={"AngabenStyle"}>
-            <h3 >Frage {propsFragenIndex} / {propsFragenLänge}</h3>
+            <h3 >Frage {propsFragenIndex} / {propsFragenLänge}<span className={"stats_Style"}>{propsFrage.stats}</span></h3>
             <hr></hr>
             <p >{propsFrage.question}</p>
             <ul>

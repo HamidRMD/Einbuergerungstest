@@ -36,7 +36,7 @@
     margin: 0 auto;
     padding: 1rem 3rem;
     width: 60%;
-    height: 80vh;
+    height: 70vh;
     margin-top: 4rem;
     font-family: 'Roboto Slab', serif;
 }
@@ -90,6 +90,21 @@ span {
     font-size: xx-large;
     font-weight: bold;
     font-family: inherit;
+}
+.alleFargenStyle {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+.stats_Style {
+    background-color:rgb(170, 37, 170);
+    color: white;
+    border-radius: 0.9rem;
+    padding: 0.5rem;
+    margin-left: 3rem;
+    font-family: sans-serif;
 }
 
 

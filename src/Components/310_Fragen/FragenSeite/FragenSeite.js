@@ -1,4 +1,4 @@
-import React, { useState ,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import FragenAngaben from './components/FragenAngaben';
 //import FragenListe from './components/data.json';
 import { useHistory } from 'react-router-dom';
@@ -7,29 +7,38 @@ import Logo from '../../Testseite/Logo';
 import "./style_1.css";
 
 
+const states = ["Alle Fragen","Baden-Württemberg","Bayern","Berlin","Brandenburg","Bremen","Hamburg","Hessen","Mecklenburg-Vorpommern","Niedersachsen","Nordrhein-Westfalen","Rheinland-Pfalz","Saarland","Sachsen","Sachsen-Anhalt","Schleswig-Holstein","Thüringen"]
+
+
 const Fragen = () => {
 
     const [data, setdata] = useState([]);
     //kann das geprüft werden. 
-    //console.log(Liste);
+    //console.log(data);
     const [FragenIndex, setFragenIndex] = useState(0);
     //Wenn was geändert werden muss, kann man State benutzen.
 
-    const Vergangenheit  = useHistory()
+    const Vergangenheit = useHistory()
+    //für InfoSeite
+
+    const [filterData , setFilterData] = useState([]) 
+
+
 
     //create useEffect für fetch axios, damit wir data von axios benutzen können
     //wenn wir was in useEffect nach return schreiben, wird das uns in erste Load zeigen. 
-     useEffect (()=>{
-         fetch310Fragen()
-         .then(response=>{
-              //console.log("what is res? ",res);    //is a data:Array(82)
-              setdata(response.data)
-         })
-         .catch(error=>{
-             alert(error.massage)
-         })
-     },[])
-   
+    useEffect(() => {
+        fetch310Fragen()
+            .then(response => {
+                //console.log("what is res? ",res);    //is a data:Array(82)
+                setdata(response.data)
+                setFilterData(response.data)
+            })
+            .catch(error => {
+                alert(error.massage)
+            })
+    }, [])
+
 
     const VorherigeAufgabe = () => {
         if (FragenIndex !== 0)
@@ -44,20 +53,48 @@ const Fragen = () => {
 
     }
 
-    const zurInfo =()=>{
-         Vergangenheit.push(
-             "/Info"
-         )
+    const zurInfo = () => {
+        Vergangenheit.push(
+            "/Info"
+        )
+    }
+
+    const clickAlleFragen =()=>{
+         setFilterData(data)
+    }
+
+    const clickAlleStates =(event  )=>{
+          //console.log("event : ",event) 
+          //console.log("value", event.target.value);
+
+          if(event.target.value === "Alle Fragen")
+          setFilterData(data)
+          else
+          setFilterData(data.filter(item=>item.stats===event.target.value))
+
     }
 
     return <div className={"FragenStyle"}>
-        <Logo />
-        { data.length > 0 && <FragenAngaben   propsFrage={data[FragenIndex]} propsFragenLänge={data.length} propsFragenIndex={FragenIndex +1}></FragenAngaben>}
+    
+    <Logo />
+        <div className={"alleFargenStyle"}>
+        <button onClick={clickAlleFragen}>
+            {"Alle Fragen"}
+        </button>
+
+        <select onChange={clickAlleStates}>
+        {states.map(item=><option>{item}</option>)}   
+        </select>
+        </div>
+        
+        {filterData.length > 0 && <FragenAngaben propsFrage={filterData[FragenIndex]} propsFragenLänge={filterData.length} propsFragenIndex={FragenIndex + 1}></FragenAngaben>}
+        
         <div className={"FooterStyle"}>
-        <button onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
-        <button onClick={zurInfo}>Info</button>
-        <button onClick={NächsteAufgabe}>Nächste Aufgabe</button>
-         </div>
+            <button onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
+            <button onClick={zurInfo}>Info</button>
+            <button onClick={NächsteAufgabe}>Nächste Aufgabe</button>
+        </div>
+        
     </div>
 }
 export default Fragen;
