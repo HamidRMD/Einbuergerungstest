@@ -1,26 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .bodyBewertung {
     background-image: url("../../img/backgroundBewertung.jpeg");
     background-repeat: no-repeat;
-    height: 1012px;
+    height: 981px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
 
 }
 
 .container-bewertung {
     height:700px;
     width: 800px;
-    background-color: rgba(43, 21, 21, 0.63);
+    background-color: rgba(43, 21, 21, 0.534);
     padding: 0 80px;
+    color: #fff;
+    font-family: 'Noto Sans JP', sans-serif;
+
 
 }
 
 .bewertung-paragraph {
-    font-family: 'Noto Sans JP', sans-serif;
     font-size:25px;
-    padding-top: 25px;
+    padding-top: 35px;
     padding-bottom: 25px;
 
 
@@ -29,6 +36,8 @@
 .container-bewertung > h1 {
     font-size:45px;
     text-align: center;
+    padding-top:10px;
+    border-bottom: 1px solid white;
 
 }
 
