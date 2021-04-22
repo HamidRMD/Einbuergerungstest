@@ -11,10 +11,43 @@ import { useHistory } from 'react-router-dom'
 const Test = () => {
 
     const [data, setData] = useState([]);
-    const [time, setTime] = useState(60);
+    const [zeit, setTime] = useState(60);
+    const [timeabgelaufen, setTimeabgelaufen] = useState(false)
     const [questionIndex, setQuestionIndex] = useState(0)
 
     const Vergangenheit = useHistory()
+    
+    const AktualiesiereTimer = () => {
+        console.log("timer=", zeit)
+        const neuezeit=zeit -1 ;
+        setTime(neuezeit)
+        if (zeit <= 0) {
+            setTimeabgelaufen(true)
+
+        }
+    }
+    const teststarten = () => {
+        const land = document.querySelector("#stats").value;
+
+        Promise.all([
+            fetch("http://localhost:5000/RandomQuestion").then(res => res.json()),
+            fetch(`http://localhost:5000/RandomQuestion/${land}`).then(res => res.json())
+        ]).then(([urlOneData, urlTwoData]) => {
+            console.log("urlOneData=", urlOneData)
+            console.log("urlTwoData=", urlTwoData)
+            console.log("mergedData=", [...urlOneData, ...urlTwoData])
+            setData([...urlOneData, ...urlTwoData]);
+
+            const delay = 1000;
+            
+            window.setInterval(AktualiesiereTimer, delay)
+
+
+
+        })
+
+    }
+
     /*
      useEffect(() => {
        
@@ -32,35 +65,6 @@ const Test = () => {
      }, [])
  
  */
-    const teststarten = () => {
-        const land = document.querySelector("#stats").value;
-
-        Promise.all([
-            fetch("http://localhost:5000/RandomQuestion").then(res => res.json()),
-            fetch(`http://localhost:5000/RandomQuestion/${land}`).then(res => res.json())
-        ]).then(([urlOneData, urlTwoData]) => {
-            console.log("urlOneData=", urlOneData)
-            console.log("urlTwoData=", urlTwoData)
-            console.log("mergedData=", [...urlOneData, ...urlTwoData])
-            setData([...urlOneData, ...urlTwoData]);
-
-            const delay = 60000;
-            const AktualiesiereTimer = () => {
-
-                setTime(time - 1)
-                if (time === 0 ){
-                    clearInterval(time)
-                    
-                }
-            }
-            window.setInterval(AktualiesiereTimer, delay)
-
-
-
-        })
-    }
-
-
     const VorherigeAufgabe = () => {
         if (questionIndex !== 0)
             setQuestionIndex(questionIndex - 1)
@@ -85,7 +89,7 @@ const Test = () => {
         <div>
 
             <div className="body-testSeite">
-               <p>du hast  noch {time} zeit! </p>
+                <p>du hast  noch {zeit} zeit! </p>
                 <Logo />
                 <label>Stats:</label>
                 <select id="stats" name="stats">
@@ -109,13 +113,13 @@ const Test = () => {
 
                 </select>
                 <button onClick={teststarten}>Start zum Test</button>
-                <div className="container-testSeite">
-                    {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]} propsQuestionLänge={data.length}
-                        propsQuestionIndex={questionIndex + 1}>
-                    </Containerfragen>}
+                {!timeabgelaufen ?
+                    <div className="container-testSeite">
+                        {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]}
+                            propsQuestionLänge={data.length}
+                            propsQuestionIndex={questionIndex + 1}>
+                        </Containerfragen>}
 
-
-                    <div>
                         <div className="containerButtonUnten">
 
                             <button onClick={zurInfo}>Info</button>
@@ -124,10 +128,10 @@ const Test = () => {
 
                         </div>
 
+
                     </div>
-                </div>
 
-
+                    : <p>zeit ist um</p>}
             </div>
             <Punkte />
 
