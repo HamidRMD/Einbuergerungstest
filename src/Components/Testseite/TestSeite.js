@@ -1,22 +1,40 @@
 import './TestSeite.css'
 
 import Logo from './Logo';
-import Uhr from "./Uhr";
+
 import Punkte from "./Punktezaehler";
 import Containerfragen from "./Containerfragen";
-import {useState } from "react";
+import { useState } from "react";
 import { useHistory } from 'react-router-dom'
 //import axios from 'axios';
 
 const Test = () => {
 
     const [data, setData] = useState([]);
+    const [time, setTime] = useState(60);
     const [questionIndex, setQuestionIndex] = useState(0)
-    
+
     const Vergangenheit = useHistory()
-   /*
-    useEffect(() => {
-      
+    /*
+     useEffect(() => {
+       
+         Promise.all([
+             fetch("http://localhost:5000/RandomQuestion").then(res => res.json()),
+             fetch(`http://localhost:5000/RandomQuestion/${land}`).then(res => res.json())
+         ]).then(([urlOneData, urlTwoData]) => {
+             console.log("urlOneData=", urlOneData)
+             console.log("urlTwoData=", urlTwoData)
+             console.log("mergedData=", [...urlOneData, ...urlTwoData])
+ 
+             setData([...urlOneData, ...urlTwoData]);
+ 
+         })
+     }, [])
+ 
+ */
+    const teststarten = () => {
+        const land = document.querySelector("#stats").value;
+
         Promise.all([
             fetch("http://localhost:5000/RandomQuestion").then(res => res.json()),
             fetch(`http://localhost:5000/RandomQuestion/${land}`).then(res => res.json())
@@ -24,30 +42,25 @@ const Test = () => {
             console.log("urlOneData=", urlOneData)
             console.log("urlTwoData=", urlTwoData)
             console.log("mergedData=", [...urlOneData, ...urlTwoData])
-
             setData([...urlOneData, ...urlTwoData]);
 
-        })
-    }, [])
+            const delay = 60000;
+            const AktualiesiereTimer = () => {
 
-*/
-   const  teststarten=()=>{
-const land=document.querySelector("#stats").value;
+                setTime(time - 1)
+                if (time === 0 ){
+                    clearInterval(time)
+                    
+                }
+            }
+            window.setInterval(AktualiesiereTimer, delay)
 
-        Promise.all([
-            fetch("http://localhost:5000/RandomQuestion").then(res => res.json()),
-            fetch(`http://localhost:5000/RandomQuestion/${land}`).then(res => res.json())
-        ]).then(([urlOneData, urlTwoData]) => {
-            console.log("urlOneData=", urlOneData)
-            console.log("urlTwoData=", urlTwoData)
-            console.log("mergedData=", [...urlOneData, ...urlTwoData])
 
-            setData([...urlOneData, ...urlTwoData]);
 
         })
     }
 
-    
+
     const VorherigeAufgabe = () => {
         if (questionIndex !== 0)
             setQuestionIndex(questionIndex - 1)
@@ -72,7 +85,7 @@ const land=document.querySelector("#stats").value;
         <div>
 
             <div className="body-testSeite">
-                <Uhr />
+               <p>du hast  noch {time} zeit! </p>
                 <Logo />
                 <label>Stats:</label>
                 <select id="stats" name="stats">

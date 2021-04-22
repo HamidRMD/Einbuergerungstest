@@ -11,7 +11,7 @@ class Uhr extends React.Component {
 
     tick() {
         console.log('Vor', this.state);
-        this.setState((prevState, props) => ({
+        this.setState((prevState) => ({
             currentTime: prevState.currentTime -1
 
         }));
@@ -21,7 +21,7 @@ class Uhr extends React.Component {
 
     componentDidMount() {
         this.timerID = setInterval(
-            (prevState, props) => this.tick(),
+            (prevState) => this.tick(),
             60000
 
         );
