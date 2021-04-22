@@ -1,5 +1,5 @@
 import './App.css';
-import AnfangAnimation from './Components/Animation/AnfangAnimation';
+
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Test from './Components/Testseite/TestSeite';
 import Fragen from "./Components/310_Fragen/FragenSeite/FragenSeite";

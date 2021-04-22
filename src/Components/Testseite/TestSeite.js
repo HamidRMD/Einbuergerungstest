@@ -1,79 +1,125 @@
 import './TestSeite.css'
+
 import Logo from './Logo';
 import Uhr from "./Uhr";
 import Punkte from "./Punktezaehler";
 import Containerfragen from "./Containerfragen";
-import fragenList from './data.json';
-import {useEffect, useState} from "react";
-import {useHistory} from 'react-router-dom'
-
-
-
+import {useState } from "react";
+import { useHistory } from 'react-router-dom'
+//import axios from 'axios';
 
 const Test = () => {
 
-    const [data, setData] = useState(fragenList);
+    const [data, setData] = useState([]);
     const [questionIndex, setQuestionIndex] = useState(0)
-    const history = useHistory();
-
+    
+    const Vergangenheit = useHistory()
+   /*
     useEffect(() => {
-        console.log(data)
+      
+        Promise.all([
+            fetch("http://localhost:5000/RandomQuestion").then(res => res.json()),
+            fetch(`http://localhost:5000/RandomQuestion/${land}`).then(res => res.json())
+        ]).then(([urlOneData, urlTwoData]) => {
+            console.log("urlOneData=", urlOneData)
+            console.log("urlTwoData=", urlTwoData)
+            console.log("mergedData=", [...urlOneData, ...urlTwoData])
+
+            setData([...urlOneData, ...urlTwoData]);
+
+        })
     }, [])
-/*
-    useEffect(() => {    
-        if (data.length===0) {
-          fetch("/questions").then( (Response) => {
-            
-            Response.json().then( antwort => {
-              
-                setData(antwort);
-            })
-          }).catch( fehler => { console.error(fehler)});
-        }
-      });
-      */
 
-    const handleLastQuestion = () => {
-        if (questionIndex !== 0)
-            setQuestionIndex(questionIndex - 1);
-    }
-    const handleNextQuestion = () => {
-        if (questionIndex < data.length - 1)
-            setQuestionIndex(questionIndex + 1);
-    }
+*/
+   const  teststarten=()=>{
+const land=document.querySelector("#stats").value;
 
-    const handleClickOnInfoButton = () => {
-        history.push("/info",{
-            text : data[questionIndex].info
+        Promise.all([
+            fetch("http://localhost:5000/RandomQuestion").then(res => res.json()),
+            fetch(`http://localhost:5000/RandomQuestion/${land}`).then(res => res.json())
+        ]).then(([urlOneData, urlTwoData]) => {
+            console.log("urlOneData=", urlOneData)
+            console.log("urlTwoData=", urlTwoData)
+            console.log("mergedData=", [...urlOneData, ...urlTwoData])
+
+            setData([...urlOneData, ...urlTwoData]);
+
         })
     }
 
+    
+    const VorherigeAufgabe = () => {
+        if (questionIndex !== 0)
+            setQuestionIndex(questionIndex - 1)
+
+    }
+
+    const NächsteAufgabe = () => {
+        if (questionIndex < data.length - 1)
+            setQuestionIndex(questionIndex + 1)
+
+
+    }
+
+    const zurInfo = () => {
+        Vergangenheit.push(
+            "/Info"
+        )
+    }
 
 
     return (
         <div>
-            
-      <div className="body-testSeite">
-      <Uhr />
-      <Logo />
-       <div className="container-testSeite">
-        <Containerfragen questionData={data[questionIndex]}/>
-        <div>
-            <div className="containerButtonUnten">
-            <button className="nextAndLastButton" onClick={handleLastQuestion}>Vorherige Frage</button>
-            {/*<button className="infoButton" onClick={handleClickOnInfoButton}>Info</button>*/}
-            <button className="nextAndLastButton" onClick={handleNextQuestion}>Nächste Aufgabe</button>
+
+            <div className="body-testSeite">
+                <Uhr />
+                <Logo />
+                <label>Stats:</label>
+                <select id="stats" name="stats">
+
+                    <option value="Baden-Württemberg">Baden-Württemberg </option>
+                    <option value="Bayern">Bayern </option>
+                    <option value="Berlin">Berlin</option>
+                    <option value="Brandenburg">Brandenburg </option>
+                    <option value="Bremen">Bremen</option>
+                    <option value="Hamburg">Hamburg</option>
+                    <option value="Hessen">Hessen</option>
+                    <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
+                    <option value="Niedersachsen">Niedersachsen</option>
+                    <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
+                    <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
+                    <option value="Saarland">Saarland</option>
+                    <option value="Sachsen">Sachsen</option>
+                    <option value="Sachsen-Anhalt">Sachsen-Anhalt</option>
+                    <option value="Schleswig-Holstein">Schleswig-Holstein </option>
+                    <option value="Thüringen">Thüringen</option>
+
+                </select>
+                <button onClick={teststarten}>Start zum Test</button>
+                <div className="container-testSeite">
+                    {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]} propsQuestionLänge={data.length}
+                        propsQuestionIndex={questionIndex + 1}>
+                    </Containerfragen>}
+
+
+                    <div>
+                        <div className="containerButtonUnten">
+
+                            <button onClick={zurInfo}>Info</button>
+                            <button onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
+                            <button onClick={NächsteAufgabe}>Nächste Aufgabe</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
             </div>
+            <Punkte />
 
         </div>
-       </div>
 
-
-       </div>   
-       <Punkte />
-    
-       </div>
-       
     )
 
 }

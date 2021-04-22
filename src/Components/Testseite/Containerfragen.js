@@ -1,39 +1,51 @@
-import './Containerfragen.css'
-import React, {useState} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState, useEffect } from 'react';
 
+const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionIndex }) => {
+    const [showAnswer, setshowAnswer] = useState({
 
-const Containerfragen = ({questionData}) => {
-
-    const [showAns, setShowAns] = useState({
         show: false,
         optionSelected: undefined
     })
+    useEffect(() => {
+        setshowAnswer({
+            show: false,
+            optionSelected: undefined
+           
+        })
+        
+    }, [])
 
-    const handleClickOnOption = (option) => {
-        setShowAns({
+    const AnwserButton = (option) => {
+
+        setshowAnswer({
             show: true,
             optionSelected: option
         })
+
     }
 
-
     return (
-        <div className={"question_container"}>
-            <h1>Aufgabe {questionData.nr} / 33</h1> <br /> <p> {questionData.text}</p>
-           <div className="containerButton">
+        <div className="FragenAngaben">
+
+            <h1 className={"FragenAngabenText"}>Test:{propsQuestionIndex} / {propsQuestionLänge}</h1>
+            <p className={"FragenAngabenText"}>{propsQuestion.question}</p>
             <ul>
-                {questionData.options.map(item => <li>
-                    <button className="buttonFragen" onClick={() => handleClickOnOption(item)}>
-                        {item.title}
+                {propsQuestion.answer.map((answerItem, answerIndex) =>
 
-                    </button>
-                    {showAns.show && <span>{item.isAns ? <p className="fragenFeedback">Richtige Antwort <i class="fas fa-check-circle"></i></p> : <p className="fragenFeedback">Falsche Antwort</p>}</span>}
-                    
-                </li>)}
+                    <li>
+                        <button onClick={() => AnwserButton(answerItem)}>{answerItem}</button>
+                      
+                        
+                        {showAnswer.show && propsQuestion.correct === answerIndex && showAnswer.optionSelected === answerItem && <span className="text-success">{"Richtige Antwort"}</span>}
+                        {showAnswer.show && showAnswer.optionSelected === answerItem && propsQuestion.correct !== answerIndex && <span className="text-danger">{"Falsche Antwort"}</span>}
+                    </li>
+                )}
             </ul>
-            </div>
-        </div>
-    );
-};
 
-export default Containerfragen;
+
+        </div>
+    )
+}
+
+export default Containerfragen
