@@ -43,3 +43,17 @@
    padding-top:110px;
 
 }
+#zeit{
+   color: rgb(242, 242, 247);
+   font-weight: bold;
+   text-align: center;
+}
+#stats{
+   color: rgb(32, 28, 28);
+   font-weight: bold;
+}
+#teststarten{
+   background-color: rgb(61, 11, 27);
+   color:white;
+   padding: 10px;
+}

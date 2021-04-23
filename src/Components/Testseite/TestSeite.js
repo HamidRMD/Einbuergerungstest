@@ -11,21 +11,13 @@ import { useHistory } from 'react-router-dom'
 const Test = () => {
 
     const [data, setData] = useState([]);
-    const [zeit, setTime] = useState(60);
+    const [zeit, setZeit] = useState(60);
     const [timeabgelaufen, setTimeabgelaufen] = useState(false)
     const [questionIndex, setQuestionIndex] = useState(0)
 
     const Vergangenheit = useHistory()
     
-    const AktualiesiereTimer = () => {
-        console.log("timer=", zeit)
-        const neuezeit=zeit -1 ;
-        setTime(neuezeit)
-        if (zeit <= 0) {
-            setTimeabgelaufen(true)
-
-        }
-    }
+   
     const teststarten = () => {
         const land = document.querySelector("#stats").value;
 
@@ -38,7 +30,18 @@ const Test = () => {
             console.log("mergedData=", [...urlOneData, ...urlTwoData])
             setData([...urlOneData, ...urlTwoData]);
 
-            const delay = 1000;
+            
+            const delay = 3000;
+            const AktualiesiereTimer = () => {
+                console.log("timer=", zeit)
+                const neuezeit=zeit -1 ;
+                console.log("neuezeit=",neuezeit)
+                setZeit(neuezeit)
+                if (zeit <= 0) {
+                    setTimeabgelaufen(true)
+        
+                }
+            }
             
             window.setInterval(AktualiesiereTimer, delay)
 
@@ -89,9 +92,9 @@ const Test = () => {
         <div>
 
             <div className="body-testSeite">
-                <p>du hast  noch {zeit} zeit! </p>
+                <p id="zeit">Sie haben noch {zeit} zeit! </p>
                 <Logo />
-                <label>Stats:</label>
+                <label id="stats">Stats:</label>
                 <select id="stats" name="stats">
 
                     <option value="Baden-Württemberg">Baden-Württemberg </option>
@@ -112,7 +115,7 @@ const Test = () => {
                     <option value="Thüringen">Thüringen</option>
 
                 </select>
-                <button onClick={teststarten}>Start zum Test</button>
+                <button id="teststarten" onClick={teststarten}>Start zum Test</button>
                 {!timeabgelaufen ?
                     <div className="container-testSeite">
                         {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]}
