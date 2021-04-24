@@ -45,8 +45,9 @@
 }
 #zeit{
    color: #fff;
-   border-radius: 50%;
-   padding: 20px;
+  border-radius: 100%;
+  text-align: center;
+   padding: 10px;
    font-size: 20px;
    font-family: 'Rowdies', cursive;
    background-color:rgba(182, 89, 122, 0.9);

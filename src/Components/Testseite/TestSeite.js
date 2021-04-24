@@ -1,12 +1,12 @@
 import './TestSeite.css'
 
 import Logo from './Logo';
-import ZumBundesländer from "./ZumBundesländer"
-import Punkte from "./Punktezaehler";
+
+//import Punkte from "./Punktezaehler";
 import Containerfragen from "./Containerfragen";
 import {  useState } from "react";
 import { useHistory } from 'react-router-dom'
-//import axios from 'axios';
+
 
 const Test = () => {
 
@@ -15,7 +15,7 @@ const Test = () => {
     const [timeabgelaufen, setTimeabgelaufen] = useState(false)
     const [questionIndex, setQuestionIndex] = useState(0)
     
-
+    
     const Vergangenheit = useHistory()
     
   
@@ -96,13 +96,37 @@ const Test = () => {
             <div className="body-testSeite">
               
             <Logo />
-            <ZumBundesländer/>
-                <p id="zeit" className="uhr">Sie haben noch {zeit} zeit! </p>
-             
-                <button id="teststarten" onClick={teststarten}>Start zum Test</button>
+              
+                <label id="stats">Bundesländer auswählen:</label>
+                <select id="stats" name="stats">
+
+                    <option value="Baden-Württemberg">Baden-Württemberg </option>
+                    <option value="Bayern">Bayern </option>
+                    <option value="Berlin">Berlin</option>
+                    <option value="Brandenburg">Brandenburg </option>
+                    <option value="Bremen">Bremen</option>
+                    <option value="Hamburg">Hamburg</option>
+                    <option value="Hessen">Hessen</option>
+                    <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
+                    <option value="Niedersachsen">Niedersachsen</option>
+                    <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
+                    <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
+                    <option value="Saarland">Saarland</option>
+                    <option value="Sachsen">Sachsen</option>
+                    <option value="Sachsen-Anhalt">Sachsen-Anhalt</option>
+                    <option value="Schleswig-Holstein">Schleswig-Holstein </option>
+                    <option value="Thüringen">Thüringen</option>
+
+                </select>
                
+                
+               
+        
                 {!timeabgelaufen ?
                     <div className="container-testSeite">
+
+                          <p id="zeit" className="uhr">Sie haben noch {zeit} zeit! </p>
+               <button id="teststarten" onClick={teststarten}>Test starten</button>
                         {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]}
                             propsQuestionLänge={data.length}
                             propsQuestionIndex={questionIndex + 1}>
@@ -120,7 +144,7 @@ const Test = () => {
                     </div>
 
                     : <p>zeit ist um</p>}
-                       <Punkte />
+                       
 
             </div>
          

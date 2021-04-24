@@ -1,19 +1,16 @@
 import Logo from "./Logo"
 
+
+
 const ZumBundesländer=()=>{
 
-  
-
-    
-      
-    
     return(
         <div className="ZumBundesländer">
 
             <Logo />
   
               
-                <label id="stats">Stats:</label>
+                <label id="stats">Bundesländer auswählen:</label>
                 <select id="stats" name="stats">
 
                     <option value="Baden-Württemberg">Baden-Württemberg </option>
@@ -34,7 +31,9 @@ const ZumBundesländer=()=>{
                     <option value="Thüringen">Thüringen</option>
 
                 </select>
-            <button>ZumBundesländerStats</button>
+               <button>Zum Test</button>
+"
+
         </div>
     )
 }
