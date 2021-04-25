@@ -4,7 +4,7 @@ import Logo from './Logo';
 
 //import Punkte from "./Punktezaehler";
 import Containerfragen from "./Containerfragen";
-import {  useState } from "react";
+import { useState } from "react";
 import { useHistory } from 'react-router-dom'
 
 
@@ -14,12 +14,13 @@ const Test = () => {
     const [zeit, setZeit] = useState(60);
     const [timeabgelaufen, setTimeabgelaufen] = useState(false)
     const [questionIndex, setQuestionIndex] = useState(0)
-    
-    
+    const [showbutton, setshowbutton] = useState(false)
+
     const Vergangenheit = useHistory()
-    
-  
+
+
     const teststarten = () => {
+        setshowbutton(true)
         const land = document.querySelector("#stats").value;
 
         Promise.all([
@@ -31,19 +32,21 @@ const Test = () => {
             console.log("mergedData=", [...urlOneData, ...urlTwoData])
             setData([...urlOneData, ...urlTwoData]);
 
-            
-            const delay = 3000;
+
+            const delay = 2000;
             const AktualiesiereTimer = () => {
+
                 console.log("timer=", zeit)
-                const neuezeit=zeit -1 ;
-                console.log("neuezeit=",neuezeit)
+                const neuezeit = zeit - 1;
+                console.log("neuezeit=", neuezeit)
                 setZeit(neuezeit)
                 if (zeit <= 0) {
                     setTimeabgelaufen(true)
-        
+
+
                 }
             }
-            
+
             window.setInterval(AktualiesiereTimer, delay)
 
 
@@ -70,7 +73,7 @@ const Test = () => {
  
  */
     const VorherigeAufgabe = () => {
-   
+
         if (questionIndex !== 0)
             setQuestionIndex(questionIndex - 1)
 
@@ -83,7 +86,7 @@ const Test = () => {
 
     }
 
-    const zurInfo = () => {   
+    const zurInfo = () => {
         Vergangenheit.push(
             "/Info"
         )
@@ -91,64 +94,64 @@ const Test = () => {
 
 
     return (
-        
 
-            <div className="body-testSeite">
-              
+
+        <div className="body-testSeite">
+
             <Logo />
-              
-                <label id="stats">Bundesländer auswählen:</label>
-                <select id="stats" name="stats">
 
-                    <option value="Baden-Württemberg">Baden-Württemberg </option>
-                    <option value="Bayern">Bayern </option>
-                    <option value="Berlin">Berlin</option>
-                    <option value="Brandenburg">Brandenburg </option>
-                    <option value="Bremen">Bremen</option>
-                    <option value="Hamburg">Hamburg</option>
-                    <option value="Hessen">Hessen</option>
-                    <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
-                    <option value="Niedersachsen">Niedersachsen</option>
-                    <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
-                    <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
-                    <option value="Saarland">Saarland</option>
-                    <option value="Sachsen">Sachsen</option>
-                    <option value="Sachsen-Anhalt">Sachsen-Anhalt</option>
-                    <option value="Schleswig-Holstein">Schleswig-Holstein </option>
-                    <option value="Thüringen">Thüringen</option>
+            <label id="stats">Bundesländer auswählen:</label>
+            <select id="stats" name="stats">
 
-                </select>
-               
-                
-               
-        
-                {!timeabgelaufen ?
+                <option value="Baden-Württemberg">Baden-Württemberg </option>
+                <option value="Bayern">Bayern </option>
+                <option value="Berlin">Berlin</option>
+                <option value="Brandenburg">Brandenburg </option>
+                <option value="Bremen">Bremen</option>
+                <option value="Hamburg">Hamburg</option>
+                <option value="Hessen">Hessen</option>
+                <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
+                <option value="Niedersachsen">Niedersachsen</option>
+                <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
+                <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
+                <option value="Saarland">Saarland</option>
+                <option value="Sachsen">Sachsen</option>
+                <option value="Sachsen-Anhalt">Sachsen-Anhalt</option>
+                <option value="Schleswig-Holstein">Schleswig-Holstein </option>
+                <option value="Thüringen">Thüringen</option>
+
+            </select>
+            {!timeabgelaufen ?
+
+                <div className="teststarten">
+
+                    <button id="teststarten" onClick={teststarten}>Test starten</button>
+                    {showbutton ?
+                        <p id="zeit" className="uhr">Sie haben noch {zeit} zeit! </p>
+                        : !showbutton}
                     <div className="container-testSeite">
-
-                          <p id="zeit" className="uhr">Sie haben noch {zeit} zeit! </p>
-               <button id="teststarten" onClick={teststarten}>Test starten</button>
                         {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]}
                             propsQuestionLänge={data.length}
                             propsQuestionIndex={questionIndex + 1}>
                         </Containerfragen>}
 
-                        <div className="containerButtonUnten">
 
-                            <button id="btn"  onClick={zurInfo}>Info</button>
-                            <button onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
-                            <button onClick={NächsteAufgabe}>Nächste Aufgabe</button>
-
-                        </div>
+                        <button id="btn" onClick={zurInfo}>Info</button>
+                        
+                        <button onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
+                        <button onClick={NächsteAufgabe}>Nächste Aufgabe</button>
 
 
                     </div>
 
-                    : <p>zeit ist um</p>}
-                       
+                </div>
 
-            </div>
-         
-       
+                : <p>zeit ist um</p>}
+
+
+        </div>
+
+
 
     )
 
