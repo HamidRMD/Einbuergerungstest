@@ -30,7 +30,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
 
             <h1 className={"FragenAngabenText"}>Test:{propsQuestionIndex} / {propsQuestionLänge}</h1>
             <p className={"FragenAngabenText"}>{propsQuestion.question}</p>
-            <img src={"localhost:5000/public/images" + propsImage} alt="ein Bild" height="50" width="60"/>
+            <img src={"http://localhost:5000//public/images" + propsImage} alt="ein Bild"/>
             <ul>
                 {propsQuestion.answer.map((answerItem, answerIndex) =>
 
