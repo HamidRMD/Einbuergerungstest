@@ -1,4 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+import './TestSeite.css'
 import React, { useState, useEffect } from 'react';
 
 const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionIndex}) => {
@@ -37,7 +38,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
            <ul>
                 {propsQuestion.answer.map((answerItem, answerIndex) =>
 
-                    <li>
+                    <li id="liste">
                         <button onClick={() => AnwserButton(answerItem)}>{answerItem}</button>
 
 

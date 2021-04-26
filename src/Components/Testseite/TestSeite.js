@@ -1,4 +1,5 @@
-import './TestSeite.css'
+
+
 
 import Logo from './Logo';
 
@@ -100,9 +101,10 @@ const Test = () => {
 
 
         <div className="body-testSeite">
-
             <Logo />
-
+  {!testläuft ?
+            
+<div>
             <label id="bundesländerselect">Bundesländer auswählen:</label>
             <select id="stats" name="stats">
 
@@ -124,6 +126,8 @@ const Test = () => {
                 <option value="Thüringen">Thüringen</option>
 
             </select>
+            </div>
+             : ""}
 
             {!timeabgelaufen ?
 
@@ -156,7 +160,7 @@ const Test = () => {
                                 <button onClick={NächsteAufgabe}>Nächste Aufgabe</button>
 
                             </div>
-                            : " click auf teststarten"}
+                            : " "}
 
                     </div>
 

@@ -14,7 +14,9 @@
     padding: 0 80px;
     
 }
-
+#liste{
+   list-style: none;
+}
 #zeit{
    color: rgb(243, 235, 235);
   border-radius: 50%;
@@ -32,6 +34,7 @@
    color: rgb(15, 15, 15);
    font-weight: bold;
    font-size: larger;
+   
 }
 #bundesländerselect{
    color: rgb(245, 247, 246);
