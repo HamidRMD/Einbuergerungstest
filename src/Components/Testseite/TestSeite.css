@@ -1,6 +1,7 @@
 .body-testSeite {
     background-image: url("../../img/backgroundstartseite.jpeg");
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 950px;
@@ -12,6 +13,43 @@
     background-color: rgba(43, 21, 21, 0.46);
     padding: 0 80px;
     
+}
+
+#zeit{
+   color: rgb(243, 235, 235);
+  border-radius: 50%;
+  text-align: center;
+  margin: 10px;
+   padding: 10px;
+   font-size: 20px;
+   position: absolute;
+   left: 400px;
+   top: 1px;
+   background-color:rgba(182, 89, 122, 0.9);
+   
+}
+#stats{
+   color: rgb(15, 15, 15);
+   font-weight: bold;
+   font-size: larger;
+}
+#bundesländerselect{
+   color: rgb(245, 247, 246);
+   font-weight: bold;
+   font-size: larger;
+
+}
+#teststarten{
+   background-color: rgb(219, 24, 86);
+   color:white;
+   font-family: bold;
+   padding: 20px;
+  margin: 5px;
+  position: absolute;
+  left: 800px;
+ top: 1px;
+  
+  right: 80px;
 }
 
 .infoButton {
@@ -42,23 +80,4 @@
    justify-content: space-between;
    padding-top:110px;
 
-}
-#zeit{
-   color: #fff;
-  border-radius: 100%;
-  text-align: center;
-   padding: 10px;
-   font-size: 20px;
-   font-family: 'Rowdies', cursive;
-   background-color:rgba(182, 89, 122, 0.9);
-   border:none;
-}
-#stats{
-   color: rgb(32, 28, 28);
-   font-weight: bold;
-}
-#teststarten{
-   background-color: rgb(61, 11, 27);
-   color:white;
-   padding: 10px;
 }

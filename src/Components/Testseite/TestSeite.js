@@ -38,11 +38,11 @@ const Test = () => {
             const AktualiesiereTimer = () => {
 
                 console.log("timer=", zeit)
-              
-                setZeit((zeit)=>{
-                    return zeit -1
+
+                setZeit((zeit) => {
+                    return zeit - 1
                 })
-                if (zeit <=0) {
+                if (zeit <= 0) {
                     setTimeabgelaufen(true)
 
 
@@ -50,7 +50,7 @@ const Test = () => {
             }
 
             window.setInterval(AktualiesiereTimer, delay)
-            
+
 
 
 
@@ -103,7 +103,7 @@ const Test = () => {
 
             <Logo />
 
-            <label id="stats">Bundesländer auswählen:</label>
+            <label id="bundesländerselect">Bundesländer auswählen:</label>
             <select id="stats" name="stats">
 
                 <option value="Baden-Württemberg">Baden-Württemberg </option>
@@ -131,8 +131,8 @@ const Test = () => {
 
                     <button id="teststarten" onClick={teststarten}>Test starten</button>
 
-                    <p id="zeit" className="uhr">Sie haben noch {zeit} minuten zeit! </p>
-                   
+
+
                     <div className="container-testSeite">
 
 
@@ -145,11 +145,11 @@ const Test = () => {
                         >
 
                         </Containerfragen>}
-                     
-                        {testläuft ?
-                      
-                            <div>
 
+                        {testläuft ?
+
+                            <div className="testläuft">
+                                <p id="zeit" className="uhr">Sie haben noch {zeit} minuten zeit! </p>
                                 <button id="btn" onClick={zurInfo}>Info</button>
 
                                 <button onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
