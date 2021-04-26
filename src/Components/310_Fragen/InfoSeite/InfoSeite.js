@@ -1,8 +1,10 @@
 import React from 'react';
+import "../FragenSeite/style_1.css";
 
 const Info =()=>{
-      return <div>
-<h1 className={'FragenAngabenText'}>Info Seite</h1>
+      return <div className={"FragenStyle"}>
+            
+<h1 className={"text"}>Info Seite</h1>
       </div>
 }
 export default Info;

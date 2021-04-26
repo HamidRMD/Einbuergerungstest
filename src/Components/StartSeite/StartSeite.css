@@ -1,3 +1,45 @@
-.ta {
-    color: black;
+.startSeite-body {
+    background-image: url('../../img/backgroundStartSeite.jpeg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 100%;
+    height:920px;
+    display:flex;
+    justify-content:center;
+
+}
+
+.startSeite-Content {
+    padding-top:50px;
+    align-self: center;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+
+}
+
+.heading-startSeite {
+   font-size: 45px;
+   border-bottom: none;
+   font-family: 'Red Hat Display', sans-serif;   
+   color: rgb(255, 255, 255);
+
+
+}
+
+.startSeite-button {
+    padding:12px;
+    font-family: 'Red Hat Display', sans-serif;   
+    font-size: 18px;
+    background-color:rgba(196, 196, 196, 0.37);
+    color: rgb(255, 255, 255);
+    width:220px;
+    margin-top: 15px;
+
+}
+
+.startSeite-button:hover {
+    background-color:rgba(39, 37, 37, 0.582);
+    font-size: 20px;
+
 }
