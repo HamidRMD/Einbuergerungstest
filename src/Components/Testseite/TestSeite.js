@@ -132,10 +132,11 @@ const Test = () => {
             {!timeabgelaufen ?
 
                 <div className="teststarten">
-
+ {!testläuft ?
+            
                     <button id="teststarten" onClick={teststarten}>Test starten</button>
 
-
+: "dddd"}
 
                     <div className="container-testSeite">
 
