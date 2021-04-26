@@ -2,7 +2,7 @@ import './TestSeite.css'
 
 import Logo from './Logo';
 
-import Timer from "./Timer"
+
 import Containerfragen from "./Containerfragen";
 import { useState } from "react";
 import { useHistory } from 'react-router-dom'
@@ -33,13 +33,15 @@ const Test = () => {
             setData([...urlOneData, ...urlTwoData]);
 
 
-            const delay = 3000;
+            //const delay = 60000;
+            const delay = 20000;
             const AktualiesiereTimer = () => {
 
                 console.log("timer=", zeit)
-                const neuezeit = zeit - 1;
-                console.log("neuezeit=", neuezeit)
-                setZeit(neuezeit)
+              
+                setZeit((zeit)=>{
+                    return zeit -1
+                })
                 if (zeit <=0) {
                     setTimeabgelaufen(true)
 
@@ -129,8 +131,8 @@ const Test = () => {
 
                     <button id="teststarten" onClick={teststarten}>Test starten</button>
 
-                    <p id="zeit" className="uhr">Sie haben noch {zeit} zeit! </p>
-                    <Timer/>
+                    <p id="zeit" className="uhr">Sie haben noch {zeit} minuten zeit! </p>
+                   
                     <div className="container-testSeite">
 
 
