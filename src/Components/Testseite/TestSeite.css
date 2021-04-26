@@ -7,13 +7,7 @@
     height: 950px;
 }
 
-.container-testSeite {
-    height:700px;
-    width: 1000px;
-    background-color: rgba(43, 21, 21, 0.46);
-    padding: 0 80px;
-    
-}
+
 #liste{
    list-style: none;
 }
@@ -43,16 +37,12 @@
 
 }
 #teststarten{
-   background-color: rgb(219, 24, 86);
+   background-color: rgb(102, 10, 39);
    color:white;
    font-family: bold;
    padding: 20px;
   margin: 5px;
-  position: absolute;
-  left: 800px;
- top: 1px;
-  
-  right: 80px;
+ 
 }
 
 .infoButton {
