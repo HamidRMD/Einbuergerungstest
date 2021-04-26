@@ -6,6 +6,7 @@ import Containerfragen from "./Containerfragen";
 import fragenList from './data.json';
 import {useEffect, useState} from "react";
 import {useHistory} from 'react-router-dom'
+import {fetchTest} from '../api/apiTest'
 
 
 
@@ -17,9 +18,16 @@ const Test = () => {
     const history = useHistory();
 
     useEffect(() => {
-        console.log(data)
+        fetchTest()
+        .then(response=>{
+
+            setData(response.data)
+        })
+        .catch(error=>{
+            alert(error.message)
+        })
     }, [])
-/*
+
     useEffect(() => {    
         if (data.length===0) {
           fetch("/questions").then( (Response) => {
@@ -31,8 +39,8 @@ const Test = () => {
           }).catch( fehler => { console.error(fehler)});
         }
       });
-      */
-
+    
+      
     const handleLastQuestion = () => {
         if (questionIndex !== 0)
             setQuestionIndex(questionIndex - 1);

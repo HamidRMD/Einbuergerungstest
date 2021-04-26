@@ -2,7 +2,7 @@ import React, { useState ,useEffect } from 'react';
 import FragenAngaben from './components/FragenAngaben';
 import FragenListe from './components/data.json';
 import { useHistory } from 'react-router-dom';
-import { fetch310Fragen } from '../api/api310Fragen';
+import { fetch310Fragen } from '../../api/api310Fragen';
 
 const Fragen = () => {
 
