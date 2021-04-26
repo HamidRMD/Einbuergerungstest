@@ -2,7 +2,7 @@ import './TestSeite.css'
 
 import Logo from './Logo';
 
-
+import Timer from "./Timer"
 import Containerfragen from "./Containerfragen";
 import { useState } from "react";
 import { useHistory } from 'react-router-dom'
@@ -14,13 +14,13 @@ const Test = () => {
     const [zeit, setZeit] = useState(60);
     const [timeabgelaufen, setTimeabgelaufen] = useState(false)
     const [questionIndex, setQuestionIndex] = useState(0)
-    const [showbutton, setshowbutton] = useState(false)
+    const [testläuft, setTestläuft] = useState(false)
 
     const Vergangenheit = useHistory()
 
 
     const teststarten = () => {
-        setshowbutton(true)
+        setTestläuft(true)
         const land = document.querySelector("#stats").value;
 
         Promise.all([
@@ -33,14 +33,14 @@ const Test = () => {
             setData([...urlOneData, ...urlTwoData]);
 
 
-            const delay = 2000;
+            const delay = 3000;
             const AktualiesiereTimer = () => {
 
                 console.log("timer=", zeit)
                 const neuezeit = zeit - 1;
                 console.log("neuezeit=", neuezeit)
                 setZeit(neuezeit)
-                if (zeit <= 0) {
+                if (zeit <=0) {
                     setTimeabgelaufen(true)
 
 
@@ -48,6 +48,7 @@ const Test = () => {
             }
 
             window.setInterval(AktualiesiereTimer, delay)
+            
 
 
 
@@ -99,7 +100,7 @@ const Test = () => {
         <div className="body-testSeite">
 
             <Logo />
-           
+
             <label id="stats">Bundesländer auswählen:</label>
             <select id="stats" name="stats">
 
@@ -121,34 +122,39 @@ const Test = () => {
                 <option value="Thüringen">Thüringen</option>
 
             </select>
-          
+
             {!timeabgelaufen ?
 
                 <div className="teststarten">
 
                     <button id="teststarten" onClick={teststarten}>Test starten</button>
-                    {showbutton ?
-                        <p id="zeit" className="uhr">Sie haben noch {zeit} zeit! </p>
-                        : !showbutton}
+
+                    <p id="zeit" className="uhr">Sie haben noch {zeit} zeit! </p>
+                    <Timer/>
                     <div className="container-testSeite">
-                    
-                    
+
+
 
                         {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]}
-                           
-                           propsQuestionLänge={data.length}
+
+                            propsQuestionLänge={data.length}
                             propsQuestionIndex={questionIndex + 1}
-                            propsImage={data.image}
-                            >
-                        
+
+                        >
+
                         </Containerfragen>}
+                     
+                        {testläuft ?
+                      
+                            <div>
 
+                                <button id="btn" onClick={zurInfo}>Info</button>
 
-                        <button id="btn" onClick={zurInfo}>Info</button>
-                        
-                        <button onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
-                        <button onClick={NächsteAufgabe}>Nächste Aufgabe</button>
+                                <button onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
+                                <button onClick={NächsteAufgabe}>Nächste Aufgabe</button>
 
+                            </div>
+                            : " click auf teststarten"}
 
                     </div>
 

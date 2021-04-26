@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from 'react';
 
-const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionIndex,propsImage}) => {
+const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionIndex}) => {
     const [showAnswer, setshowAnswer] = useState({
 
         show: false,
@@ -30,8 +30,11 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
 
             <h1 className={"FragenAngabenText"}>Test:{propsQuestionIndex} / {propsQuestionLänge}</h1>
             <p className={"FragenAngabenText"}>{propsQuestion.question}</p>
-            <img src={"http://localhost:5000//public/images" + propsImage} alt="ein Bild"/>
-            <ul>
+          {propsQuestion.image &&
+            <img src={"http://localhost:5000/images/" + propsQuestion.image} alt="ein Bild"/>
+           
+          }
+           <ul>
                 {propsQuestion.answer.map((answerItem, answerIndex) =>
 
                     <li>
