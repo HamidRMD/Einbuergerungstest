@@ -2,7 +2,7 @@ import './TestSeite.css'
 
 import Logo from './Logo';
 
-//import Punkte from "./Punktezaehler";
+
 import Containerfragen from "./Containerfragen";
 import { useState } from "react";
 import { useHistory } from 'react-router-dom'
@@ -99,7 +99,7 @@ const Test = () => {
         <div className="body-testSeite">
 
             <Logo />
-
+           
             <label id="stats">Bundesländer auswählen:</label>
             <select id="stats" name="stats">
 
@@ -121,6 +121,7 @@ const Test = () => {
                 <option value="Thüringen">Thüringen</option>
 
             </select>
+          
             {!timeabgelaufen ?
 
                 <div className="teststarten">
@@ -130,9 +131,16 @@ const Test = () => {
                         <p id="zeit" className="uhr">Sie haben noch {zeit} zeit! </p>
                         : !showbutton}
                     <div className="container-testSeite">
+                    
+                    
+
                         {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]}
-                            propsQuestionLänge={data.length}
-                            propsQuestionIndex={questionIndex + 1}>
+                           
+                           propsQuestionLänge={data.length}
+                            propsQuestionIndex={questionIndex + 1}
+                            propsImage={data.image}
+                            >
+                        
                         </Containerfragen>}
 
 
