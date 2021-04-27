@@ -10,11 +10,11 @@
 }
 
 .container-bewertung {
-    height:700px;
+    height:550px;
     width: 800px;
     background-color: rgba(43, 21, 21, 0.63);
-    padding: 0 80px;
-
+    padding-right: 40px;
+    padding-left: 40px;
 }
 
 .bewertung-paragraph {
@@ -22,13 +22,16 @@
     font-size:25px;
     padding-top: 25px;
     padding-bottom: 25px;
+    color:white;
 
 
 }
 
 .container-bewertung > h1 {
+    padding-top: 35px;
     font-size:45px;
     text-align: center;
+    color:white;
 
 }
 
@@ -40,8 +43,8 @@
     background-color:rgba(182, 89, 122, 0.9);
     border:none;
     position: relative;
-    left:600px;
-    top:280px;
+    left:550px;
+    top:100px;
 }
 
 

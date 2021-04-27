@@ -105,7 +105,7 @@ const Test = () => {
   {!testläuft ?
             
 <div className="bundesländer">
-            <label id="bundesländerselect">Bundesländer auswählen:</label>
+            <label id="bundesländerselect">Bundesländer auswählen : </label>
             <select id="stats" name="stats">
 
                 <option value="Baden-Württemberg">Baden-Württemberg </option>
