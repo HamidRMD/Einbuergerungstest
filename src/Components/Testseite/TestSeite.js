@@ -155,10 +155,20 @@ const Test = () => {
                         {testläuft ?
 
                             <div className="testläuft">
-                                <p id="zeit" className="uhr">Sie haben noch {zeit} minuten zeit! </p>
-                                <button id="btn" onClick={zurInfo}>Info</button>
+
+                                <div id="zeitDiv">
+                                <p>Sie haben noch</p>
+                                <div id="uhrDiv" >
+                                <p id="uhrZahlen">{zeit}</p>
+                                <p>Min</p>
+                                </div>
+                                <p id="uhrStr">Zeit</p>
+                                </div>
+
+                                
 
                                 <button onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
+                                <button id="btn" onClick={zurInfo}>Info</button>
                                 <button onClick={NächsteAufgabe}>Nächste Aufgabe</button>
 
                             </div>
