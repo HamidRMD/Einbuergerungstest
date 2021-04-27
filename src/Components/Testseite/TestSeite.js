@@ -104,7 +104,7 @@ const Test = () => {
             <Logo />
   {!testläuft ?
             
-<div>
+<div className="bundesländer">
             <label id="bundesländerselect">Bundesländer auswählen:</label>
             <select id="stats" name="stats">
 
@@ -127,6 +127,7 @@ const Test = () => {
 
             </select>
             </div>
+
              : ""}
 
             {!timeabgelaufen ?
