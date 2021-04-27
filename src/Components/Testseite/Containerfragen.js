@@ -1,13 +1,16 @@
-
+//kinderteil
 import './TestSeite.css'
 import React, { useState, useEffect } from 'react';
 
-const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionIndex}) => {
+const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionIndex, antwortHandler }) => {
     const [showAnswer, setshowAnswer] = useState({
 
         show: false,
         optionSelected: undefined
     })
+
+   // const [nutzerantwort, setnutzerantwort] = useState(false)
+
     useEffect(() => {
         setshowAnswer({
             show: false,
@@ -17,7 +20,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
 
     }, [])
 
-    const AnwserButton = (option) => {
+    const anwserButton = (option) => {
 
         setshowAnswer({
             show: true,
@@ -25,21 +28,38 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
         })
 
     }
-
+   
     return (
         <div className="FragenAngaben">
 
             <h1 className={"FragenAngabenText"}>Test:{propsQuestionIndex} / {propsQuestionLänge}</h1>
             <p className={"FragenAngabenText"}>{propsQuestion.question}</p>
-          {propsQuestion.image &&
-            <img src={"http://localhost:5000/images/" + propsQuestion.image} alt="ein Bild"/>
-           
-          }
-           <ul>
+            {propsQuestion.image &&
+                <img src={"http://localhost:5000/images/" + propsQuestion.image} alt="ein Bild" />
+
+            }
+
+            <ul>
                 {propsQuestion.answer.map((answerItem, answerIndex) =>
 
                     <li id="liste">
-                        <button onClick={() => AnwserButton(answerItem)}>{answerItem}</button>
+
+                        <button onClick={() => {
+
+                            anwserButton(answerItem);
+                            //wie kann ich die richtige antwort erknennen
+                            // wie kann ich diese anwrt array im ergerbis (true oder false) speichern
+                            if (propsQuestion.correct === answerIndex) {
+                                console.log("corretanswer1=")
+                                antwortHandler(true, propsQuestionIndex)
+                               
+                            }
+
+                            else {
+                                antwortHandler(false, propsQuestionIndex)
+                            }
+
+                        }}>{answerItem}</button>
 
 
                         {showAnswer.show && propsQuestion.correct === answerIndex && showAnswer.optionSelected === answerItem && <span className="text-success">{"Richtige Antwort"}</span>}
@@ -47,7 +67,6 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
                     </li>
                 )}
             </ul>
-
 
         </div>
     )
