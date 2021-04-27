@@ -6,11 +6,11 @@
     height:981px;
     display:flex;
     justify-content:center;
+    
 
 }
 
 .startSeite-Content {
-    padding-top:50px;
     align-self: center;
     display: flex;
     flex-flow: column;
@@ -31,7 +31,7 @@
     padding:12px;
     font-family: 'Red Hat Display', sans-serif;   
     font-size: 18px;
-    background-color:rgba(196, 196, 196, 0.37);
+    background-color:rgba(196, 196, 196, 0.568);
     color: rgb(255, 255, 255);
     width:220px;
     margin-top: 15px;
@@ -43,4 +43,45 @@
     background-color:rgba(39, 37, 37, 0.582);
     font-size: 20px;
 
+}
+
+.aboutUs-button {
+    height:50px;
+    width:150px;
+    font-family: 'Red Hat Display', sans-serif;   
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background-color:rgba(196, 196, 196, 0.288);
+    border:none;
+    font-weight: 700;
+    position: relative;
+    top:2rem;
+    right:1rem;
+   
+}
+
+.aboutUs-button:hover {
+        background-color:rgba(39, 37, 37, 0.582);
+        font-size: 20px;
+    
+    }
+
+    
+
+.AboutUs-body {
+    position: absolute;
+    right:0px;
+    height:93%;
+
+}
+
+.divAboutUs {
+    background-color: rgba(182, 89, 122, 0.9);
+    height:91%;
+    width:300px;
+    padding-top: 100px;
+    padding-left:20px;
+    padding-right:20px;
+    text-align:justify;
+   
 }
