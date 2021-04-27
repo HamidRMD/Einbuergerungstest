@@ -1,6 +1,6 @@
 
 
-
+//elternteil 
 import Logo from './Logo';
 
 
@@ -16,7 +16,9 @@ const Test = () => {
     const [timeabgelaufen, setTimeabgelaufen] = useState(false)
     const [questionIndex, setQuestionIndex] = useState(0)
     const [testläuft, setTestläuft] = useState(false)
-
+    const [showergebnis, setshowergebnis] = useState(false)
+    const [anzahlrichtige, setanzahlrichtige] = useState(0)
+    const [ergebnis, setErgebnis] = useState([])
     const Vergangenheit = useHistory()
 
 
@@ -95,48 +97,72 @@ const Test = () => {
             "/Info"
         )
     }
+    const aktualisreErgebnis = (antwort, indexfrage) => {
+        
+        let copyergebnis = [...ergebnis]
+        copyergebnis[indexfrage] = antwort
+        setErgebnis(copyergebnis)
+    }
+    
 
+    const results = () => {
+        const summe = ergebnis.reduce((zwischenSumme, aktullewert) => {
+            if (aktullewert) {
+                zwischenSumme = zwischenSumme + 1
+
+            }
+            return zwischenSumme
+
+        }, 0
+        //},0 ist startwert ist 0 für reducer
+        )
+        console.log("summe=", summe)
+        
+        setanzahlrichtige(summe)
+        setshowergebnis(true)
+
+    }
 
     return (
 
 
         <div className="body-testSeite">
             <Logo />
-  {!testläuft ?
-            
-<div>
-            <label id="bundesländerselect">Bundesländer auswählen:</label>
-            <select id="stats" name="stats">
+            {!testläuft ?
 
-                <option value="Baden-Württemberg">Baden-Württemberg </option>
-                <option value="Bayern">Bayern </option>
-                <option value="Berlin">Berlin</option>
-                <option value="Brandenburg">Brandenburg </option>
-                <option value="Bremen">Bremen</option>
-                <option value="Hamburg">Hamburg</option>
-                <option value="Hessen">Hessen</option>
-                <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
-                <option value="Niedersachsen">Niedersachsen</option>
-                <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
-                <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
-                <option value="Saarland">Saarland</option>
-                <option value="Sachsen">Sachsen</option>
-                <option value="Sachsen-Anhalt">Sachsen-Anhalt</option>
-                <option value="Schleswig-Holstein">Schleswig-Holstein </option>
-                <option value="Thüringen">Thüringen</option>
+                <div>
+                    <label id="bundesländerselect">Bundesländer auswählen:</label>
+                    <select id="stats" name="stats">
 
-            </select>
-            </div>
-             : ""}
+                        <option value="Baden-Württemberg">Baden-Württemberg </option>
+                        <option value="Bayern">Bayern </option>
+                        <option value="Berlin">Berlin</option>
+                        <option value="Brandenburg">Brandenburg </option>
+                        <option value="Bremen">Bremen</option>
+                        <option value="Hamburg">Hamburg</option>
+                        <option value="Hessen">Hessen</option>
+                        <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
+                        <option value="Niedersachsen">Niedersachsen</option>
+                        <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
+                        <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
+                        <option value="Saarland">Saarland</option>
+                        <option value="Sachsen">Sachsen</option>
+                        <option value="Sachsen-Anhalt">Sachsen-Anhalt</option>
+                        <option value="Schleswig-Holstein">Schleswig-Holstein </option>
+                        <option value="Thüringen">Thüringen</option>
+
+                    </select>
+                </div>
+                : ""}
 
             {!timeabgelaufen ?
 
                 <div className="teststarten">
- {!testläuft ?
-            
-                    <button id="teststarten" onClick={teststarten}>Test starten</button>
+                    {!testläuft ?
 
-: ""}
+                        <button id="teststarten" onClick={teststarten}>Test starten</button>
+
+                        : ""}
 
                     <div className="container-testSeite">
 
@@ -146,7 +172,7 @@ const Test = () => {
 
                             propsQuestionLänge={data.length}
                             propsQuestionIndex={questionIndex + 1}
-
+                            antwortHandler={aktualisreErgebnis}
                         >
 
                         </Containerfragen>}
@@ -159,8 +185,14 @@ const Test = () => {
 
                                 <button onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
                                 <button onClick={NächsteAufgabe}>Nächste Aufgabe</button>
+                                <div>
 
+                                    <button onClick={results}>Results</button>
+                                    {showergebnis ? `Du hast  ${anzahlrichtige} richtege antwort beantwortet` : ""}
+
+                                </div>
                             </div>
+
                             : " "}
 
                     </div>
@@ -173,9 +205,11 @@ const Test = () => {
         </div>
 
 
-
     )
 
 }
 
 export default Test;
+
+
+
