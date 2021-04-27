@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 950px;
+    height: 981px;
 }
 
 
@@ -28,20 +28,23 @@
    color: rgb(15, 15, 15);
    font-weight: bold;
    font-size: larger;
+   margin-left: 10px;
    
 }
 #bundesländerselect{
-   color: rgb(245, 247, 246);
+   color: rgba(245, 247, 246, 0.856);
    font-weight: bold;
    font-size: larger;
 
 }
 #teststarten{
-   background-color: rgb(102, 10, 39);
+   background-color:rgba(180, 59, 101, 0.9);
+   font-family: 'Rowdies', cursive;
    color:white;
-   font-family: bold;
-   padding: 20px;
-  margin: 5px;
+   padding: 17px;
+   width:200px;
+   border: none;
+   font-size: 20px;
  
 }
 
@@ -63,7 +66,7 @@
    padding: 15px;
    font-size: 20px;
    font-family: 'Rowdies', cursive;
-   background-color:rgba(182, 89, 122, 0.9);
+   background-color:rgba(180, 59, 101, 0.9);
    border:none;
 
 }
@@ -74,3 +77,20 @@
    padding-top:110px;
 
 }
+
+.bundesländer {
+   position: absolute;
+   right: 2rem;
+   top: 3rem;
+   font-family: 'Rowdies', cursive;
+   font-size:20px;
+   font-weight: 300;
+
+}
+
+#stats > option {
+   background-color:rgba(180, 59, 101, 0.9);
+   color:white;
+
+}
+
