@@ -97,6 +97,7 @@ const Test = () => {
             "/Info"
         )
     }
+    
     const aktualisreErgebnis = (antwort, indexfrage) => {
         
         let copyergebnis = [...ergebnis]
@@ -172,7 +173,7 @@ const Test = () => {
                         {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]}
 
                             propsQuestionLänge={data.length}
-                            propsQuestionIndex={questionIndex + 1}
+                            propsQuestionIndex={questionIndex}
                             antwortHandler={aktualisreErgebnis}
                         >
 
@@ -182,13 +183,13 @@ const Test = () => {
 
                             <div className="testläuft">
                                 <p id="zeit" className="uhr">Sie haben noch {zeit} minuten zeit! </p>
-                                <button id="btn" onClick={zurInfo}>Info</button>
+                                <button className="buttonstyle" onClick={zurInfo}>Info</button>
 
-                                <button onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
-                                <button onClick={NächsteAufgabe}>Nächste Aufgabe</button>
-                                <div>
+                                <button className="buttonstyle" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
+                                <button  className="buttonstyle" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
+                                <div id="results">
 
-                                    <button onClick={results}>Results</button>
+                                    <button  id="punkte"onClick={results}>Punkte</button>
                                     {showergebnis ? `Du hast  ${anzahlrichtige} richtege antwort beantwortet` : ""}
 
                                 </div>

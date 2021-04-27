@@ -31,12 +31,28 @@
    margin-left: 10px;
    
 }
+#results{
+   text-align: center;
+   font-weight: bold;
+   font-size: 30px;
+   color: azure;
+}
 #bundesländerselect{
    color: rgba(245, 247, 246, 0.856);
    font-weight: bold;
    font-size: larger;
 
 }
+#punkte{
+   background-color:rgba(180, 59, 101, 0.9);
+   font-family: 'Rowdies', cursive;
+   color:white;
+   padding: 17px;
+   width:200px;
+   
+   font-size: 20px;
+}
+
 #teststarten{
    background-color:rgba(180, 59, 101, 0.9);
    font-family: 'Rowdies', cursive;
@@ -94,3 +110,27 @@
 
 }
 
+.buttonstyle{
+   color: #fff;
+   padding: 15px;
+   font-size: 20px;
+   font-family: 'Rowdies', cursive;
+   background-color:rgba(185, 55, 61, 0.9);
+border: 3px black solid;
+}
+
+.Anzahlfrage{
+   font-size: 40px;
+   font-weight: bold;
+   color: rgb(238, 238, 223);
+}
+.FragenAngabenText{
+   font-size: 30px;
+   font-weight: bold;
+   font-family: 'Rowdies', cursive;
+}
+.FragenAngaben{
+   font-size:30px;
+   font-weight: bold;
+   
+}
