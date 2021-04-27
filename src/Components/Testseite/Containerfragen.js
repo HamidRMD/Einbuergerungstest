@@ -28,15 +28,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
         })
 
     }
-    /*  
-  const richtgeanwortauswählen=()=>{
-      if (propsQuestion.correct === answerIndex) {
-          console.log("corretanswer1=")
-          setnutzerantwort(true)
-      }
-  }
-  
-  */
+   
     return (
         <div className="FragenAngaben">
 
