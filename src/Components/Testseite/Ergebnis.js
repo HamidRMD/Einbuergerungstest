@@ -1,4 +1,6 @@
 import "./ergebnis.css"
+
+import Logo from './Logo';
 import { useState, useEffect } from "react"
 const Ergebnis = () => {
     const [punktZahl, setpunktZahl] = useState(null)
@@ -16,11 +18,15 @@ const Ergebnis = () => {
     }, [punktZahl])
     return (
         <div className="body-Ergebnis">
-            <h1>Ergebnis ...</h1>
+            <Logo/>
+            <h1>Herzlich Glückwüunch</h1>
             {bestanden ?
                 <p>Du hast bestanden</p>
                 : <p>du hast nicht bestanden</p>}
+        <button>Test wiederholen</button>
+        <button>Test vorbereitung</button>
         </div>
+
     )
 }
 
