@@ -6,15 +6,15 @@ import './TestSeite.css'
 import React, { useState, useEffect } from 'react';
 
 const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionIndex, antwortHandler }) => {
-  
-  
+
+
     const [showAnswer, setshowAnswer] = useState({
 
         show: false,
         optionSelected: undefined
     })
 
-   // const [nutzerantwort, setnutzerantwort] = useState(false)
+    // const [nutzerantwort, setnutzerantwort] = useState(false)
 
     useEffect(() => {
         setshowAnswer({
@@ -33,11 +33,11 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
         })
 
     }
-   
+
     return (
         <div className="FragenAngaben">
-
-            <h1 className="Anzahlfrage">Test:{propsQuestionIndex +1 } / {propsQuestionLänge}</h1>
+         
+            <h1 className="Anzahlfrage">Test:{propsQuestionIndex + 1} / {propsQuestionLänge}</h1>
             <p className="FragenAngabenText">{propsQuestion.question}</p>
             {propsQuestion.image &&
                 <img src={"http://localhost:5000/images/" + propsQuestion.image} alt="ein Bild" />
@@ -49,7 +49,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
 
                     <li id="liste">
 
-                        <button  id="anwort" onClick={() => {
+                        <button id="anwort" onClick={() => {
 
                             anwserButton(answerItem);
                             //wie kann ich die richtige antwort erknennen
@@ -57,7 +57,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
                             if (propsQuestion.correct === answerIndex) {
                                 console.log("corretanswer1=")
                                 antwortHandler(true, propsQuestionIndex)
-                               
+
                             }
 
                             else {
@@ -66,14 +66,14 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
 
                         }}>{answerItem}</button>
 
-                        {showAnswer.show && propsQuestion.correct === answerIndex && showAnswer.optionSelected === answerItem }
-                        {showAnswer.show && showAnswer.optionSelected === answerItem && propsQuestion.correct !== answerIndex }
-                       
+                        {showAnswer.show && propsQuestion.correct === answerIndex && showAnswer.optionSelected === answerItem}
+                        {showAnswer.show && showAnswer.optionSelected === answerItem && propsQuestion.correct !== answerIndex}
+
                     </li>
                 )}
             </ul>
-            </div>
-       
+        </div>
+
     )
 }
 

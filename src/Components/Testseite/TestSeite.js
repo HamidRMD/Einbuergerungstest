@@ -16,13 +16,14 @@ const Test = () => {
     const [timeabgelaufen, setTimeabgelaufen] = useState(false)
     const [questionIndex, setQuestionIndex] = useState(0)
     const [testläuft, setTestläuft] = useState(false)
-   
+const [showuhrzeittext, setshowuhrzeittext] = useState(false)
     const [anzahlrichtige, setanzahlrichtige] = useState(0)
     const [ergebnis, setErgebnis] = useState([])
     const Vergangenheit = useHistory()
 
 
     const teststarten = () => {
+       setshowuhrzeittext(true)
         setTestläuft(true)
         const land = document.querySelector("#stats").value;
 
@@ -104,7 +105,7 @@ const Test = () => {
             //},0 ist startwert ist 0 für reducer
         )
         localStorage.setItem("testpunkte", summe)
-     
+
         Vergangenheit.push(
             "/Ergebnis"
         )
@@ -133,7 +134,7 @@ const Test = () => {
         console.log("summe=", summe)
 
         setanzahlrichtige(summe)
-        
+
 
     }
 
@@ -142,6 +143,7 @@ const Test = () => {
 
         <div className="body-testSeite">
             <Logo />
+
             {!testläuft ?
 
                 <div className="bundesländer">
@@ -180,8 +182,11 @@ const Test = () => {
                         : ""}
 
                     <div className="container-testSeite">
+                        {showuhrzeittext ? 
+                        <p className="uhrzeit">Uhrzeit</p>
+                        : ""}
 
-                        <p id="zeit" className="uhr">Sie haben noch {zeit} minuten zeit! </p>
+                        <p id="zeit" className="uhr">{zeit}</p>
 
                         {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]}
 
@@ -200,7 +205,7 @@ const Test = () => {
                                 <div id="results">
                                     <p>Punkte</p>
                                     <button id="punkte" onClick={results}> {anzahlrichtige}</button>
-                                  
+
 
                                 </div>
 

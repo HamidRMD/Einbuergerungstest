@@ -6,32 +6,33 @@
     align-items: center;
     height: 981px;
 }
-
+.container-testSeite{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   
+}
+.Uhrzeit{
+  
+   font-family: 'Rowdies', cursive;
+   color:white;
+  
+   font-size: 20px
+}
+.uhr{
+   background-color:rgba(180, 59, 101, 0.9);
+   font-family: 'Rowdies', cursive;
+   color:white;
+   padding: 17px;
+   width:200px;
+   border-radius: 100%;
+   font-size: 20px;
+   text-align: center;
+}
 
 #liste{
    list-style: none;
 }
-
-.uhr {
-   font-size:30px;
-   padding-top:10px;
-color: white;
-}
-
-#uhrStr {
-   padding-top:0.5rem;
-}
-
-
-#uhrDiv {
-   background-color:rgba(180, 59, 101, 0.9);
-   border-radius: 50%;  
-   padding-bottom: 3px; 
-   width:130px;
-
-
-}
-
 #zeitDiv{
    color: rgb(243, 235, 235);
    text-align: center;
