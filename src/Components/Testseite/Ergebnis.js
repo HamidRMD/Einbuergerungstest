@@ -41,8 +41,8 @@ const Ergebnis = () => {
                 <h1>Herzlich Glückwüunch</h1>
                 : <h1>Es tut mir Leid</h1>}
             <p>Sie haben die prüfung {!bestanden ? "nich" : ""}  bestanden  und Sie haben {punktZahl} fragen  von 33 richtig beantwortet</p>
-            
-            {bestanden ? 
+
+            {bestanden ?
                 <h2>Bestanden</h2>
                 : <h2>nicht Bestanden</h2>}
 

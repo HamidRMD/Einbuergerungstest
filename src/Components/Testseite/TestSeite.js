@@ -16,7 +16,7 @@ const Test = () => {
     const [timeabgelaufen, setTimeabgelaufen] = useState(false)
     const [questionIndex, setQuestionIndex] = useState(0)
     const [testläuft, setTestläuft] = useState(false)
-    const [showergebnis, setshowergebnis] = useState(false)
+   
     const [anzahlrichtige, setanzahlrichtige] = useState(0)
     const [ergebnis, setErgebnis] = useState([])
     const Vergangenheit = useHistory()
@@ -133,7 +133,7 @@ const Test = () => {
         console.log("summe=", summe)
 
         setanzahlrichtige(summe)
-        setshowergebnis(true)
+        
 
     }
 
@@ -200,7 +200,7 @@ const Test = () => {
                                 <div id="results">
                                     <p>Punkte</p>
                                     <button id="punkte" onClick={results}> {anzahlrichtige}</button>
-                                    {showergebnis ? `Du hast  ${anzahlrichtige} richtege antwort beantwortet` : ""}
+                                  
 
                                 </div>
 
