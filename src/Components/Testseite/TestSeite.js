@@ -93,6 +93,7 @@ const Test = () => {
     }
 
     const Testbeenden = () => {
+        alert("Test beendet")
         Vergangenheit.push(
             "/StartSeite"
         )
@@ -168,7 +169,7 @@ const Test = () => {
 
                     <div className="container-testSeite">
 
-
+                    <p id="zeit" className="uhr">Sie haben noch {zeit} minuten zeit! </p>
 
                         {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]}
 
@@ -178,12 +179,12 @@ const Test = () => {
                         >
 
                         </Containerfragen>}
-
-                        {testläuft ?
+                          {testläuft ?
 
                             <div className="testläuft">
-                                <p id="zeit" className="uhr">Sie haben noch {zeit} minuten zeit! </p>
-                             
+                            
+                          
+                 
 
                                 <button className="buttonstyle" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
                                 <button  className="buttonstyle" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
