@@ -14,8 +14,8 @@
 
 }
 
-.container-bewertung {
-    height:700px;
+.container {
+    height:800px;
     width: 800px;
     background-color: rgba(43, 21, 21, 0.534);
     padding: 0 80px;
@@ -24,8 +24,12 @@
 
 
 }
-
-.bewertung-paragraph {
+.p-mitte {
+    text-align: center;
+    font-size: 4rem;
+    font-family: fantasy;
+}
+.paragraph {
     font-size:25px;
     padding-top: 35px;
     padding-bottom: 25px;
@@ -43,7 +47,7 @@
 
 .zurFragen {
     color: #fff;
-    margin: 2rem;
+    margin: 4rem;
     border-radius: 1rem;
     padding: 15px;
     

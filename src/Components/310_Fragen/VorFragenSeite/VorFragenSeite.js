@@ -20,10 +20,10 @@ const Zurück = () => {
                 zIndex: 10
             }}>
                 <Logo />
-                <div className="container-bewertung">
-                    <h1>Einbürgerungstest</h1>
+                <div className="container">
+                    <h1 className={"p-mitte"}>Einbürgerungstest</h1>
 
-                    <p className="bewertung-paragraph">Alle allgemeine Fragen und Bundesland Fragen für den Test "Leben in Deutschland". Hier finden Sie alle 300 allgemeine Fragen und 10 Bundesland Fragen für den Einbürgerungstest "Leben in Deutschland".</p>
+                    <p className="paragraph">Alle allgemeine Fragen und Bundesland Fragen für den Test "Leben in Deutschland". Hier finden Sie alle 300 allgemeine Fragen und 10 Bundesland Fragen für den Einbürgerungstest "Leben in Deutschland".</p>
 
 
                     
