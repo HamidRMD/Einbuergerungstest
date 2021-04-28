@@ -20,15 +20,15 @@ const Ergebnis = () => {
     }, [punktZahl])
 
     const Vergangenheit = useHistory()
-    
-    const Testvorbereitung=()=>{
+
+    const Testvorbereitung = () => {
         console.log("Testvorbereitung!")
         Vergangenheit.push(
             "/Fragen"
         )
     }
-  
-    const Testwiederholen=()=>{
+
+    const Testwiederholen = () => {
         console.log("Testwiederholen!")
         Vergangenheit.push(
             "/Test"
@@ -36,15 +36,20 @@ const Ergebnis = () => {
     }
     return (
         <div className="body-Ergebnis">
-            <Logo/>
-            <h1>Herzlich Glückwüunch</h1>
+            <Logo />
             {bestanden ?
-                <p>Sie haben die prüfung bestanden</p>
-                : <p>Sie haben die prüfung bestanden</p>}
+                <h1>Herzlich Glückwüunch</h1>
+                : <h1>Es tut mir Leid</h1>}
+            <p>Sie haben die prüfung {!bestanden ? "nich" : ""}  bestanden  und Sie haben {punktZahl} fragen  von 33 richtig beantwortet</p>
+            
+            {bestanden ? 
+                <h2>Bestanden</h2>
+                : <h2>nicht Bestanden</h2>}
 
-        <button className="buttonstyle" onClick={Testwiederholen}>Test wiederholen</button>
-       <p>Punkte</p>
-        <button className="buttonstyle" onClick={Testvorbereitung}>Test vorbereitung</button>
+            <button className="buttonstyle" onClick={Testwiederholen}>Test wiederholen</button>
+
+            <p className="punktZahl">{punktZahl}</p>
+            <button className="buttonstyle" onClick={Testvorbereitung}>Test vorbereitung</button>
         </div>
 
     )

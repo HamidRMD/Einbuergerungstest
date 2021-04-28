@@ -103,8 +103,8 @@ const Test = () => {
         }, 0
             //},0 ist startwert ist 0 für reducer
         )
-        localStorage.setItem("testpunkte",summe)
-        alert("Test beendet")
+        localStorage.setItem("testpunkte", summe)
+     
         Vergangenheit.push(
             "/Ergebnis"
         )
@@ -119,7 +119,7 @@ const Test = () => {
 
 
     const results = () => {
-       
+
         const summe = ergebnis.reduce((zwischenSumme, aktullewert) => {
             if (aktullewert) {
                 zwischenSumme = zwischenSumme + 1
@@ -198,8 +198,8 @@ const Test = () => {
                                 <button className="buttonstyle" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
                                 <button className="buttonstyle" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
                                 <div id="results">
-
-                                    <button id="punkte" onClick={results}>Punkte</button>
+                                    <p>Punkte</p>
+                                    <button id="punkte" onClick={results}> {anzahlrichtige}</button>
                                     {showergebnis ? `Du hast  ${anzahlrichtige} richtege antwort beantwortet` : ""}
 
                                 </div>
