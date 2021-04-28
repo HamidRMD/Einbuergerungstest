@@ -92,9 +92,9 @@ const Test = () => {
 
     }
 
-    const zurInfo = () => {
+    const Testbeenden = () => {
         Vergangenheit.push(
-            "/Info"
+            "/StartSeite"
         )
     }
     
@@ -183,16 +183,18 @@ const Test = () => {
 
                             <div className="testläuft">
                                 <p id="zeit" className="uhr">Sie haben noch {zeit} minuten zeit! </p>
-                                <button className="buttonstyle" onClick={zurInfo}>Info</button>
+                             
 
                                 <button className="buttonstyle" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
                                 <button  className="buttonstyle" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
                                 <div id="results">
 
-                                    <button  id="punkte"onClick={results}>Punkte</button>
+                                    <button  id="punkte" onClick={results}>Punkte</button>
                                     {showergebnis ? `Du hast  ${anzahlrichtige} richtege antwort beantwortet` : ""}
 
                                 </div>
+
+<button className="buttonstyle" onClick={Testbeenden}>Test beenden</button>
                             </div>
 
                             : " "}
@@ -202,7 +204,6 @@ const Test = () => {
                 </div>
 
                 : <p>zeit ist um</p>}
-
 
         </div>
 
