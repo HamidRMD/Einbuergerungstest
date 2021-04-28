@@ -46,9 +46,11 @@ const Ergebnis = () => {
                 <h2>Bestanden</h2>
                 : <h2>nicht Bestanden</h2>}
 
-            <button className="buttonstyle" onClick={Testwiederholen}>Test wiederholen</button>
-
+    
             <p className="punktZahl">{punktZahl}</p>
+            <p>Punkte</p>
+            <button className="buttonstyle" onClick={Testwiederholen}>Test wiederholen</button>
+          
             <button className="buttonstyle" onClick={Testvorbereitung}>Test vorbereitung</button>
         </div>
 
