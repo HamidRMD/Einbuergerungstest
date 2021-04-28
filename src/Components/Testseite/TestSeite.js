@@ -93,6 +93,17 @@ const Test = () => {
     }
 
     const Testbeenden = () => {
+        const summe = ergebnis.reduce((zwischenSumme, aktullewert) => {
+            if (aktullewert) {
+                zwischenSumme = zwischenSumme + 1
+
+            }
+            return zwischenSumme
+
+        }, 0
+            //},0 ist startwert ist 0 für reducer
+        )
+        localStorage.setItem("testpunkte",summe)
         alert("Test beendet")
         Vergangenheit.push(
             "/Ergebnis"
@@ -108,6 +119,7 @@ const Test = () => {
 
 
     const results = () => {
+       
         const summe = ergebnis.reduce((zwischenSumme, aktullewert) => {
             if (aktullewert) {
                 zwischenSumme = zwischenSumme + 1
