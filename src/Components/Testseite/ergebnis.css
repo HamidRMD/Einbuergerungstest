@@ -12,7 +12,16 @@ h1{
     font-size: 50px;
 }
 p{
-    color: rgb(27, 27, 19);
+    color: rgb(243, 243, 234);
     font-weight: bold;
     font-size: 50px;
 }
+.buttonstyle{
+    color: #fff;
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'Rowdies', cursive;
+    background-color:rgba(126, 92, 94, 0.9);
+ 
+
+ }

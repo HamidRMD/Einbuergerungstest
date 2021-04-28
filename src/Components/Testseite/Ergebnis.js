@@ -1,7 +1,9 @@
 import "./ergebnis.css"
-
 import Logo from './Logo';
+import { useHistory } from 'react-router-dom'
 import { useState, useEffect } from "react"
+
+
 const Ergebnis = () => {
     const [punktZahl, setpunktZahl] = useState(null)
     const [bestanden, setBestanden] = useState(false)
@@ -16,15 +18,33 @@ const Ergebnis = () => {
 
 
     }, [punktZahl])
+
+    const Vergangenheit = useHistory()
+    
+    const Testvorbereitung=()=>{
+        console.log("Testvorbereitung!")
+        Vergangenheit.push(
+            "/Fragen"
+        )
+    }
+  
+    const Testwiederholen=()=>{
+        console.log("Testwiederholen!")
+        Vergangenheit.push(
+            "/Test"
+        )
+    }
     return (
         <div className="body-Ergebnis">
             <Logo/>
             <h1>Herzlich Glückwüunch</h1>
             {bestanden ?
-                <p>Du hast bestanden</p>
-                : <p>du hast nicht bestanden</p>}
-        <button>Test wiederholen</button>
-        <button>Test vorbereitung</button>
+                <p>Sie haben die prüfung bestanden</p>
+                : <p>Sie haben die prüfung bestanden</p>}
+
+        <button className="buttonstyle" onClick={Testwiederholen}>Test wiederholen</button>
+       <p>Punkte</p>
+        <button className="buttonstyle" onClick={Testvorbereitung}>Test vorbereitung</button>
         </div>
 
     )
