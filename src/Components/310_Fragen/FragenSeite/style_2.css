@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    
+    background-repeat: no-repeat;
+    height: 981px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.container-bewertung {
+    height:700px;
+    width: 800px;
+    background-color: rgba(43, 21, 21, 0.534);
+    padding: 0 80px;
+    color: #fff;
+    font-family: 'Noto Sans JP', sans-serif;
+
+
+}
+
+.bewertung-paragraph {
+    font-size:25px;
+    padding-top: 35px;
+    padding-bottom: 25px;
+
+
+}
+
+.container-bewertung > h1 {
+    font-size:45px;
+    text-align: center;
+    padding-top:10px;
+    border-bottom: 1px solid white;
+
+}
+
+.zurFragen {
+    color: #fff;
+    margin: 2rem;
+    border-radius: 1rem;
+    padding: 15px;
+    
+    font-family: 'Rowdies', cursive;
+    background-color:rgba(182, 89, 122, 0.9);
+    border:none;
+    position: relative;
+    left:600px;
+    top:280px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: 'Rowdies', cursive;
+}
+.zurFragen:hover {
+    font-size: xx-large;
+    background-color:pink;
+    color: black;
+    border-color: yellowgreen;
+}
+
+
+

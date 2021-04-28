@@ -38,6 +38,8 @@ const Fragen = () => {
                 alert(error.massage)
             })
     }, [])
+   
+    
 
 
     const VorherigeAufgabe = () => {
@@ -66,7 +68,7 @@ const Fragen = () => {
     const clickAlleStates = (event) => {
         //console.log("event : ",event) 
         //console.log("value", event.target.value);
-
+        setFragenIndex(0)
         if (event.target.value === "Allgemein")
             setFilterData(data)
         else
@@ -79,7 +81,7 @@ const Fragen = () => {
         <Logo />
         
         <div className={"alleFargenStyle"}>
-        <button className={"zurück1"}>Zurück</button>
+        <Link to={"/"}><button className={"zurück"}>Zurück</button></Link>
             <button onClick={clickAlleFragen}>
                 {"Allgemein"}
             </button>
@@ -95,7 +97,7 @@ const Fragen = () => {
 
                 <div className={"FooterStyle"}>
                     <button className={"vorherigeAufgabe"} onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
-                    <button onClick={zurInfo}>Info</button>
+                    
                     <button className={"nächsteAufgabe"} onClick={NächsteAufgabe}>Nächste Aufgabe</button>
                 </div>
             </div>
