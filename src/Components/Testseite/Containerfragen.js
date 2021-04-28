@@ -66,8 +66,8 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
 
                         }}>{answerItem}</button>
 
-                        {showAnswer.show && propsQuestion.correct === answerIndex && showAnswer.optionSelected === answerItem && <span className="text-success">{"Richtige Antwort"}</span>}
-                        {showAnswer.show && showAnswer.optionSelected === answerItem && propsQuestion.correct !== answerIndex && <span className="text-danger">{"Falsche Antwort"}</span>}
+                        {showAnswer.show && propsQuestion.correct === answerIndex && showAnswer.optionSelected === answerItem }
+                        {showAnswer.show && showAnswer.optionSelected === answerItem && propsQuestion.correct !== answerIndex }
                        
                     </li>
                 )}

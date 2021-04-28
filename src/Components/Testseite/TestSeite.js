@@ -95,17 +95,17 @@ const Test = () => {
     const Testbeenden = () => {
         alert("Test beendet")
         Vergangenheit.push(
-            "/StartSeite"
+            "/Ergebnis"
         )
     }
-    
+
     const aktualisreErgebnis = (antwort, indexfrage) => {
-        
+
         let copyergebnis = [...ergebnis]
         copyergebnis[indexfrage] = antwort
         setErgebnis(copyergebnis)
     }
-    
+
 
     const results = () => {
         const summe = ergebnis.reduce((zwischenSumme, aktullewert) => {
@@ -116,10 +116,10 @@ const Test = () => {
             return zwischenSumme
 
         }, 0
-        //},0 ist startwert ist 0 für reducer
+            //},0 ist startwert ist 0 für reducer
         )
         console.log("summe=", summe)
-        
+
         setanzahlrichtige(summe)
         setshowergebnis(true)
 
@@ -130,33 +130,33 @@ const Test = () => {
 
         <div className="body-testSeite">
             <Logo />
-  {!testläuft ?
-            
-<div className="bundesländer">
-            <label id="bundesländerselect">Bundesländer auswählen : </label>
-            <select id="stats" name="stats">
+            {!testläuft ?
 
-                <option value="Baden-Württemberg">Baden-Württemberg </option>
-                <option value="Bayern">Bayern </option>
-                <option value="Berlin">Berlin</option>
-                <option value="Brandenburg">Brandenburg </option>
-                <option value="Bremen">Bremen</option>
-                <option value="Hamburg">Hamburg</option>
-                <option value="Hessen">Hessen</option>
-                <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
-                <option value="Niedersachsen">Niedersachsen</option>
-                <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
-                <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
-                <option value="Saarland">Saarland</option>
-                <option value="Sachsen">Sachsen</option>
-                <option value="Sachsen-Anhalt">Sachsen-Anhalt</option>
-                <option value="Schleswig-Holstein">Schleswig-Holstein </option>
-                <option value="Thüringen">Thüringen</option>
+                <div className="bundesländer">
+                    <label id="bundesländerselect">Bundesländer auswählen : </label>
+                    <select id="stats" name="stats">
 
-            </select>
-            </div>
+                        <option value="Baden-Württemberg">Baden-Württemberg </option>
+                        <option value="Bayern">Bayern </option>
+                        <option value="Berlin">Berlin</option>
+                        <option value="Brandenburg">Brandenburg </option>
+                        <option value="Bremen">Bremen</option>
+                        <option value="Hamburg">Hamburg</option>
+                        <option value="Hessen">Hessen</option>
+                        <option value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
+                        <option value="Niedersachsen">Niedersachsen</option>
+                        <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
+                        <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
+                        <option value="Saarland">Saarland</option>
+                        <option value="Sachsen">Sachsen</option>
+                        <option value="Sachsen-Anhalt">Sachsen-Anhalt</option>
+                        <option value="Schleswig-Holstein">Schleswig-Holstein </option>
+                        <option value="Thüringen">Thüringen</option>
 
-             : ""}
+                    </select>
+                </div>
+
+                : ""}
 
             {!timeabgelaufen ?
 
@@ -169,7 +169,7 @@ const Test = () => {
 
                     <div className="container-testSeite">
 
-                    <p id="zeit" className="uhr">Sie haben noch {zeit} minuten zeit! </p>
+                        <p id="zeit" className="uhr">Sie haben noch {zeit} minuten zeit! </p>
 
                         {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]}
 
@@ -179,23 +179,23 @@ const Test = () => {
                         >
 
                         </Containerfragen>}
-                          {testläuft ?
+                        {testläuft ?
 
                             <div className="testläuft">
-                            
-                          
-                 
+
+
+
 
                                 <button className="buttonstyle" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
-                                <button  className="buttonstyle" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
+                                <button className="buttonstyle" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
                                 <div id="results">
 
-                                    <button  id="punkte" onClick={results}>Punkte</button>
+                                    <button id="punkte" onClick={results}>Punkte</button>
                                     {showergebnis ? `Du hast  ${anzahlrichtige} richtege antwort beantwortet` : ""}
 
                                 </div>
 
-<button className="buttonstyle" onClick={Testbeenden}>Test beenden</button>
+                                <button className="buttonstyle" onClick={Testbeenden}>Test beenden</button>
                             </div>
 
                             : " "}
