@@ -183,9 +183,6 @@ const Test = () => {
 
                             <div className="testläuft">
 
-
-
-
                                 <button className="buttonstyle" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
                                 <button className="buttonstyle" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
                                 <div id="results">
