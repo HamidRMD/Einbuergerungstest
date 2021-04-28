@@ -16,14 +16,16 @@ const Test = () => {
     const [timeabgelaufen, setTimeabgelaufen] = useState(false)
     const [questionIndex, setQuestionIndex] = useState(0)
     const [testläuft, setTestläuft] = useState(false)
-const [showuhrzeittext, setshowuhrzeittext] = useState(false)
+    const [showuhrzeittext, setshowuhrzeittext] = useState(false)
+    const [showuhr, setUhr] = useState(false)
     const [anzahlrichtige, setanzahlrichtige] = useState(0)
     const [ergebnis, setErgebnis] = useState([])
     const Vergangenheit = useHistory()
 
 
     const teststarten = () => {
-       setshowuhrzeittext(true)
+        setshowuhrzeittext(true)
+        setUhr(true)
         setTestläuft(true)
         const land = document.querySelector("#stats").value;
 
@@ -182,11 +184,12 @@ const [showuhrzeittext, setshowuhrzeittext] = useState(false)
                         : ""}
 
                     <div className="container-testSeite">
-                        {showuhrzeittext ? 
-                        <p className="uhrzeit">Uhrzeit</p>
-                        : ""}
-
-                        <p id="zeit" className="uhr">{zeit}</p>
+                        {showuhrzeittext ?
+                            <p className="uhrzeit">Uhrzeit</p>
+                            : ""}
+                        {showuhr ?
+                            <p id="zeit" className="uhr">{zeit}</p>
+                            : ""}
 
                         {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]}
 
