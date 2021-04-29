@@ -49,7 +49,11 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
 
                     <li id="liste">
 
+<<<<<<< HEAD
                         <button className="anwort" onClick={() => {
+=======
+                        <button id="antwortButton" onClick={() => {
+>>>>>>> 0815828230e2d9c5a4edfe2f24542df0cfb479d5
 
                             anwserButton(answerItem);
                             //wie kann ich die richtige antwort erknennen
