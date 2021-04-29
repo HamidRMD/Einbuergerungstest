@@ -205,14 +205,15 @@ const Test = () => {
                         {testläuft ?
 
                             <div className="testläuft">
-
+                            <div className="containerButton">
                                 <button className="nextAndLastButton" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
-                                <button className="nextAndLastButton" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
                                 <button className="nextAndLastButton" onClick={Testbeenden}>Test beenden</button>
+                                <button className="nextAndLastButton" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
+                            </div>
 
                                 <div id="punktZählerContainer">
                                     <div>
-                                    <p>Punkte</p>
+                                    <p className="punktZählerStr">Punkte</p>
                                     <button id="punkte" onClick={results}> {anzahlrichtige}</button>
                                     </div>
 
