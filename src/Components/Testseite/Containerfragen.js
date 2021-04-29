@@ -37,7 +37,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
     return (
         <div className="FragenAngaben">
          
-            <h1 className="Anzahlfrage">Test:{propsQuestionIndex + 1} / {propsQuestionLänge}</h1>
+            <h1 className="Anzahlfrage">Aufgabe: {propsQuestionIndex + 1} / {propsQuestionLänge}</h1>
             <p className="FragenAngabenText">{propsQuestion.question}</p>
             {propsQuestion.image &&
                 <img src={"http://localhost:5000/images/" + propsQuestion.image} alt="ein Bild" />
@@ -49,7 +49,11 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
 
                     <li id="liste">
 
+<<<<<<< HEAD
+                        <button id="antwortButton" onClick={() => {
+=======
                         <button className="anwort" onClick={() => {
+>>>>>>> 45063f766469ea1231d621bcc9533d913fa40063
 
                             anwserButton(answerItem);
                             //wie kann ich die richtige antwort erknennen
