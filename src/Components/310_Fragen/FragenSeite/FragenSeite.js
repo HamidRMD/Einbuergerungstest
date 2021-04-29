@@ -10,6 +10,7 @@ import "./style_1.css";
 const states = ["Allgemein", "Baden-Württemberg", "Bayern", "Berlin", "Brandenburg", "Bremen", "Hamburg", "Hessen", "Mecklenburg-Vorpommern", "Niedersachsen", "Nordrhein-Westfalen", "Rheinland-Pfalz", "Saarland", "Sachsen", "Sachsen-Anhalt", "Schleswig-Holstein", "Thüringen"]
 
 
+
 const Fragen = () => {
 
     const [data, setdata] = useState([]);
@@ -28,15 +29,7 @@ const Fragen = () => {
     //create useEffect für fetch axios, damit wir data von axios benutzen können
     //wenn wir was in useEffect nach return schreiben, wird das uns in erste Load zeigen. 
     useEffect(() => {
-        fetch310Fragen()
-            .then(response => {
-                //console.log("what is res? ",res);    //is a data:Array(82)
-                setdata(response.data)
-                setFilterData(response.data)
-            })
-            .catch(error => {
-                alert(error.massage)
-            })
+       
     }, [])
    
     
@@ -77,9 +70,7 @@ const Fragen = () => {
     }
 
     return <div className={"FragenStyle"}>
-
         <Logo />
-        
         <div className={"alleFargenStyle"}>
         <Link to={"/"}><button className={"zurück"}>Zurück</button></Link>
             <button onClick={clickAlleFragen}>
