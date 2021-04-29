@@ -203,8 +203,8 @@ const Test = () => {
 
                             <div className="testläuft">
 
-                                <button className="buttonstyle" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
-                                <button className="buttonstyle" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
+                                <button className="testbutton" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
+                                <button className="testbutton" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
                                 <div id="results">
                                     <p>Punkte</p>
                                     <button id="punkte" onClick={results}> {anzahlrichtige}</button>
@@ -212,7 +212,7 @@ const Test = () => {
 
                                 </div>
 
-                                <button className="buttonstyle" onClick={Testbeenden}>Test beenden</button>
+                                <button className="testbutton" onClick={Testbeenden}>Test beenden</button>
                             </div>
 
                             : " "}

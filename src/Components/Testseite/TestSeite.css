@@ -71,11 +71,12 @@
 #punkte{
    background-color:rgba(180, 59, 101, 0.9);
    font-family: 'Rowdies', cursive;
-   color:white;
-   padding: 17px;
-   width:200px;
-   
-   font-size: 20px;
+   color: rgb(245, 230, 230);
+    font-weight: bold;
+    font-size: 70px;
+    border-radius: 100%;
+    padding: 40px;
+    margin: 5px;
 }
 
 #teststarten{
@@ -134,15 +135,25 @@
    color:white;
 
 }
-
-.buttonstyle{
-   color: #fff;
-   padding: 15px;
-   font-size: 20px;
+.anwort{
+   background-color:rgba(180, 59, 101, 0.9);
    font-family: 'Rowdies', cursive;
-   background-color:rgba(185, 55, 61, 0.9);
-border: 3px black solid;
+   color: rgb(245, 230, 230);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
 }
+.testbutton{
+   background-color:rgba(180, 59, 101, 0.9);
+   font-family: 'Rowdies', cursive;
+   color: rgb(245, 230, 230);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+    margin: 5px;
+}
+
 
 .Anzahlfrage{
    font-size: 40px;
