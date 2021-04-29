@@ -1,17 +1,128 @@
 .body-testSeite {
     background-image: url("../../img/backgroundstartseite.jpeg");
     display: flex;
+    background-size:cover;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 950px;
+    height: 981px;
 }
 
-.container-testSeite {
-    height:700px;
-    width: 1000px;
-    background-color: rgba(43, 21, 21, 0.46);
-    padding: 0 80px;
-    
+
+#divUhr {
+font-family: 'Rowdies', cursive;
+color:white;
+position: absolute;
+right: 3rem;
+top: 1.5rem;
+
+}
+
+.uhrHeading{
+   color:white;
+   font-size: 30px;
+   padding-left: 5px;
+   
+}
+
+.uhrZahlen {
+   height:100px;
+   width:120px;
+   border-radius: 50%;
+   font-size:35px;
+   padding-left: 38px;
+   padding-top: 25px;
+   background-color:rgba(180, 59, 101, 0.9);
+
+}
+
+#uhrStr {
+   font-size:20px;
+}
+
+.uhr{
+   background-color:rgba(180, 59, 101, 0.9);
+   font-family: 'Rowdies', cursive;
+   color:white;
+   padding: 17px;
+   width:200px;
+   border-radius: 100%;
+   font-size: 20px;
+   text-align: center;
+}
+
+#liste{
+   list-style: none;
+}
+#zeitDiv{
+   color: rgb(243, 235, 235);
+   text-align: center;
+   margin: 10px;
+   padding: 5px;
+   font-size: 20px;
+   position: absolute;
+   right: 40px;
+   top: 4px;
+   font-family: 'Rowdies', cursive;
+
+   
+}
+
+
+
+#stats{
+   color: rgb(15, 15, 15);
+   font-weight: bold;
+   font-size: larger;
+   margin-left: 10px;
+   
+}
+
+#punktZählerContainer {
+display:flex;
+justify-content: center;
+width: 100%;
+font-family: 'Rowdies', cursive;
+margin-top: 40px;
+
+}
+
+#bundesländerselect{
+   color: rgba(245, 247, 246, 0.856);
+   font-weight: bold;
+   font-size: larger;
+
+}
+
+.punktZählerStr {
+font-size: 35px;
+margin-bottom: 0;
+color: white;
+
+}
+
+#punkte{
+   background-color:rgba(180, 59, 101, 0.9);
+   color:white;
+   padding: 30px;
+   width:121px;
+   height:120px;
+   font-size: 45px;
+   border-radius:50%;
+   border:none;
+
+}
+
+#teststarten{
+   background-color:rgba(180, 59, 101, 0.9);
+   font-family: 'Rowdies', cursive;
+   color:white;
+   padding: 17px;
+   width:200px;
+   border: none;
+   font-size: 20px;
+   margin-bottom: 300px;
+ 
 }
 
 .infoButton {
@@ -27,13 +138,22 @@
 
 }
 
+.containerButton {
+ display: flex;
+ width: 100%;
+ justify-content:space-between;
+ padding-top: 20px;
+
+}
+
 .nextAndLastButton {
    color: #fff;
    padding: 15px;
    font-size: 20px;
    font-family: 'Rowdies', cursive;
-   background-color:rgba(182, 89, 122, 0.9);
+   background-color:rgba(180, 59, 101, 0.9);
    border:none;
+   margin-right: 5px;
 
 }
 
@@ -43,3 +163,86 @@
    padding-top:110px;
 
 }
+
+.bundesländer {
+   position: absolute;
+   left: 40rem;
+   top: 25rem;
+   font-family: 'Rowdies', cursive;
+   font-size:20px;
+   font-weight: 300;
+
+}
+
+#stats > option {
+   background-color:rgba(180, 59, 101, 0.9);
+   color:white;
+
+}
+.anwort{
+   background-color:rgba(180, 59, 101, 0.9);
+   font-family: 'Rowdies', cursive;
+   color: rgb(245, 230, 230);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+}
+.testbutton{
+   background-color:rgba(180, 59, 101, 0.9);
+   font-family: 'Rowdies', cursive;
+   color: rgb(245, 230, 230);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+    margin: 5px;
+}
+
+
+.Anzahlfrage{
+   font-size: 40px;
+   font-weight: bold;
+   color: rgb(238, 238, 223);
+}
+.FragenAngabenText{
+   font-family: 'Roboto Slab', serif;
+   font-size: 30px;
+   padding-top: 5px;
+   color: white;
+
+}
+.FragenAngaben{
+   width:1000px;
+   height:600px;
+   padding:80px;
+   background-color: rgba(43, 21, 21, 0.46);
+   
+}
+
+.Anzahlfrage {
+   font-family: 'Roboto Slab', serif;
+   border-bottom: 1px solid white;
+   word-spacing: 8px;
+   margin:0;
+   font-size:35px;
+
+   }
+
+   #antwortButton {
+      background-color:rgba(180, 59, 101, 0.9);
+      color:rgb(243, 235, 235);
+      border:none;
+      padding:15px; 
+      margin: 10px 0;
+      border-radius: 35px;
+      width:800px;
+      font-family: 'Rowdies', cursive;
+      font-size: 20px;
+
+
+   }
+
+   .testläuft {
+      width:100%;
+   }
+

@@ -1,3 +1,11 @@
+.FragenAngaben {
+    background-image: url("../../img/backgroundstartseite.jpeg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 981px;
+}
 h1 {
     color:white;
     font-family: 'Roboto Slab', serif;
@@ -13,7 +21,7 @@ p {
     color:white;
     font-family: 'Roboto Slab', serif;
     font-size:20px;
-    font-weight:700;
+    font-weight:bold;
 
 }
 
