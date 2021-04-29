@@ -42,11 +42,13 @@ const FragenAngaben = ({propsFrage, propsFragenLänge, propsFragenIndex } ) => {
                   })
             }
       }, [propsFragenIndex])
+     
 
       return <div className={"AngabenStyle"}>
-            <h3 >Frage {propsFragenIndex} / {propsFragenLänge}</h3>
+            <h3 >Frage {propsFragenIndex} / {propsFragenLänge}<span className={"stats_Style"}>{propsFrage.stats}</span></h3>
             <hr></hr>
             <p >{propsFrage.question}</p>
+            { propsFrage.image &&  <img src={"http://localhost:5000/images/"+ propsFrage.image} alt={"photos"}/> }         
             <ul>
                   {propsFrage.answer.map((answerItem, answerIndex) =>
                         <li className={answerClass(answerItem , answerIndex)}

@@ -2,6 +2,13 @@
 
 //elternteil 
 import Logo from './Logo';
+//import Uhr from "./Uhr";
+//import Punkte from "./Punktezaehler";
+
+//import fragenList from './data.json';
+//import {useEffect, useState} from "react";
+//import {useHistory} from 'react-router-dom'
+//import {fetchTest} from '../api/apiTest'
 
 
 import Containerfragen from "./Containerfragen";
