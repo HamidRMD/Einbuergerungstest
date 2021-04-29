@@ -14,7 +14,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
         optionSelected: undefined
     })
 
-    // const [nutzerantwort, setnutzerantwort] = useState(false)
+   
 
     useEffect(() => {
         setshowAnswer({
@@ -31,6 +31,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
             show: true,
             optionSelected: option
         })
+        
 
     }
 
@@ -48,7 +49,6 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
                 {propsQuestion.answer.map((answerItem, answerIndex) =>
 
                     <li id="liste">
-
                         <button id="antwortButton" onClick={() => {
 
                             anwserButton(answerItem);
@@ -64,7 +64,12 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
                                 antwortHandler(false, propsQuestionIndex)
                             }
 
-                        }}>{answerItem}</button>
+                        }}>{answerItem}
+                         &nbsp; 
+                           {showAnswer.optionSelected ===answerItem ? <i class="fas fa-check-circle"></i> : ""}
+                        </button>
+                     
+                  
 
                         {showAnswer.show && propsQuestion.correct === answerIndex && showAnswer.optionSelected === answerItem}
                         {showAnswer.show && showAnswer.optionSelected === answerItem && propsQuestion.correct !== answerIndex}
