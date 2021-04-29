@@ -14,7 +14,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
         optionSelected: undefined
     })
 
-    // const [nutzerantwort, setnutzerantwort] = useState(false)
+   
 
     useEffect(() => {
         setshowAnswer({
@@ -31,6 +31,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
             show: true,
             optionSelected: option
         })
+        
 
     }
 
@@ -48,12 +49,8 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
                 {propsQuestion.answer.map((answerItem, answerIndex) =>
 
                     <li id="liste">
-
-<<<<<<< HEAD
-                        <button className="anwort" onClick={() => {
-=======
+   
                         <button id="antwortButton" onClick={() => {
->>>>>>> 0815828230e2d9c5a4edfe2f24542df0cfb479d5
 
                             anwserButton(answerItem);
                             //wie kann ich die richtige antwort erknennen
@@ -68,7 +65,12 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
                                 antwortHandler(false, propsQuestionIndex)
                             }
 
-                        }}>{answerItem}</button>
+                        }}>{answerItem}
+                         &nbsp; 
+                           {showAnswer.optionSelected ===answerItem ? <i class="fas fa-check-circle"></i> : ""}
+                        </button>
+                     
+                  
 
                         {showAnswer.show && propsQuestion.correct === answerIndex && showAnswer.optionSelected === answerItem}
                         {showAnswer.show && showAnswer.optionSelected === answerItem && propsQuestion.correct !== answerIndex}

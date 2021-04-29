@@ -220,7 +220,7 @@ const Test = () => {
 
                                 </div>
 
-                                <button className="testbutton" onClick={Testbeenden}>Test beenden</button>
+                               
                             </div>
                             
 
