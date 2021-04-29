@@ -189,7 +189,7 @@ const Test = () => {
                             <p className="uhrHeading">Uhrzeit</p>
                             : ""}
                         {showuhr ?
-                            <p  className="uhrZahlen">{zeit}</p>
+                            <p  className="uhrZahlen">{zeit}:00</p>
 
                             : ""}
                             </div>
