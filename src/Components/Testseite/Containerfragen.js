@@ -49,7 +49,6 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
                 {propsQuestion.answer.map((answerItem, answerIndex) =>
 
                     <li id="liste">
-   
                         <button id="antwortButton" onClick={() => {
 
                             anwserButton(answerItem);

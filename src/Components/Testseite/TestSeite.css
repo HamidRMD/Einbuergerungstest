@@ -27,9 +27,9 @@ top: 1.5rem;
    height:100px;
    width:120px;
    border-radius: 50%;
-   font-size:20px;
-   padding-left: 30px;
-   padding-top: 30px;
+   font-size:35px;
+   padding-left: 38px;
+   padding-top: 25px;
    background-color:rgba(180, 59, 101, 0.9);
 
 }
@@ -80,6 +80,8 @@ top: 1.5rem;
 display:flex;
 justify-content: center;
 width: 100%;
+font-family: 'Rowdies', cursive;
+margin-top: 40px;
 
 }
 
@@ -89,9 +91,15 @@ width: 100%;
    font-size: larger;
 
 }
+
+.punktZählerStr {
+font-size: 35px;
+margin-bottom: 0;
+
+}
+
 #punkte{
    background-color:rgba(180, 59, 101, 0.9);
-   font-family: 'Rowdies', cursive;
    color:white;
    padding: 30px;
    width:121px;
@@ -99,6 +107,7 @@ width: 100%;
    font-size: 45px;
    border-radius:50%;
    border:none;
+
 }
 
 #teststarten{
@@ -126,6 +135,14 @@ width: 100%;
 
 }
 
+.containerButton {
+ display: flex;
+ width: 100%;
+ justify-content:space-between;
+ padding-top: 20px;
+
+}
+
 .nextAndLastButton {
    color: #fff;
    padding: 15px;
@@ -133,7 +150,7 @@ width: 100%;
    font-family: 'Rowdies', cursive;
    background-color:rgba(180, 59, 101, 0.9);
    border:none;
-   margin-right: 5px;;
+   margin-right: 5px;
 
 }
 

@@ -189,7 +189,7 @@ const Test = () => {
                             <p className="uhrHeading">Uhrzeit</p>
                             : ""}
                         {showuhr ?
-                            <p  className="uhrZahlen">{zeit} : 00</p>
+                            <p  className="uhrZahlen">{zeit}</p>
 
                             : ""}
                             </div>
@@ -205,22 +205,22 @@ const Test = () => {
                         {testläuft ?
 
                             <div className="testläuft">
-
+                            <div className="containerButton">
                                 <button className="nextAndLastButton" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
-                                <button className="nextAndLastButton" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
                                 <button className="nextAndLastButton" onClick={Testbeenden}>Test beenden</button>
+                                <button className="nextAndLastButton" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
+                            </div>
 
                                 <div id="punktZählerContainer">
-                                    
-                                    <p>Punkte</p>
+                                    <div>
+                                    <p className="punktZählerStr">Punkte</p>
                                     <button id="punkte" onClick={results}> {anzahlrichtige}</button>
-                                    
+                                    </div>
 
                                      
 
                                 </div>
 
-                               
                             </div>
                             
 
