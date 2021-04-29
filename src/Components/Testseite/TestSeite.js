@@ -15,7 +15,7 @@ const Test = () => {
 
     const [data, setData] = useState(fragenList);
     const [questionIndex, setQuestionIndex] = useState(0)
-    const history = useHistory();
+   // const history = useHistory();
 
     useEffect(() => {
         fetchTest()
@@ -50,11 +50,11 @@ const Test = () => {
             setQuestionIndex(questionIndex + 1);
     }
 
-    const handleClickOnInfoButton = () => {
-        history.push("/info",{
-            text : data[questionIndex].info
-        })
-    }
+    // const handleClickOnInfoButton = () => {
+    //     history.push("/info",{
+    //         text : data[questionIndex].info
+    //     })
+    // }
 
 
 
