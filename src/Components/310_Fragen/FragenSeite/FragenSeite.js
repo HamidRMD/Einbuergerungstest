@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import FragenAngaben from './components/FragenAngaben';
 //import FragenListe from './components/data.json';
-import { useHistory } from 'react-router-dom';
+import { useHistory ,Link} from 'react-router-dom';
+import { fetch310Fragen } from '../api/api310Fragen';
+import Logo from '../../Testseite/Logo';
+import "./style_1.css";
+
+
+const states = ["Allgemein", "Baden-Württemberg", "Bayern", "Berlin", "Brandenburg", "Bremen", "Hamburg", "Hessen", "Mecklenburg-Vorpommern", "Niedersachsen", "Nordrhein-Westfalen", "Rheinland-Pfalz", "Saarland", "Sachsen", "Sachsen-Anhalt", "Schleswig-Holstein", "Thüringen"]
+
+
 
 const Fragen = () => {
 
@@ -14,7 +22,7 @@ const Fragen = () => {
     const Vergangenheit = useHistory()
     //für InfoSeite
 
-    const [filterData , setFilterData] = useState([]) 
+    const [filterData, setFilterData] = useState([])
 
 
 
@@ -23,6 +31,8 @@ const Fragen = () => {
     useEffect(() => {
        
     }, [])
+   
+    
 
 
     const VorherigeAufgabe = () => {
@@ -32,7 +42,7 @@ const Fragen = () => {
     }
 
     const NächsteAufgabe = () => {
-        if (FragenIndex < data.length - 1)
+        if (FragenIndex < filterData.length - 1)
             setFragenIndex(FragenIndex + 1)
 
 
@@ -44,40 +54,45 @@ const Fragen = () => {
         )
     }
 
-    const clickAlleFragen =()=>{
-         setFilterData(data)
+    const clickAlleFragen = () => {
+        setFilterData(data)
     }
 
-    const clickAlleStates =(event  )=>{
-          //console.log("event : ",event) 
-          //console.log("value", event.target.value);
-
-          if(event.target.value === "Alle Fragen")
-          setFilterData(data)
-          else
-          setFilterData(data.filter(item=>item.stats===event.target.value))
+    const clickAlleStates = (event) => {
+        //console.log("event : ",event) 
+        //console.log("value", event.target.value);
+        setFragenIndex(0)
+        if (event.target.value === "Allgemein")
+            setFilterData(data)
+        else
+            setFilterData(data.filter(item => item.stats === event.target.value))
 
     }
 
     return <div className={"FragenStyle"}>
-    
+        <Logo />
         <div className={"alleFargenStyle"}>
-        <button onClick={clickAlleFragen}>
-            {"Alle Fragen"}
-        </button>
+        <Link to={"/"}><button className={"zurück"}>Zurück</button></Link>
+            <button onClick={clickAlleFragen}>
+                {"Allgemein"}
+            </button>
 
-        <select onChange={clickAlleStates}>
-        </select>
+            <select onChange={clickAlleStates}>
+                {states.map(item => <option>{item}</option>)}
+            </select>
         </div>
-        
-        {filterData.length > 0 && <FragenAngaben propsFrage={filterData[FragenIndex]} propsFragenLänge={filterData.length} propsFragenIndex={FragenIndex + 1}></FragenAngaben>}
-        
-        <div className={"FooterStyle"}>
-            <button onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
-            <button onClick={zurInfo}>Info</button>
-            <button onClick={NächsteAufgabe}>Nächste Aufgabe</button>
-        </div>
-        
+
+        {filterData.length > 0 &&
+            <div className={"cardStyle"}>
+                <FragenAngaben propsFrage={filterData[FragenIndex]} propsFragenLänge={filterData.length} propsFragenIndex={FragenIndex +1}></FragenAngaben>
+
+                <div className={"FooterStyle"}>
+                    <button className={"vorherigeAufgabe"} onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
+                    
+                    <button className={"nächsteAufgabe"} onClick={NächsteAufgabe}>Nächste Aufgabe</button>
+                </div>
+            </div>
+        }
     </div>
 }
 export default Fragen;

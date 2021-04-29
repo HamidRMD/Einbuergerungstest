@@ -1,3 +1,7 @@
+
+.ta {
+    color: black;
+
 .startSeite-body {
     background-image: url('../../img/backgroundStartSeite.jpeg');
     background-repeat: no-repeat;
@@ -84,4 +88,5 @@
     padding-right:20px;
     text-align:justify;
    
+
 }
