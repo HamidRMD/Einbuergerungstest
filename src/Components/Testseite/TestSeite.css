@@ -10,13 +10,37 @@
    
    
 }
-.Uhrzeit{
-  
-   font-family: 'Rowdies', cursive;
-   color:white;
-  
-   font-size: 20px
+
+#divUhr {
+font-family: 'Rowdies', cursive;
+position: absolute;
+right: 3rem;
+top: 1.5rem;
+
 }
+
+.uhrHeading{
+   color:white;
+   font-size: 30px;
+   padding-left: 5px;
+   
+}
+
+.uhrZahlen {
+   height:120px;
+   width:120px;
+   border-radius: 50%;
+   font-size:30px;
+   padding-left: 38px;
+   padding-top: 15px;
+   background-color:rgba(180, 59, 101, 0.9);
+
+}
+
+#uhrStr {
+   font-size:20px;
+}
+
 .uhr{
    background-color:rgba(180, 59, 101, 0.9);
    font-family: 'Rowdies', cursive;

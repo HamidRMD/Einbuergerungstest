@@ -184,12 +184,15 @@ const Test = () => {
                         : ""}
 
                     <div className="container-testSeite">
+                        <div id="divUhr">
                         {showuhrzeittext ?
-                            <p className="uhrzeit">Uhrzeit</p>
+                            <p className="uhrHeading">Uhrzeit</p>
                             : ""}
                         {showuhr ?
-                            <p id="zeit" className="uhr">{zeit}</p>
+                            <p  className="uhrZahlen">{zeit}<br />Min</p>
+
                             : ""}
+                            </div>
 
                         {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]}
 
