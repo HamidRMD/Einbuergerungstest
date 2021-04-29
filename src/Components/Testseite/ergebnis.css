@@ -1,41 +1,81 @@
 .body-Ergebnis {
-    background-image: url("../../img/backgroundstartseite.jpeg");
+    background-image: url("../../img/pexels-photo-3661973.jpeg");
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 981px;
 }
-h1{
-    color: rgb(250, 250, 242);
-    font-weight: bold;
-    font-size: 50px;
+
+.ergebnisContent {
+    font-family: 'Rowdies', cursive;
+    color: white;
+    width:1300px;
+    height:700px;
+    padding:50px;
+    background-color: rgba(196, 196, 196, 0.23);
+
 }
+
+.begrüßung {
+   font-size:70px;
+   text-align: center;  
+
+}
+
+.ergebnisErklärung {
+    padding-top:20px;
+    font-size:30px;
+
+}
+
+.bestandenOderNicht {
+    font-size:50px;
+    text-align:center;
+    padding-top:30px;
+
+}
+
+#punktZahlContainer {
+    display: flex;
+    justify-content: center;
+    padding-top:20px;
+
+}
+
 .punktZahl{
+    text-align:center;
     background-color: rgb(18, 155, 125);
     color: rgb(245, 230, 230);
     font-weight: bold;
-    font-size: 70px;
-    border-radius: 100%;
+    font-size: 80px;
+    border-radius: 50%;
+    width:200px;
+    height:200px;
     padding: 40px;
     margin: 5px;
 }
-h2{
-    color: rgb(250, 250, 242);
-    font-weight: bold;
-    font-size: 50px;
+
+#punktStr {
+    font-size:50px;
+    text-align:center;
 }
-p{
-    color: rgb(243, 243, 234);
-    font-weight: bold;
-    font-size: 50px;
+
+#containerErgebnisButton {
+    display: flex;
+    justify-content: space-between;
+    width:70%;
+    padding-top:20px;
+
 }
+
 .buttonstyle{
     color: #fff;
     padding: 15px;
-    font-size: 20px;
+    font-size: 25px;
+    background-color: rgba(195, 183, 183, 0.4);
     font-family: 'Rowdies', cursive;
-    background-color:rgba(126, 92, 94, 0.9);
- 
+    border:none;
+
 
  }

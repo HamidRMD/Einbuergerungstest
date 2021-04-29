@@ -37,21 +37,32 @@ const Ergebnis = () => {
     return (
         <div className="body-Ergebnis">
             <Logo />
+
+            <div className="ergebnisContent">
             {bestanden ?
-                <h1>Herzlich Glückwüunch</h1>
-                : <h1>Es tut mir Leid</h1>}
-            <p>Sie haben die prüfung {!bestanden ? "nicht" : ""}  bestanden  und Sie haben {punktZahl} fragen  von 33 richtig beantwortet</p>
+                
+                <h1 className="begrüßung">Herzlichen Glückwünsch!</h1>
+                : <h1 className="begrüßung">Es tut mir Leid!</h1>}
+                
+            <p className="ergebnisErklärung">Sie haben die prüfung {!bestanden ? "nicht" : ""}  bestanden  und Sie haben {punktZahl} fragen  von 33 richtig beantwortet.</p>
 
             {bestanden ?
-                <h2>Bestanden</h2>
-                : <h2>nicht Bestanden</h2>}
+                <h2 className="bestandenOderNicht">Bestanden</h2>
+                : <h2 className="bestandenOderNicht">Nicht Bestanden</h2>}
 
-    
+            <div id="punktZahlContainer">
             <p className="punktZahl">{punktZahl}</p>
-            <p>Punkte</p>
+            </div>
+
+            <p id="punktStr">Punkte</p>
+
+            </div>
+           
+            <div id="containerErgebnisButton">
             <button className="buttonstyle" onClick={Testwiederholen}>Test wiederholen</button>
-          
             <button className="buttonstyle" onClick={Testvorbereitung}>Test vorbereitung</button>
+            </div>
+
         </div>
 
     )

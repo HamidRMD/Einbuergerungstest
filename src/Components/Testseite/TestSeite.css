@@ -10,6 +10,7 @@
 
 #divUhr {
 font-family: 'Rowdies', cursive;
+color:white;
 position: absolute;
 right: 3rem;
 top: 1.5rem;
@@ -95,6 +96,7 @@ margin-top: 40px;
 .punktZählerStr {
 font-size: 35px;
 margin-bottom: 0;
+color: white;
 
 }
 
