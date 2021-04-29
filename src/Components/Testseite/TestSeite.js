@@ -189,7 +189,7 @@ const Test = () => {
                             <p className="uhrHeading">Uhrzeit</p>
                             : ""}
                         {showuhr ?
-                            <p  className="uhrZahlen">{zeit}<br />Min</p>
+                            <p  className="uhrZahlen">{zeit}</p>
 
                             : ""}
                             </div>
@@ -217,7 +217,9 @@ const Test = () => {
                                     <button id="punkte" onClick={results}> {anzahlrichtige}</button>
                                     </div>
 
-                                    </div>  
+                                     
+
+                                </div>
 
                             </div>
                             
