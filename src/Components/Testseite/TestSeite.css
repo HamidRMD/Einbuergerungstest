@@ -78,12 +78,12 @@ top: 1.5rem;
    margin-left: 10px;
    
 }
-#results{
-   text-align: center;
-   font-weight: bold;
-   font-size: 30px;
-   color: azure;
+
+#punktzählerDiv {
+position: absolute;
+left: 0;
 }
+
 #bundesländerselect{
    color: rgba(245, 247, 246, 0.856);
    font-weight: bold;
@@ -132,6 +132,7 @@ top: 1.5rem;
    font-family: 'Rowdies', cursive;
    background-color:rgba(180, 59, 101, 0.9);
    border:none;
+   margin-right: 5px;;
 
 }
 
@@ -173,17 +174,43 @@ border: 3px black solid;
    color: rgb(238, 238, 223);
 }
 .FragenAngabenText{
+   font-family: 'Roboto Slab', serif;
    font-size: 30px;
-   font-weight: bold;
-   font-family: 'Rowdies', cursive;
+   padding-top: 5px;
+
 }
 .FragenAngaben{
-   font-size:30px;
-   font-weight: bold;
+   width:1000px;
+   height:600px;
+   padding:80px;
+   background-color: rgba(43, 21, 21, 0.46);
    
 }
 
 .Anzahlfrage {
-   font-family: 'Rowdies', cursive;
+   font-family: 'Roboto Slab', serif;
+   border-bottom: 1px solid white;
+   word-spacing: 8px;
+   margin:0;
+   font-size:35px;
 
-}
+   }
+
+   #antwortButton {
+      background-color:rgba(180, 59, 101, 0.9);
+      color:rgb(243, 235, 235);
+      border:none;
+      padding:15px; 
+      margin: 10px 0;
+      border-radius: 35px;
+      width:800px;
+      font-family: 'Rowdies', cursive;
+      font-size: 20px;
+
+
+   }
+
+   .testläuft {
+      width:100%;
+   }
+
