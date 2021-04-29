@@ -210,10 +210,11 @@ const Test = () => {
                                 <button className="nextAndLastButton" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
                                 <button className="nextAndLastButton" onClick={Testbeenden}>Test beenden</button>
 
-                                <div id="punktZählerDiv">
+                                <div id="punktZählerContainer">
+                                    <div>
                                     <p>Punkte</p>
                                     <button id="punkte" onClick={results}> {anzahlrichtige}</button>
-
+                                    </div>
 
                                     </div>  
 

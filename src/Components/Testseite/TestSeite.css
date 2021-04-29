@@ -79,9 +79,11 @@ top: 1.5rem;
    
 }
 
-#punktzählerDiv {
-position: absolute;
-left: 0;
+#punktZählerContainer {
+display:flex;
+justify-content: center;
+width: 100%;
+
 }
 
 #bundesländerselect{
@@ -94,10 +96,12 @@ left: 0;
    background-color:rgba(180, 59, 101, 0.9);
    font-family: 'Rowdies', cursive;
    color:white;
-   padding: 17px;
-   width:200px;
-   
-   font-size: 20px;
+   padding: 30px;
+   width:120px;
+   height:120px;
+   font-size: 45px;
+   border-radius:50%;
+   border:none;
 }
 
 #teststarten{
