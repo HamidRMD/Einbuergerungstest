@@ -206,30 +206,18 @@ const Test = () => {
 
                             <div className="testläuft">
 
-<<<<<<< HEAD
                                 <button className="nextAndLastButton" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
                                 <button className="nextAndLastButton" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
                                 <button className="nextAndLastButton" onClick={Testbeenden}>Test beenden</button>
 
                                 <div id="punktZählerContainer">
                                     <div>
-=======
-                                <button className="testbutton" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
-                                <button className="testbutton" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
-                                <div id="results">
->>>>>>> 45063f766469ea1231d621bcc9533d913fa40063
                                     <p>Punkte</p>
                                     <button id="punkte" onClick={results}> {anzahlrichtige}</button>
                                     </div>
 
                                     </div>  
 
-<<<<<<< HEAD
-=======
-                                </div>
-
-                                <button className="testbutton" onClick={Testbeenden}>Test beenden</button>
->>>>>>> 45063f766469ea1231d621bcc9533d913fa40063
                             </div>
                             
 
