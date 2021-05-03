@@ -8,10 +8,7 @@ import Bewertung from "./Components/Bewertung/BewertungsKriterien";
 import Start from "./Components/StartSeite/StartSeite";
 import Test from "./Components/Testseite/TestSeite";
 import Ergebnis from "./Components/Testseite/Ergebnis"
-dotenv.config() 
-
-//<Route path={"/Login"} component={Login}></Route>
-//<Route path={"/Signup"} component={Signup}></Route>
+dotenv.config()
 function App() {
   return (
     <div className="App">

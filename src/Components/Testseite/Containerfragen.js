@@ -10,7 +10,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
 
     const [showAnswer, setshowAnswer] = useState({
 
-        show: false,
+        
         optionSelected: undefined
     })
 
@@ -18,7 +18,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
 
     useEffect(() => {
         setshowAnswer({
-            show: false,
+           
             optionSelected: undefined
 
         })
@@ -28,7 +28,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
     const anwserButton = (option) => {
 
         setshowAnswer({
-            show: true,
+           
             optionSelected: option
         })
         
@@ -41,19 +41,19 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
             <h1 className="Anzahlfrage">Aufgabe: {propsQuestionIndex + 1} / {propsQuestionLänge}</h1>
             <p className="FragenAngabenText">{propsQuestion.question}</p>
             {propsQuestion.image &&
-                <img src={"http://localhost:5000/images/" + propsQuestion.image} alt="ein Bild" />
+                <img src={process.env.REACT_APP_BACKENDURL  + "images/" + propsQuestion.image} alt="ein Bild" />
 
             }
 
             <ul>
                 {propsQuestion.answer.map((answerItem, answerIndex) =>
 
-                    <li id="liste">
+                    <li key={answerIndex} id="liste">
                         <button id="antwortButton" onClick={() => {
 
                             anwserButton(answerItem);
                             //wie kann ich die richtige antwort erknennen
-                            // wie kann ich diese anwrt array im ergerbis (true oder false) speichern
+                            // wie kann ich diese anwort array im ergerbis (true oder false) speichern
                             if (propsQuestion.correct === answerIndex) {
                                 console.log("corretanswer1=")
                                 antwortHandler(true, propsQuestionIndex)
@@ -71,8 +71,8 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
                      
                   
 
-                        {showAnswer.show && propsQuestion.correct === answerIndex && showAnswer.optionSelected === answerItem}
-                        {showAnswer.show && showAnswer.optionSelected === answerItem && propsQuestion.correct !== answerIndex}
+                        { propsQuestion.correct === answerIndex && showAnswer.optionSelected === answerItem}
+                        {showAnswer.optionSelected === answerItem && propsQuestion.correct !== answerIndex}
 
                     </li>
                 )}

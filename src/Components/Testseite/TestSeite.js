@@ -19,7 +19,8 @@ import { useHistory } from 'react-router-dom'
 const Test = () => {
 
     const [data, setData] = useState([]);
-    const [zeit, setZeit] = useState(60);
+
+    const [zeit, setZeit] = useState(3600);
     const [timeabgelaufen, setTimeabgelaufen] = useState(false)
     const [questionIndex, setQuestionIndex] = useState(0)
     const [testläuft, setTestläuft] = useState(false)
@@ -29,46 +30,61 @@ const Test = () => {
     const [ergebnis, setErgebnis] = useState([])
     const Vergangenheit = useHistory()
 
+    const Testbeenden = () => {
+        const summe = ergebnis.reduce((zwischenSumme, aktullewert) => {
+            if (aktullewert) {
+                zwischenSumme = zwischenSumme + 1
 
+            }
+            return zwischenSumme
+
+        }, 0
+            //},0 ist startwert ist 0 für reducer
+        )
+        localStorage.setItem("testpunkte", summe)
+
+        Vergangenheit.push(
+            "/Ergebnis"
+        )
+    }
     const teststarten = () => {
         setshowuhrzeittext(true)
         setUhr(true)
         setTestläuft(true)
         const land = document.querySelector("#stats").value;
+        // fetch("http://localhost:5000/RandomQuestion").then(res => res.json()),
 
         Promise.all([
-            fetch("http://localhost:5000/RandomQuestion").then(res => res.json()),
-            fetch(`http://localhost:5000/RandomQuestion/${land}`).then(res => res.json())
+            fetch(process.env.REACT_APP_BACKENDURL + "RandomQuestion").then(res => res.json()),
+            fetch(process.env.REACT_APP_BACKENDURL + `RandomQuestion/${land}`).then(res => res.json())
+
         ]).then(([urlOneData, urlTwoData]) => {
             console.log("urlOneData=", urlOneData)
             console.log("urlTwoData=", urlTwoData)
             console.log("mergedData=", [...urlOneData, ...urlTwoData])
             setData([...urlOneData, ...urlTwoData]);
 
-
-            //const delay = 60000;
-            const delay = 20000;
+            const delay = 1000;
             const AktualiesiereTimer = () => {
-
                 console.log("timer=", zeit)
-
                 setZeit((zeit) => {
+                    if (zeit <= 0) {
+                        setTimeabgelaufen(true)
+                        Testbeenden()
+                        return 0
+                    }
                     return zeit - 1
                 })
-                if (zeit <= 0) {
-                    setTimeabgelaufen(true)
 
-
-                }
             }
 
             window.setInterval(AktualiesiereTimer, delay)
 
 
-
-
         })
-
+            .catch((error) => {
+                console.log("error!=" + error)
+            })
     }
 
     /*
@@ -102,23 +118,7 @@ const Test = () => {
 
     }
 
-    const Testbeenden = () => {
-        const summe = ergebnis.reduce((zwischenSumme, aktullewert) => {
-            if (aktullewert) {
-                zwischenSumme = zwischenSumme + 1
 
-            }
-            return zwischenSumme
-
-        }, 0
-            //},0 ist startwert ist 0 für reducer
-        )
-        localStorage.setItem("testpunkte", summe)
-
-        Vergangenheit.push(
-            "/Ergebnis"
-        )
-    }
 
     const aktualisreErgebnis = (antwort, indexfrage) => {
 
@@ -192,14 +192,14 @@ const Test = () => {
 
                     <div className="container-testSeite">
                         <div id="divUhr">
-                        {showuhrzeittext ?
-                            <p className="uhrHeading">Uhrzeit</p>
-                            : ""}
-                        {showuhr ?
-                            <p  className="uhrZahlen">{zeit}:00</p>
+                            {showuhrzeittext ?
+                                <p className="uhrHeading">Uhrzeit</p>
+                                : ""}
+                            {showuhr ?
+                                <p className="uhrZahlen">{Math.floor(zeit / 60 )}:{zeit % 60}</p>
 
-                            : ""}
-                            </div>
+                                : ""}
+                        </div>
 
                         {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]}
 
@@ -212,40 +212,40 @@ const Test = () => {
                         {testläuft ?
 
                             <div className="testläuft">
-                            <div className="containerButton">
-                                <button className="nextAndLastButton" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
-                                <button className="nextAndLastButton" onClick={Testbeenden}>Test beenden</button>
-                                <button className="nextAndLastButton" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
-                            </div>
+                                <div className="containerButton">
+                                    <button className="nextAndLastButton" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
+                                    <button className="nextAndLastButton" onClick={Testbeenden}>Test beenden</button>
+                                    <button className="nextAndLastButton" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
+                                </div>
 
                                 <div id="punktZählerContainer">
                                     <div>
-                                    <p className="punktZählerStr">Punkte</p>
-                                    <button id="punkte" onClick={results}> {anzahlrichtige}</button>
+                                        <p className="punktZählerStr">Punkte</p>
+                                        <button id="punkte" onClick={results}> {anzahlrichtige}</button>
                                     </div>
 
-                                     
+
 
                                 </div>
 
                             </div>
-                            
 
-                            : " "}   
-                            
+
+                            : " "}
+
 
                     </div>
-                    
+
 
                 </div>
 
                 : <p>zeit ist um</p>}
 
-                                    
+
 
         </div>
 
-        
+
 
 
     )

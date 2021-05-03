@@ -10,7 +10,7 @@ const Ergebnis = () => {
     useEffect(() => {
         if (punktZahl === null) {
             let speicher = localStorage.getItem("testpunkte")
-            if (speicher >= 20) {
+            if (speicher >= 17) {
                 setBestanden(true)
             }
             setpunktZahl(speicher)
@@ -42,7 +42,9 @@ const Ergebnis = () => {
             {bestanden ?
                 
                 <h1 className="begrüßung">Herzlichen Glückwünsch!</h1>
-                : <h1 className="begrüßung">Es tut mir Leid!</h1>}
+                : 
+                <h1 className="begrüßung">Es tut mir Leid!</h1>
+                }
                 
             <p className="ergebnisErklärung">Sie haben die prüfung {!bestanden ? "nicht" : ""}  bestanden  und Sie haben {punktZahl} fragen  von 33 richtig beantwortet.</p>
 

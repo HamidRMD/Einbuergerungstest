@@ -29,9 +29,10 @@ top: 1.5rem;
    height:100px;
    width:120px;
    border-radius: 50%;
-   font-size:35px;
+   font-size:25px;
    padding-left: 38px;
    padding-top: 25px;
+   
    background-color:rgba(180, 59, 101, 0.9);
 
 }
