@@ -13,7 +13,7 @@ const Test = () => {
 
     const [data, setData] = useState([]);
 
-    const [zeit, setZeit] = useState(60);
+    const [zeit, setZeit] = useState(3600);
     const [timeabgelaufen, setTimeabgelaufen] = useState(false)
     const [questionIndex, setQuestionIndex] = useState(0)
     const [testläuft, setTestläuft] = useState(false)
@@ -57,7 +57,7 @@ const Test = () => {
             console.log("mergedData=", [...urlOneData, ...urlTwoData])
             setData([...urlOneData, ...urlTwoData]);
 
-            const delay = 20000;
+            const delay = 1000;
             const AktualiesiereTimer = () => {
                 console.log("timer=", zeit)
                 setZeit((zeit) => {
@@ -189,7 +189,7 @@ const Test = () => {
                                 <p className="uhrHeading">Uhrzeit</p>
                                 : ""}
                             {showuhr ?
-                                <p className="uhrZahlen">{zeit}:00</p>
+                                <p className="uhrZahlen">{Math.floor(zeit / 60 )}:{zeit % 60}</p>
 
                                 : ""}
                         </div>
