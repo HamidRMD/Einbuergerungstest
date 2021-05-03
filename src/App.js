@@ -1,4 +1,5 @@
 import './App.css';
+import dotenv from "dotenv"
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Fragen from "./Components/310_Fragen/FragenSeite/FragenSeite";
 import Zurück from "./Components/310_Fragen/VorFragenSeite/VorFragenSeite"
@@ -7,6 +8,8 @@ import Bewertung from "./Components/Bewertung/BewertungsKriterien";
 import Start from "./Components/StartSeite/StartSeite";
 import Test from "./Components/Testseite/TestSeite";
 import Ergebnis from "./Components/Testseite/Ergebnis"
+dotenv.config() 
+
 //<Route path={"/Login"} component={Login}></Route>
 //<Route path={"/Signup"} component={Signup}></Route>
 function App() {
