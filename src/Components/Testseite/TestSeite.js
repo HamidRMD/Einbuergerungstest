@@ -45,36 +45,41 @@ const Test = () => {
         setUhr(true)
         setTestläuft(true)
         const land = document.querySelector("#stats").value;
+        // fetch("http://localhost:5000/RandomQuestion").then(res => res.json()),
 
         Promise.all([
-            fetch("http://localhost:5000/RandomQuestion").then(res => res.json()),
-            fetch(`http://localhost:5000/RandomQuestion/${land}`).then(res => res.json())
+            fetch(process.env.REACT_APP_BACKENDURL + "RandomQuestion").then(res => res.json()),
+            fetch(process.env.REACT_APP_BACKENDURL + `RandomQuestion/${land}`).then(res => res.json())
+
         ]).then(([urlOneData, urlTwoData]) => {
             console.log("urlOneData=", urlOneData)
             console.log("urlTwoData=", urlTwoData)
             console.log("mergedData=", [...urlOneData, ...urlTwoData])
             setData([...urlOneData, ...urlTwoData]);
-        
+
             const delay = 20000;
             const AktualiesiereTimer = () => {
                 console.log("timer=", zeit)
                 setZeit((zeit) => {
-                    if(zeit<=0){
+                    if (zeit <= 0) {
                         setTimeabgelaufen(true)
                         Testbeenden()
                         return 0
                     }
                     return zeit - 1
                 })
-               
+
             }
-        
+
             window.setInterval(AktualiesiereTimer, delay)
-           
-           
+
+
         })
+            .catch((error) => {
+                console.log("error!=" + error)
+            })
     }
-    
+
     /*
      useEffect(() => {
        
@@ -106,7 +111,7 @@ const Test = () => {
 
     }
 
-   
+
 
     const aktualisreErgebnis = (antwort, indexfrage) => {
 

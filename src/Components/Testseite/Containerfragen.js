@@ -41,7 +41,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
             <h1 className="Anzahlfrage">Aufgabe: {propsQuestionIndex + 1} / {propsQuestionLänge}</h1>
             <p className="FragenAngabenText">{propsQuestion.question}</p>
             {propsQuestion.image &&
-                <img src={"http://localhost:5000/images/" + propsQuestion.image} alt="ein Bild" />
+                <img src={process.env.REACT_APP_BACKENDURL  + "images/" + propsQuestion.image} alt="ein Bild" />
 
             }
 
