@@ -12,6 +12,7 @@ import { useHistory } from 'react-router-dom'
 const Test = () => {
 
     const [data, setData] = useState([]);
+
     const [zeit, setZeit] = useState(60);
     const [timeabgelaufen, setTimeabgelaufen] = useState(false)
     const [questionIndex, setQuestionIndex] = useState(0)
@@ -22,7 +23,23 @@ const Test = () => {
     const [ergebnis, setErgebnis] = useState([])
     const Vergangenheit = useHistory()
 
+    const Testbeenden = () => {
+        const summe = ergebnis.reduce((zwischenSumme, aktullewert) => {
+            if (aktullewert) {
+                zwischenSumme = zwischenSumme + 1
 
+            }
+            return zwischenSumme
+
+        }, 0
+            //},0 ist startwert ist 0 für reducer
+        )
+        localStorage.setItem("testpunkte", summe)
+
+        Vergangenheit.push(
+            "/Ergebnis"
+        )
+    }
     const teststarten = () => {
         setshowuhrzeittext(true)
         setUhr(true)
@@ -37,33 +54,27 @@ const Test = () => {
             console.log("urlTwoData=", urlTwoData)
             console.log("mergedData=", [...urlOneData, ...urlTwoData])
             setData([...urlOneData, ...urlTwoData]);
-
-
-            //const delay = 60000;
+        
             const delay = 20000;
             const AktualiesiereTimer = () => {
-
                 console.log("timer=", zeit)
-
                 setZeit((zeit) => {
+                    if(zeit<=0){
+                        setTimeabgelaufen(true)
+                        Testbeenden()
+                        return 0
+                    }
                     return zeit - 1
                 })
-                if (zeit <= 0) {
-                    setTimeabgelaufen(true)
-
-
-                }
+               
             }
-
+        
             window.setInterval(AktualiesiereTimer, delay)
-
-
-
-
+           
+           
         })
-
     }
-
+    
     /*
      useEffect(() => {
        
@@ -95,23 +106,7 @@ const Test = () => {
 
     }
 
-    const Testbeenden = () => {
-        const summe = ergebnis.reduce((zwischenSumme, aktullewert) => {
-            if (aktullewert) {
-                zwischenSumme = zwischenSumme + 1
-
-            }
-            return zwischenSumme
-
-        }, 0
-            //},0 ist startwert ist 0 für reducer
-        )
-        localStorage.setItem("testpunkte", summe)
-
-        Vergangenheit.push(
-            "/Ergebnis"
-        )
-    }
+   
 
     const aktualisreErgebnis = (antwort, indexfrage) => {
 
@@ -185,14 +180,14 @@ const Test = () => {
 
                     <div className="container-testSeite">
                         <div id="divUhr">
-                        {showuhrzeittext ?
-                            <p className="uhrHeading">Uhrzeit</p>
-                            : ""}
-                        {showuhr ?
-                            <p  className="uhrZahlen">{zeit}:00</p>
+                            {showuhrzeittext ?
+                                <p className="uhrHeading">Uhrzeit</p>
+                                : ""}
+                            {showuhr ?
+                                <p className="uhrZahlen">{zeit}:00</p>
 
-                            : ""}
-                            </div>
+                                : ""}
+                        </div>
 
                         {data.length > 0 && <Containerfragen propsQuestion={data[questionIndex]}
 
@@ -205,40 +200,40 @@ const Test = () => {
                         {testläuft ?
 
                             <div className="testläuft">
-                            <div className="containerButton">
-                                <button className="nextAndLastButton" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
-                                <button className="nextAndLastButton" onClick={Testbeenden}>Test beenden</button>
-                                <button className="nextAndLastButton" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
-                            </div>
+                                <div className="containerButton">
+                                    <button className="nextAndLastButton" onClick={VorherigeAufgabe}>Vorherige Aufgabe</button>
+                                    <button className="nextAndLastButton" onClick={Testbeenden}>Test beenden</button>
+                                    <button className="nextAndLastButton" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
+                                </div>
 
                                 <div id="punktZählerContainer">
                                     <div>
-                                    <p className="punktZählerStr">Punkte</p>
-                                    <button id="punkte" onClick={results}> {anzahlrichtige}</button>
+                                        <p className="punktZählerStr">Punkte</p>
+                                        <button id="punkte" onClick={results}> {anzahlrichtige}</button>
                                     </div>
 
-                                     
+
 
                                 </div>
 
                             </div>
-                            
 
-                            : " "}   
-                            
+
+                            : " "}
+
 
                     </div>
-                    
+
 
                 </div>
 
                 : <p>zeit ist um</p>}
 
-                                    
+
 
         </div>
 
-        
+
 
 
     )
