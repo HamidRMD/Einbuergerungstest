@@ -218,15 +218,15 @@ const Test = () => {
                                     <button className="nextAndLastButton" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
                                 </div>
 
-                                <div id="punktZählerContainer">
-                                    <div>
-                                        <p className="punktZählerStr">Punkte</p>
-                                        <button id="punkte" onClick={results}> {anzahlrichtige}</button>
-                                    </div>
+                              
+                                {anzahlrichtige ?  
+                                       
+                                        <button  onClick={results}> </button>
+                                    : ""}
 
 
 
-                                </div>
+                                
 
                             </div>
 
