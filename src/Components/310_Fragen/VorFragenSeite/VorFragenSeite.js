@@ -9,26 +9,32 @@ import "../FragenSeite/style_1.css";
 
 const Zurück = () => {
     return (
-        <div>
-            <video className={"runVideo"} controls loop muted autoPlay width={300} height={200}>
-                <source src={"/Germany9.mp4"} type={"video/mp4"} ></source>
+        <div className={"body"}>
+            <Logo />
+            <Link to={"/Fragen"}><button className="zurFragen">zur Fragen</button></Link>
+            <video className={"runVideo"} controls loop muted autoPlay width={300} height={200}
+            style={{
+                //backgroundImage:"unset",
+                position: "absolute",
+                width: "40%",
+                height:'100vh',
+                paddingBottom:'20vh',
+               paddingLeft:'110vh',
+                zIndex: 8,
+                opacity: 0.9
+            }}>
+                <source src={"/Darkom.mp4"} type={"video/mp4"} ></source>
+                
             </video>
-            <div className="body" style={{
+            <div style={{
                 //backgroundImage:"unset",
                 position: "absolute",
                 width: "100%",
-                zIndex: 10
+                zIndex: -1,
+                opacity: 0.5
             }}>
-                <Logo />
-                <div className="container">
-                    <h1 className={"p-mitte"}>Einbürgerungstest</h1>
-
-                    <p className="paragraph">Alle allgemeine Fragen und Bundesland Fragen für den Test "Leben in Deutschland". Hier finden Sie alle 300 allgemeine Fragen und 10 Bundesland Fragen für den Einbürgerungstest "Leben in Deutschland".</p>
-
-
-                    
-                    <Link to={"/Fragen"}><button className="zurFragen">zur Fragen</button></Link>
-                </div>
+                
+              
                 
             </div>
         </div>

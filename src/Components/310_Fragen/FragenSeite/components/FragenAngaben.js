@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "../style_1.css";
 
+//img src={"http://localhost:5000/images/"+ propsFrage.image} alt={"photos"}/>
 const FragenAngaben = ({propsFrage, propsFragenLänge, propsFragenIndex } ) => {
 
       const [showAns, setshowAns] = useState({
@@ -48,7 +49,7 @@ const FragenAngaben = ({propsFrage, propsFragenLänge, propsFragenIndex } ) => {
             <h3 >Frage {propsFragenIndex} / {propsFragenLänge}<span className={"stats_Style"}>{propsFrage.stats}</span></h3>
             <hr></hr>
             <p >{propsFrage.question}</p>
-            { propsFrage.image &&  <img src={"http://localhost:5000/images/"+ propsFrage.image} alt={"photos"}/> }         
+            { propsFrage.image &&  <img src={process.env.REACT_APP_BACKENDURL + "images/"+ propsFrage.image} alt={"photos"}/> }         
             <ul>
                   {propsFrage.answer.map((answerItem, answerIndex) =>
                         <li className={answerClass(answerItem , answerIndex)}

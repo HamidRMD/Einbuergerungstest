@@ -4,13 +4,14 @@
 }
 
 .body {
-    
+    background-image: url("../FragenSeite/Images/backgroundStartSeite.jpeg");
     background-repeat: no-repeat;
-    height: 981px;
+    background-size: cover;
+    width: 100%;
+    height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 
 }
 
@@ -46,25 +47,25 @@
 }
 
 .zurFragen {
-    color: #fff;
+    color: black;
     margin: 4rem;
     border-radius: 1rem;
     padding: 15px;
-    
+    z-index: 10;
     font-family: 'Rowdies', cursive;
-    background-color:rgba(182, 89, 122, 0.9);
+    background-color: greenyellow;
     border:none;
     position: relative;
-    left:600px;
-    top:280px;
+    left:72vh;
+    top:20vh;
     cursor: pointer;
     font-size: 1.5rem;
     font-family: 'Rowdies', cursive;
 }
 .zurFragen:hover {
-    font-size: xx-large;
-    background-color:pink;
-    color: black;
+    font-size: 40px;
+    background-color: rgba(43, 21, 21, 0.534);
+    color: greenyellow;
     border-color: yellowgreen;
 }
 
