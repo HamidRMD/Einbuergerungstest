@@ -25,15 +25,20 @@ top: 1.5rem;
    
 }
 
-.uhrZahlen {
-   height:100px;
-   width:120px;
-   border-radius: 50%;
-   font-size:25px;
-   padding-left: 38px;
-   padding-top: 25px;
-   
+#uhrDivZahl {
+   display: flex;
+   justify-content: center;
    background-color:rgba(180, 59, 101, 0.9);
+   height: 110px;
+   width: 120px;
+   border-radius: 50%;
+   margin-top:10px;
+
+}
+
+.uhrZahlen {
+   font-size:30px;
+   align-self: center;
 
 }
 
@@ -54,7 +59,10 @@ top: 1.5rem;
 
 #liste{
    list-style: none;
+   text-align: center;
+
 }
+
 #zeitDiv{
    color: rgb(243, 235, 235);
    text-align: center;
@@ -143,7 +151,7 @@ color: white;
  display: flex;
  width: 100%;
  justify-content:space-between;
- padding-top: 20px;
+ padding-top: 100px;
 
 }
 
@@ -209,6 +217,7 @@ color: white;
    font-family: 'Roboto Slab', serif;
    font-size: 30px;
    padding-top: 5px;
+   padding-bottom: 15px;
    color: white;
 
 }
@@ -255,4 +264,6 @@ color: white;
       padding-bottom: 13px;
   
   }
+
+  
   

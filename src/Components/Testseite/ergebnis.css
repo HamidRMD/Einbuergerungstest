@@ -43,17 +43,23 @@
 
 }
 
-.punktZahl{
-    text-align:center;
+.punktZahlDiv {
     background-color: rgb(18, 155, 125);
     color: rgb(245, 230, 230);
     font-weight: bold;
-    font-size: 80px;
     border-radius: 50%;
     width:200px;
     height:200px;
     padding: 40px;
     margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.punktZahl{
+    align-self: center;
+    font-size: 80px;
+   
 }
 
 #punktStr {
@@ -64,7 +70,7 @@
 #containerErgebnisButton {
     display: flex;
     justify-content: space-between;
-    width:70%;
+    width:76%;
     padding-top:20px;
 
 }
