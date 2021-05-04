@@ -46,7 +46,7 @@ const FragenAngaben = ({propsFrage, propsFragenLänge, propsFragenIndex } ) => {
      
 
       return <div className={"AngabenStyle"}>
-            <h3 >Frage {propsFragenIndex} / {propsFragenLänge}<span className={"stats_Style"}>{propsFrage.stats}</span></h3>
+            <h4 >Frage {propsFragenIndex}  /  {propsFragenLänge}<span className={"stats_Style"}>{propsFrage.stats}</span></h4>
             <hr></hr>
             <p >{propsFrage.question}</p>
             { propsFrage.image &&  <img src={process.env.REACT_APP_BACKENDURL + "images/"+ propsFrage.image} alt={"photos"}/> }         

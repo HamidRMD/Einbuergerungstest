@@ -74,9 +74,7 @@ const Fragen = () => {
         <Logo />
         <div className={"alleFargenStyle"}>
         <Link to={"/"}><button className={"zurück"}>Zurück</button></Link>
-            <button onClick={clickAlleFragen}>
-                {"Allgemein"}
-            </button>
+        
 
             <select onChange={clickAlleStates}>
                 {states.map(item => <option>{item}</option>)}

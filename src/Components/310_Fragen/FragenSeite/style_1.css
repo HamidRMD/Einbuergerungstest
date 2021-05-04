@@ -56,7 +56,8 @@
 .cardStyle {
     background-color: rgba(43, 21, 21, 0.46);
     width: 60%;
-    height: 80vh;
+    height: auto;
+    min-height: 80vh;
     margin: 0 auto;
     
 }
@@ -81,11 +82,16 @@
     justify-content: space-between;
     align-items: center;
 }
+
 .AngabenStyle > p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: bold;
 }
 .AngabenStyle > ul > li:hover {
-    background-color: rgba(129, 56, 56, 0.425);
+    
+    /*background-color: rgba(129, 56, 56, 0.425);*/
+    color: rgba(129, 56, 56, 1);
+    background-color: white;
 }
 .richtige_Antwort {
    background-color: green !important;
@@ -116,11 +122,19 @@ span {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 30px;
+    
     border-radius: 0.5rem;
-    margin: 1rem;
-    margin-left: 23rem;
-    margin-right: 23rem;
+    
+   
+    
+    /* height: 30px; */
+    border-radius: 0.5rem;
+    /* margin: 1rem; */
+    /* margin-left: 23rem; */
+    /* margin-right: 23rem; */
+    max-width: 60vw;
+    margin: 1rem auto;
+    padding: 0.1rem 0.5rem;
 }
 .alleFargenStyle > button {
     font-weight: bold;
@@ -156,8 +170,8 @@ span {
     border: 1px solid greenyellow;
 }
 .AngabenStyle > img:hover {
-    height: 15rem;
-    border: 2px solid rgba(182, 89, 122, 0.9);
+    transform: scale(2.5);
+    border: 1px solid rgba(182, 89, 122, 0.9);
     
 }
 .alleFargenStyle > button {

@@ -12,7 +12,7 @@ const Zurück = () => {
         <div className={"body"}>
             <Logo />
             <Link to={"/Fragen"}><button className="zurFragen">zur Fragen</button></Link>
-            <video className={"runVideo"} controls loop muted autoPlay width={300} height={200}
+            <video className={"runVideo"} loop muted autoPlay width={300} height={200}
             style={{
                 //backgroundImage:"unset",
                 position: "absolute",
