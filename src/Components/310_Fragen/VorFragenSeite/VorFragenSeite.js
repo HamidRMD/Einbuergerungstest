@@ -26,17 +26,7 @@ const Zurück = () => {
                 <source src={"/Darkom.mp4"} type={"video/mp4"} ></source>
                 
             </video>
-            <div style={{
-                //backgroundImage:"unset",
-                position: "absolute",
-                width: "100%",
-                zIndex: -1,
-                opacity: 0.5
-            }}>
-                
-              
-                
-            </div>
+            
         </div>
 
     );

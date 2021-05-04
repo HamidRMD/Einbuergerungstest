@@ -57,15 +57,14 @@
     border:none;
     position: relative;
     left:72vh;
-    top:20vh;
+    top:17vh;
     cursor: pointer;
     font-size: 1.5rem;
     font-family: 'Rowdies', cursive;
 }
 .zurFragen:hover {
     font-size: 40px;
-    background-color: rgba(43, 21, 21, 0.534);
-    color: greenyellow;
+    background-color: limegreen;
     border-color: yellowgreen;
 }
 
