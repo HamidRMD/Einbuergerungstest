@@ -1,5 +1,4 @@
 .FragenAngaben {
-    background-image: url("../../img/backgroundstartseite.jpeg");
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,4 +73,5 @@ li {
 .greenBackground {
     background-color:aqua;
 }
+
 
