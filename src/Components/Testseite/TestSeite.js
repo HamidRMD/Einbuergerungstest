@@ -2,13 +2,6 @@
 
 //elternteil 
 import Logo from './Logo';
-//import Uhr from "./Uhr";
-//import Punkte from "./Punktezaehler";
-
-//import fragenList from './data.json';
-//import {useEffect, useState} from "react";
-//import {useHistory} from 'react-router-dom'
-//import {fetchTest} from '../api/apiTest'
 
 
 import Containerfragen from "./Containerfragen";
@@ -52,7 +45,7 @@ const Test = () => {
         setUhr(true)
         setTestläuft(true)
         const land = document.querySelector("#stats").value;
-        // fetch("http://localhost:5000/RandomQuestion").then(res => res.json()),
+       
 
         Promise.all([
             fetch(process.env.REACT_APP_BACKENDURL + "RandomQuestion").then(res => res.json()),
@@ -87,23 +80,7 @@ const Test = () => {
             })
     }
 
-    /*
-     useEffect(() => {
-       
-         Promise.all([
-             fetch("http://localhost:5000/RandomQuestion").then(res => res.json()),
-             fetch(`http://localhost:5000/RandomQuestion/${land}`).then(res => res.json())
-         ]).then(([urlOneData, urlTwoData]) => {
-             console.log("urlOneData=", urlOneData)
-             console.log("urlTwoData=", urlTwoData)
-             console.log("mergedData=", [...urlOneData, ...urlTwoData])
- 
-             setData([...urlOneData, ...urlTwoData]);
- 
-         })
-     }, [])
- 
- */
+  
     const VorherigeAufgabe = () => {
 
         if (questionIndex !== 0)
