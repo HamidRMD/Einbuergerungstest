@@ -4,13 +4,22 @@ Diese Anwendung wurde entwickelt, um Immigranten bei der Vorbereitung auf den Ei
 
 ## Datenquelle
 
-Diese App ist aus der Idee der dci Worldcode Studentengruppe entstanden.
+Diese App ist aus der Idee der DCI Worldcode Studentengruppe entstanden.
 
 ## Abhängigkeiten
 
 Diese App ist in JavaScript geschrieben und verfügt einige Technologien wie:
 
-- React und Redux
+### Das Frontend:
+
+- React 
 - Html5
 - CSS3
+
+### Das Backend
+
+- Atlas MongoDB
+
+Um die App zu bearbeiten, benötigen Sie Zugriff auf einen Code-Editor wie Visual Studio oder Atom, um die Code-Entwicklung dynamischer und organisierter zu gestalten.
+Unser Test wurde mit der React-Bibliothek entwickelt, daher müssen Sie diese Bibliothek über Git herunterladen.
 
