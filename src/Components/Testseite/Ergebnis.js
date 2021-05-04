@@ -53,7 +53,7 @@ const Ergebnis = () => {
                 : <h2 className="bestandenOderNicht">Nicht Bestanden</h2>}
 
             <div id="punktZahlContainer">
-            <p className="punktZahl">{punktZahl}</p>
+            <div className="punktZahlDiv"><p className="punktZahl">{punktZahl}</p></div>
             </div>
 
             <p id="punktStr">Punkte</p>
