@@ -196,7 +196,7 @@ const Test = () => {
                                 <p className="uhrHeading">Uhrzeit</p>
                                 : ""}
                             {showuhr ?
-                                <p className="uhrZahlen">{Math.floor(zeit / 60 )}:{zeit % 60}</p>
+                               <div id="uhrDivZahl"> <p className="uhrZahlen">{Math.floor(zeit / 60 )}:{zeit % 60}</p></div>
 
                                 : ""}
                         </div>

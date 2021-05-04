@@ -68,8 +68,10 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
 
                         }}>{answerItem}
                          &nbsp; 
-                           {showAnswer.optionSelected ===answerItem ? <i class="fas fa-check-circle"></i> : ""}
-                        </button>
+                           {showAnswer.optionSelected ===answerItem ? <i class="fas fa-check-circle"></i> : ""} 
+                        </button> 
+
+                       
                      
                   
 
