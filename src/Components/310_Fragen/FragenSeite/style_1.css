@@ -112,15 +112,15 @@ span {
     font-family: inherit;
 }
 .alleFargenStyle {
-    background-color: aqua;
+    background-color:rgba(182, 89, 122, 0.9);
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 30px;
     border-radius: 0.5rem;
     margin: 1rem;
-    margin-left: 15rem;
-    margin-right: 15rem;
+    margin-left: 23rem;
+    margin-right: 23rem;
 }
 .alleFargenStyle > button {
     font-weight: bold;
