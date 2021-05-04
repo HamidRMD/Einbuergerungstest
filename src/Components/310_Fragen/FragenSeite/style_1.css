@@ -1,4 +1,3 @@
-
 .FragenStyle {
     background-image: url("./Images/310-fragen.jpeg");
     background-size: cover;
@@ -12,9 +11,11 @@
 .FooterStyle {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 90%;
+    
     margin: 0 auto;
-    margin-top: 2rem; 
+    margin-top: 3rem; 
+    padding: 1rem;
 }
 .FooterStyle > button {
    all: unset;
@@ -26,19 +27,38 @@
    font-size: 1.5rem;
    border: 1px solid transparent;
    font-family: 'Rowdies', cursive;
+   
 }
 
 .FooterStyle > button:hover {
     border-color: yellowgreen;
 }
+.vorherigeAufgabe:hover {
+    font-size: xx-large;
+    background-color:pink;
+    color: black;
+}
+.nächsteAufgabe:hover {
+    font-size: xx-large;
+    background-color:pink;
+    color: black;
+}
 .AngabenStyle {
-    background-color: rgba(43, 21, 21, 0.46);
-    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    
     padding: 1rem 3rem;
-    width: 60%;
-    height: 70vh;
+    
     margin-top: 4rem;
     font-family: 'Roboto Slab', serif;
+}
+.cardStyle {
+    background-color: rgba(43, 21, 21, 0.46);
+    width: 60%;
+    height: 80vh;
+    margin: 0 auto;
+    
 }
 .AngabenStyle > hr {
     margin: 1rem 0;
@@ -94,17 +114,75 @@ span {
 .alleFargenStyle {
     background-color: aqua;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 30px;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+.alleFargenStyle > button {
+    font-weight: bold;
+    font-size: large;
+    font-family: serif;
+    margin: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.alleFargenStyle > select {
+    font-weight: bold;
+    font-size: large;
+    font-family: serif;
+    margin: 0.5rem;
+    padding-left: 0.5rem;
 }
 .stats_Style {
-    background-color:rgb(170, 37, 170);
-    color: white;
+    background-color:pink;
+    color: black;
     border-radius: 0.9rem;
     padding: 0.5rem;
     margin-left: 3rem;
     font-family: sans-serif;
+}
+.AngabenStyle > img {
+    height: 5rem;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    border: 1px solid greenyellow;
+}
+.AngabenStyle > img:hover {
+    height: 15rem;
+    border: 2px solid rgba(182, 89, 122, 0.9);
+    
+}
+.alleFargenStyle > button {
+    background-color:pink;
+}
+.alleFargenStyle > select {
+    background-color: pink;
+}
+.zurück {
+    background-color: pink;
+    font-weight: bold;
+    font-size: large;
+    font-family: serif;
+    margin: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.runVideo {
+    
+    
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
 }
 
 

@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background-image: url("../FragenSeite/Images/backgroundStartSeite.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    height:800px;
+    width: 800px;
+    background-color: rgba(43, 21, 21, 0.534);
+    padding: 0 80px;
+    color: #fff;
+    font-family: 'Noto Sans JP', sans-serif;
+
+
+}
+.p-mitte {
+    text-align: center;
+    font-size: 4rem;
+    font-family: fantasy;
+}
+.paragraph {
+    font-size:25px;
+    padding-top: 35px;
+    padding-bottom: 25px;
+
+
+}
+
+.container-bewertung > h1 {
+    font-size:45px;
+    text-align: center;
+    padding-top:10px;
+    border-bottom: 1px solid white;
+
+}
+
+.zurFragen {
+    color: black;
+    margin: 4rem;
+    border-radius: 1rem;
+    padding: 15px;
+    z-index: 10;
+    font-family: 'Rowdies', cursive;
+    background-color: greenyellow;
+    border:none;
+    position: relative;
+    left:72vh;
+    top:20vh;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: 'Rowdies', cursive;
+}
+.zurFragen:hover {
+    font-size: 40px;
+    background-color: rgba(43, 21, 21, 0.534);
+    color: greenyellow;
+    border-color: yellowgreen;
+}
+
+
+

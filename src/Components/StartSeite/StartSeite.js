@@ -16,7 +16,7 @@ const Start =()=>{
 
 <div className="startSeite-Content">
 <h1 className="heading-startSeite">Einbürgerungstest</h1>
-<Link to={"/Fragen"}><button className="startSeite-button">Test vorbereitung</button></Link>
+<Link to={"/Zurück"}><button className="startSeite-button">Test vorbereitung</button></Link>
 
 
 <Link to={"/Bewertung"}><button className="startSeite-button">Start den Test</button></Link>

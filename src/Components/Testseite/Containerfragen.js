@@ -1,39 +1,85 @@
-import './Containerfragen.css'
-import React, {useState} from 'react';
+//kinderteil
 
 
-const Containerfragen = ({questionData}) => {
+import './TestSeite.css'
 
-    const [showAns, setShowAns] = useState({
-        show: false,
+import React, { useState, useEffect } from 'react';
+
+const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionIndex, antwortHandler }) => {
+
+
+    const [showAnswer, setshowAnswer] = useState({
+
+        
         optionSelected: undefined
     })
 
-    const handleClickOnOption = (option) => {
-        setShowAns({
-            show: true,
+   
+
+    useEffect(() => {
+        setshowAnswer({
+           
+            optionSelected: undefined
+
+        })
+
+    }, [])
+
+    const anwserButton = (option) => {
+
+        setshowAnswer({
+           
             optionSelected: option
         })
+        
+
     }
 
-
     return (
-        <div className={"question_container"}>
-            <h1>Aufgabe {questionData.nr} / 33</h1> <br /> <p> {questionData.text}</p>
-           <div className="containerButton">
+        <div className="FragenAngaben">
+         
+            <h1 className="Anzahlfrage">Aufgabe: {propsQuestionIndex + 1} / {propsQuestionLänge}</h1>
+            <p className="FragenAngabenText">{propsQuestion.question}</p>
+            {propsQuestion.image &&
+                <img src={process.env.REACT_APP_BACKENDURL  + "images/" + propsQuestion.image} alt="ein Bild" />
+
+            }
+
             <ul>
-                {questionData.options.map(item => <li>
-                    <button className="buttonFragen" onClick={() => handleClickOnOption(item)}>
-                        {item.title}
+                {propsQuestion.answer.map((answerItem, answerIndex) =>
 
-                    </button>
-                    {showAns.show && <span>{item.isAns ? <p className="fragenFeedback">Richtige Antwort <i class="fas fa-check-circle"></i></p> : <p className="fragenFeedback">Falsche Antwort</p>}</span>}
-                    
-                </li>)}
+                    <li key={answerIndex} id="liste">
+                        <button id="antwortButton" onClick={() => {
+
+                            anwserButton(answerItem);
+                            //wie kann ich die richtige antwort erknennen
+                            // wie kann ich diese anwort array im ergerbis (true oder false) speichern
+                            if (propsQuestion.correct === answerIndex) {
+                                console.log("corretanswer1=")
+                                antwortHandler(true, propsQuestionIndex)
+
+                            }
+
+                            else {
+                                antwortHandler(false, propsQuestionIndex)
+                            }
+
+                        }}>{answerItem}
+                         &nbsp; 
+                           {showAnswer.optionSelected ===answerItem ? <i class="fas fa-check-circle"></i> : ""}
+                        </button>
+                     
+                  
+
+                        { propsQuestion.correct === answerIndex && showAnswer.optionSelected === answerItem}
+                        {showAnswer.optionSelected === answerItem && propsQuestion.correct !== answerIndex}
+
+                    </li>
+                )}
             </ul>
-            </div>
         </div>
-    );
-};
 
-export default Containerfragen;
+    )
+}
+
+export default Containerfragen
