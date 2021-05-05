@@ -57,7 +57,7 @@ const Containerfragen = ({ propsQuestion, propsQuestionLänge, propsQuestionInde
                             //wie kann ich die richtige antwort erknennen
                             // wie kann ich diese anwort array im ergerbis (true oder false) speichern
                             if (propsQuestion.correct === answerIndex) {
-                                console.log("corretanswer1=")
+                                //console.log("corretanswer1=")
                                 antwortHandler(true, propsQuestionIndex)
 
                             }

@@ -22,7 +22,7 @@ const Ergebnis = () => {
     const Vergangenheit = useHistory()
 
     const Testvorbereitung = () => {
-        console.log("Testvorbereitung!")
+        //console.log("Testvorbereitung!")
         Vergangenheit.push(
             "/Fragen"
         )
