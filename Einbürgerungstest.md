@@ -21,5 +21,10 @@ Diese App ist in JavaScript geschrieben und verfügt einige Technologien wie:
 - Atlas MongoDB
 
 Um die App zu bearbeiten, benötigen Sie Zugriff auf einen Code-Editor wie Visual Studio oder Atom, um die Code-Entwicklung dynamischer und organisierter zu gestalten.
-Unser Test wurde mit der React-Bibliothek entwickelt, daher müssen Sie diese Bibliothek über Git herunterladen.
+Unser Test wurde mit der React-Bibliothek entwickelt, um diese Bibliothek zu verwenden  ist es notwendig  Node.js und NPM installiert zu haben.
+
+## Verwendung 
+
+1. Repository klonen  'git clone https://github.com/Hamid404/Einbuergerungstest.git'
+2. 
 
