@@ -86,6 +86,22 @@ Wenn der Benutzer auf Beende den Test klickt, wird er auf eine andere Seite weit
 
 ## Probleme 
 
+Verzögerung beim Laden der Anwendung im Browser.
+Auftreten von Verzögerungen beim Aufruf von Serverfragen.
+
+## Verbesserungen
+
+Geschwindigkeitsoptimierung mit dem Server.
+
+Hinzufügen von neuen Funktionen wie:
+
+- Automatische Übersetzung in andere Sprachen.
+- Erläuterung der einzelnen Fragen im Abschnitt Testvorbereitung.
+
+Die App Responsive zu machen.
+
+## Dank und Quellen
+
 
 
 
