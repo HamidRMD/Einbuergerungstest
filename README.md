@@ -70,6 +70,21 @@ Durch Anklicken einer Frage erhält man automatisch eine Rückmeldung, ob diese 
 
 ![Screenshot from 2021-05-05 13-53-22](https://user-images.githubusercontent.com/61413894/117139341-6d05aa00-adac-11eb-8156-3042b67dcf55.png)
 
+Durch Anklicken von start den test wird der Benutzer auf eine Seite mit den Bewertungskriterien weitergeleitet.Nach dem Klicken auf weiter zum Test muss der Benutzer den gewünschten Bundesländer auswählen:
+
+![Screenshot from 2021-05-05 15-42-29](https://user-images.githubusercontent.com/61413894/117156873-6849f180-adbe-11eb-9a98-5945d6c26b82.png)
+![Screenshot from 2021-05-05 15-42-51](https://user-images.githubusercontent.com/61413894/117156991-7ef04880-adbe-11eb-8d51-b3ed46e835ad.png)
+
+Um den Test durchzuführen, klicken Sie einfach auf "Start den Test". Der Benutzer gelangt dann auf die Seite mit 33 Fragen und hat 60 Minuten Zeit, den Test zu beenden.
+
+![Screenshot from 2021-05-05 15-44-12](https://user-images.githubusercontent.com/61413894/117157264-be1e9980-adbe-11eb-89a6-d8047e4ef82f.png)
+
+Wenn der Benutzer auf Beende den Test klickt, wird er auf eine andere Seite weitergeleitet, auf der er das Ergebnis des Tests und die Optionen erhält, den Test erneut durchzuführen oder um sich besser auf den Test vorzubereiten:
+
+![Screenshot from 2021-05-05 15-44-24](https://user-images.githubusercontent.com/61413894/117157472-e908ed80-adbe-11eb-8096-9a54bc591924.png)
+![Screenshot from 2021-05-05 15-57-17](https://user-images.githubusercontent.com/61413894/117157488-ec03de00-adbe-11eb-8e45-3e993489b4a2.png)
+
+## Probleme 
 
 
 
