@@ -77,7 +77,7 @@ const Fragen = () => {
         
 
             <select onChange={clickAlleStates}>
-                {states.map(item => <option>{item}</option>)}
+                {states.map((item ,index) => <option key={index} >{item}</option>)}
             </select>
         </div>
 

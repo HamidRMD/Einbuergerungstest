@@ -50,6 +50,7 @@ const FragenAngaben = ({propsFrage, propsFragenLänge, propsFragenIndex } ) => {
             <hr></hr>
             <p >{propsFrage.question}</p>
             { propsFrage.image &&  <img src={process.env.REACT_APP_BACKENDURL + "images/"+ propsFrage.image} alt={"photos"}/> }
+            { propsFrage.image &&  <p>hhh</p> }
             
                    
             <ul>
@@ -58,9 +59,9 @@ const FragenAngaben = ({propsFrage, propsFragenLänge, propsFragenIndex } ) => {
                         <li key={answerIndex} className={answerClass(answerItem , answerIndex)}
                                onClick={() => AnalyzeClickOnButton(answerItem)}>{answerItem}
 
-                              {showAns.show && propsFrage.correct === answerIndex && showAns.optionSelected === answerItem && <span className={"richtige_Antwort"}>{"Richtige Antwort"}<i class="fas fa-check-circle"></i></span>}
-                              {showAns.show && propsFrage.correct === answerIndex && showAns.optionSelected !== answerItem &&<span className={"extra"}>{"wäre die Richtige Antwort"}<i class="fas fa-check-circle"></i></span>}
-                              {showAns.show && showAns.optionSelected === answerItem &&  propsFrage.correct !== answerIndex && <span className={"falsche_Antwort"}>{"Falsche Antwort"}<i class="fas fa-times-circle"></i></span>}
+                              {showAns.show && propsFrage.correct === answerIndex && showAns.optionSelected === answerItem && <span className={"richtige_Antwort"}>{"Richtige Antwort"}<i className="fas fa-check-circle"></i></span>}
+                              {showAns.show && propsFrage.correct === answerIndex && showAns.optionSelected !== answerItem &&<span className={"extra"}>{"wäre die Richtige Antwort"}<i className="fas fa-check-circle"></i></span>}
+                              {showAns.show && showAns.optionSelected === answerItem &&  propsFrage.correct !== answerIndex && <span className={"falsche_Antwort"}>{"Falsche Antwort"}<i className="fas fa-times-circle"></i></span>}
 
                         </li>
                   )}
