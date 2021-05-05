@@ -52,14 +52,14 @@ const Test = () => {
             fetch(process.env.REACT_APP_BACKENDURL + `RandomQuestion/${land}`).then(res => res.json())
 
         ]).then(([urlOneData, urlTwoData]) => {
-            console.log("urlOneData=", urlOneData)
-            console.log("urlTwoData=", urlTwoData)
-            console.log("mergedData=", [...urlOneData, ...urlTwoData])
+            //console.log("urlOneData=", urlOneData)
+            //console.log("urlTwoData=", urlTwoData)
+            //console.log("mergedData=", [...urlOneData, ...urlTwoData])
             setData([...urlOneData, ...urlTwoData]);
 
             const delay = 1000;
             const AktualiesiereTimer = () => {
-                console.log("timer=", zeit)
+                //console.log("timer=", zeit)
                 setZeit((zeit) => {
                     if (zeit <= 0) {
                         setTimeabgelaufen(true)

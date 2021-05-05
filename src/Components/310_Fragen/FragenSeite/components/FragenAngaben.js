@@ -50,11 +50,12 @@ const FragenAngaben = ({propsFrage, propsFragenLänge, propsFragenIndex } ) => {
             <hr></hr>
             <p >{propsFrage.question}</p>
             { propsFrage.image &&  <img src={process.env.REACT_APP_BACKENDURL + "images/"+ propsFrage.image} alt={"photos"}/> }
-                  
+            
+                   
             <ul>
 
                   {propsFrage.answer.map((answerItem, answerIndex) =>
-                        <li className={answerClass(answerItem , answerIndex)}
+                        <li key={answerIndex} className={answerClass(answerItem , answerIndex)}
                                onClick={() => AnalyzeClickOnButton(answerItem)}>{answerItem}
 
                               {showAns.show && propsFrage.correct === answerIndex && showAns.optionSelected === answerItem && <span className={"richtige_Antwort"}>{"Richtige Antwort"}<i class="fas fa-check-circle"></i></span>}
