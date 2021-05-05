@@ -29,7 +29,7 @@ const Ergebnis = () => {
     }
 
     const Testwiederholen = () => {
-        console.log("Testwiederholen!")
+      
         Vergangenheit.push(
             "/Test"
         )

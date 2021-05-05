@@ -16,6 +16,7 @@ const Test = () => {
     const [zeit, setZeit] = useState(3600);
     const [timeabgelaufen, setTimeabgelaufen] = useState(false)
     const [questionIndex, setQuestionIndex] = useState(0)
+    const [timerid, setTimerId] = useState(0)
     const [testläuft, setTestläuft] = useState(false)
     const [showuhrzeittext, setshowuhrzeittext] = useState(false)
     const [showuhr, setUhr] = useState(false)
@@ -24,6 +25,7 @@ const Test = () => {
     const Vergangenheit = useHistory()
 
     const Testbeenden = () => {
+
         const summe = ergebnis.reduce((zwischenSumme, aktullewert) => {
             if (aktullewert) {
                 zwischenSumme = zwischenSumme + 1
@@ -35,7 +37,9 @@ const Test = () => {
             //},0 ist startwert ist 0 für reducer
         )
         localStorage.setItem("testpunkte", summe)
-
+        if (timerid) {
+            window.clearInterval(timerid)
+        }
         Vergangenheit.push(
             "/Ergebnis"
         )
@@ -45,7 +49,7 @@ const Test = () => {
         setUhr(true)
         setTestläuft(true)
         const land = document.querySelector("#stats").value;
-       
+
 
         Promise.all([
             fetch(process.env.REACT_APP_BACKENDURL + "RandomQuestion").then(res => res.json()),
@@ -71,8 +75,8 @@ const Test = () => {
 
             }
 
-            window.setInterval(AktualiesiereTimer, delay)
-
+            let timer = window.setInterval(AktualiesiereTimer, delay)
+            setTimerId(timer)
 
         })
             .catch((error) => {
@@ -80,7 +84,7 @@ const Test = () => {
             })
     }
 
-  
+
     const VorherigeAufgabe = () => {
 
         if (questionIndex !== 0)
@@ -173,7 +177,9 @@ const Test = () => {
                                 <p className="uhrHeading">Uhrzeit</p>
                                 : ""}
                             {showuhr ?
-                               <div id="uhrDivZahl"> <p className="uhrZahlen">{Math.floor(zeit / 60 )}:{zeit % 60}</p></div>
+                                <div id="uhrDivZahl">
+                                    <p className="uhrZahlen">{Math.floor(zeit / 60)}:{ zeit % 60 < 10 ? '0' : '' }{zeit % 60}</p>
+                                </div>
 
                                 : ""}
                         </div>
@@ -195,15 +201,15 @@ const Test = () => {
                                     <button className="nextAndLastButton" onClick={NächsteAufgabe}>Nächste Aufgabe</button>
                                 </div>
 
-                              
-                                {anzahlrichtige ?  
-                                       
-                                        <button  onClick={results}> </button>
+
+                                {anzahlrichtige ?
+
+                                    <button onClick={results}> </button>
                                     : ""}
 
 
 
-                                
+
 
                             </div>
 
