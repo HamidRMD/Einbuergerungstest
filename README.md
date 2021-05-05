@@ -1,5 +1,81 @@
-# Einbuergerungstest
+# Einbürgerungstest
 Abschlussprojekt
+
+Diese Anwendung wurde entwickelt, um Immigranten bei der Vorbereitung auf den Einbürgerungstest zu helfen. Nicht nur beim Lernen der Fragen, sondern auch bei der zeitlichen Simulation des Tests und der Punktevergabe, basierend auf den Bewertungskriterien des offiziellen Tests.
+
+
+## Datenquelle
+
+Diese App ist aus der Idee der DCI Worldcode Studentengruppe entstanden.
+
+## Abhängigkeiten
+
+Diese App ist in JavaScript geschrieben und verfügt einige Technologien wie:
+
+### Das Frontend:
+
+- React 
+- Html5
+- CSS3
+
+### Das Backend
+
+- Atlas MongoDB
+
+Pfade zum Backend:
+
+"http://localhost:5000/RandomQuestion"
+
+"http://localhost:5000/RandomQuestion/${land}"
+
+"http://localhost:5000/questions"
+
+Um die App zu bearbeiten, benötigen Sie Zugriff auf einen Code-Editor wie Visual Studio oder Atom, um die Code-Entwicklung dynamischer und organisierter zu gestalten.
+Unser Test wurde mit der React-Bibliothek entwickelt, um diese Bibliothek zu verwenden  ist es notwendig  Node.js und NPM installiert zu haben.
+
+## Verwendung 
+
+1. Repository klonen  mit 'git clone https://github.com/Hamid404/Einbuergerungstest.git'.
+2. Node Modules installieren mit 'npm install'.
+3. Datei .env hinzufügen, Beispiel:
+
+'PORT=****
+JWT=*********
+mongo=mongodb+srv:*********************
+REACT_APP_BACKENDURL=************'
+
+4.'npm start' oder 'npm run start' in die Kommandozeile eingeben.
+
+## Funktionen
+Die beiden Hauptfunktionen sind die Simulation des Einbürgerungstests und die Vorbereitung auf den Test, bei dem der Benutzer interaktiv auf über 400 Fragen zum Lernen zugreifen kann.
+
+![Screenshot from 2021-05-05 13-47-42](https://user-images.githubusercontent.com/61413894/117136542-ca97f780-ada8-11eb-8dd4-d1cedba52aa1.png)
+
+Für Neugierige gibt es oben rechts auf dem Bildschirm die Option Über uns mit einigen Informationen über die Entwickler des Projekts:
+
+![Screenshot from 2021-05-05 14-08-11](https://user-images.githubusercontent.com/61413894/117138586-822e0900-adab-11eb-8a3c-8954fedf5d84.png)
+
+
+Durch Anklicken der Option Testvorbereitung landet der Benutzer auf eine Seite mit einer kleinen Information über unsere Testvorbereitung:
+
+![Screenshot from 2021-05-05 13-51-24](https://user-images.githubusercontent.com/61413894/117138205-fb792c00-adaa-11eb-97bd-a6082edb3977.png)
+
+Auf der Testvorbereitungsseite kann der Benutzer den gewünschten Bundesländer auswählen:
+
+![Screenshot from 2021-05-05 13-53-57](https://user-images.githubusercontent.com/61413894/117139139-2f088600-adac-11eb-9637-66c4fb1a76e1.png)
+
+Durch Anklicken einer Frage erhält man automatisch eine Rückmeldung, ob diese richtig oder falsch ist:
+
+![Screenshot from 2021-05-05 13-52-51](https://user-images.githubusercontent.com/61413894/117139332-68d98c80-adac-11eb-8d1c-c22f316f024b.png)
+
+![Screenshot from 2021-05-05 13-53-22](https://user-images.githubusercontent.com/61413894/117139341-6d05aa00-adac-11eb-8156-3042b67dcf55.png)
+
+
+
+
+
+
+
 
 # Team
 
