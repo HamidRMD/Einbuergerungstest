@@ -49,8 +49,10 @@ const FragenAngaben = ({propsFrage, propsFragenLänge, propsFragenIndex } ) => {
             <h4 >Frage {propsFragenIndex}  /  {propsFragenLänge}<span className={"stats_Style"}>{propsFrage.stats}</span></h4>
             <hr></hr>
             <p >{propsFrage.question}</p>
-            { propsFrage.image &&  <img src={process.env.REACT_APP_BACKENDURL + "images/"+ propsFrage.image} alt={"photos"}/> }         
+            { propsFrage.image &&  <img src={process.env.REACT_APP_BACKENDURL + "images/"+ propsFrage.image} alt={"photos"}/> }
+                  
             <ul>
+
                   {propsFrage.answer.map((answerItem, answerIndex) =>
                         <li className={answerClass(answerItem , answerIndex)}
                                onClick={() => AnalyzeClickOnButton(answerItem)}>{answerItem}

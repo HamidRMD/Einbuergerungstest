@@ -55,9 +55,9 @@ const Fragen = () => {
 
     
 
-    const clickAlleFragen = () => {
-        setFilterData(data)
-    }
+    //const clickAlleFragen = () => {
+      //  setFilterData(data)
+    //}
 
     const clickAlleStates = (event) => {
         //console.log("event : ",event) 
