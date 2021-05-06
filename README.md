@@ -55,8 +55,11 @@ Unser Test wurde mit der React-Bibliothek entwickelt, um diese Bibliothek zu ver
 3. Datei .env hinzufügen, Beispiel:
 
 `PORT=****
+
 JWT=*********
+
 mongo=mongodb+srv:*********************
+
 REACT_APP_BACKENDURL=************`
 
 4.`npm start` oder `npm run start` in die Kommandozeile eingeben.
