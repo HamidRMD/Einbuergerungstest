@@ -40,11 +40,11 @@ Diese App ist in JavaScript geschrieben und verfügt einige Technologien wie:
 
 ### Wir haben das Backend und Frontend getrennt
 
-- Damit wir praktisch mit mehreren Domains arbeiten
-- Microservices-Architektur verwenden
+- Damit wir praktisch mit mehreren Domains arbeiten können
+- Microservices-Architektur verwenden 
 - (Vorschlag von André oder Nathalie)
 
-#### Backend-Endpunkte zum abrufen zum  abrufen des Fragekatalogs :
+#### Backend-Endpunkte zum  abrufen des Fragekatalogs :
 
 RandomQuestion -> liefert 33 Fragen aus dem allgemeinen Fragenkatalog:
 <http://localhost:5000/RandomQuestion>
