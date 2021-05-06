@@ -1,7 +1,10 @@
 # Einbürgerungstest
 Abschlussprojekt
 
-Diese Anwendung wurde entwickelt, um Immigranten bei der Vorbereitung auf den Einbürgerungstest zu helfen. Nicht nur beim Lernen der Fragen, sondern auch bei der zeitlichen Simulation des Tests und der Punktevergabe, basierend auf den Bewertungskriterien des offiziellen Tests.
+Diese Anwendung wurde entwickelt, um Immigranten bei der Vorbereitung auf den Einbürgerungstest zu helfen. Nicht nur beim Lernen der Fragen, sondern auch bei der zeitlichen Simulation des Tests und der Punktevergabe, basierend auf den Bewertungskriterien des offiziellen Tests. Unsere App ist online unter:
+
+
+<https://world-code.herokuapp.com/>
 
 
 ## Datenquelle
@@ -119,6 +122,8 @@ Es ist auch wichtig, das Engagement und die Hingabe aller Mitglieder der Wordcod
 
 Unsere primäre Forschungsquelle war :
 <https://reactjs.org/docs/getting-started.html>
+
+Das DCI-Lernmaterial.
 
 
 ## PLAN
