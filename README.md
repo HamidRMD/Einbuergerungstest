@@ -117,7 +117,7 @@ Die App Responsive zu machen.
 
 ## Dank und Quellen
 
-Unser aufrichtiger Dank gilt Nathalie Abendroth Scherf und André Nachname für ihre wertvolle Anleitung, ihre Geduld und ihr Engagement.
+Unser aufrichtiger Dank gilt Nathalie Abendroth Scherf und André Kleinschmidt für ihre wertvolle Anleitung, ihre Geduld und ihr Engagement.
 Es ist auch wichtig, das Engagement und die Hingabe aller Mitglieder der Wordcode-Gruppe hervorzuheben.
 
 Unsere primäre Forschungsquelle war :
@@ -125,9 +125,6 @@ Unsere primäre Forschungsquelle war :
 
 Das DCI-Lernmaterial.
 
-
-## PLAN
-![Planung](https://user-images.githubusercontent.com/65950252/112838376-4a8dbc00-909d-11eb-8951-f87a8ead9f96.jpg)
 
 
 
