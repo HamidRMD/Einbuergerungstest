@@ -36,27 +36,27 @@ Diese App ist in JavaScript geschrieben und verfügt einige Technologien wie:
 
 Pfade zum Backend:
 
-"http://localhost:5000/RandomQuestion"
+<http://localhost:5000/RandomQuestion>
 
-"http://localhost:5000/RandomQuestion/${land}"
+<http://localhost:5000/RandomQuestion/${land}>
 
-"http://localhost:5000/questions"
+<http://localhost:5000/questions>
 
 Um die App zu bearbeiten, benötigen Sie Zugriff auf einen Code-Editor wie Visual Studio oder Atom, um die Code-Entwicklung dynamischer und organisierter zu gestalten.
 Unser Test wurde mit der React-Bibliothek entwickelt, um diese Bibliothek zu verwenden  ist es notwendig  Node.js und NPM installiert zu haben.
 
 ## Verwendung 
 
-1. Repository klonen  mit 'git clone https://github.com/Hamid404/Einbuergerungstest.git'.
-2. Node Modules installieren mit 'npm install'.
+1. Repository klonen  mit `git clone https://github.com/Hamid404/Einbuergerungstest.git`.
+2. Node Modules installieren mit `npm install`.
 3. Datei .env hinzufügen, Beispiel:
 
-'PORT=****
+`PORT=****
 JWT=*********
 mongo=mongodb+srv:*********************
-REACT_APP_BACKENDURL=************'
+REACT_APP_BACKENDURL=************`
 
-4.'npm start' oder 'npm run start' in die Kommandozeile eingeben.
+4.`npm start` oder `npm run start` in die Kommandozeile eingeben.
 
 ## Funktionen
 Die beiden Hauptfunktionen sind die Simulation des Einbürgerungstests und die Vorbereitung auf den Test, bei dem der Benutzer interaktiv auf über 400 Fragen zum Lernen zugreifen kann.
@@ -118,7 +118,7 @@ Unser aufrichtiger Dank gilt Nathalie Abendroth Scherf und André Nachname für 
 Es ist auch wichtig, das Engagement und die Hingabe aller Mitglieder der Wordcode-Gruppe hervorzuheben.
 
 Unsere primäre Forschungsquelle war :
-https://reactjs.org/docs/getting-started.html
+<https://reactjs.org/docs/getting-started.html>
 
 
 ## PLAN
