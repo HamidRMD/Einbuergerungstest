@@ -34,6 +34,7 @@ Diese App ist in JavaScript geschrieben und verfügt einige Technologien wie:
 ### Das Backend
 
 - Express
+- Mongo
 
 ### Die Datenbank
 - MongoDB
@@ -42,18 +43,15 @@ Diese App ist in JavaScript geschrieben und verfügt einige Technologien wie:
 
 - Damit wir praktisch mit mehreren Domains arbeiten können
 - Microservices-Architektur verwenden 
-- (Vorschlag von André oder Nathalie)
+- Erleichterung der Zusammenarbeit
 
 #### Backend-Endpunkte zum  abrufen des Fragekatalogs :
 
-RandomQuestion -> liefert 33 Fragen aus dem allgemeinen Fragenkatalog:
-<http://localhost:5000/RandomQuestion>
+- `RandomQuestion` -> liefert 33 Fragen aus dem allgemeinen Fragenkatalog.
 
-RandomQuestion/landname -> liefert 33 Fragen aus dem katalog des angegebenen Bundeslandes:
-<http://localhost:5000/RandomQuestion/${land}>
+- `RandomQuestion/land` -> liefert 33 Fragen aus dem katalog des angegebenen Bundeslandes.
 
-questions -> liefert alle in der Datenbank gespeicherten Fragen:
-<http://localhost:5000/questions>
+- `questions` -> liefert alle in der Datenbank gespeicherten Fragen.
 
 
 Um die App zu bearbeiten, benötigen Sie Zugriff auf einen Code-Editor wie Visual Studio oder Atom, um die Code-Entwicklung dynamischer und organisierter zu gestalten.
@@ -78,7 +76,14 @@ REACT_APP_BACKENDURL=************`
 #### Verwendung nur des Backends
 
 1. Repository klonen  mit `https://github.com/khaled-alhamoud/backend.git`.
-2. MongoDB starten
+2. Datei .env hinzufügen, Beispiel:
+
+`PORT=****
+
+JWT=***********
+
+mongo=********************************`
+
 3. `node server.js` in die Kommandozeile eingeben.
 
 ## Funktionen
