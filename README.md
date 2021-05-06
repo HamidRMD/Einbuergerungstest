@@ -3,9 +3,7 @@ Abschlussprojekt
 
 Diese Anwendung wurde entwickelt, um Immigranten bei der Vorbereitung auf den Einbürgerungstest zu helfen. Nicht nur beim Lernen der Fragen, sondern auch bei der zeitlichen Simulation des Tests und der Punktevergabe, basierend auf den Bewertungskriterien des offiziellen Tests. Unsere App ist online unter:
 
-
 <https://world-code.herokuapp.com/>
-
 
 ## Datenquelle
 
@@ -35,15 +33,28 @@ Diese App ist in JavaScript geschrieben und verfügt einige Technologien wie:
 
 ### Das Backend
 
-- Atlas MongoDB
+- Express
 
-Pfade zum Backend:
+### Die Datenbank
+- MongoDB
 
+### Wir haben das Backend und Frontend getrennt
+
+- Damit wir praktisch mit mehreren Domains arbeiten
+- Microservices-Architektur verwenden
+- (Vorschlag von André oder Nathalie)
+
+#### Backend-Endpunkte zum abrufen zum  abrufen des Fragekatalogs :
+
+RandomQuestion -> liefert 33 Fragen aus dem allgemeinen Fragenkatalog:
 <http://localhost:5000/RandomQuestion>
 
+RandomQuestion/landname -> liefert 33 Fragen aus dem katalog des angegebenen Bundeslandes:
 <http://localhost:5000/RandomQuestion/${land}>
 
+questions -> liefert alle in der Datenbank gespeicherten Fragen:
 <http://localhost:5000/questions>
+
 
 Um die App zu bearbeiten, benötigen Sie Zugriff auf einen Code-Editor wie Visual Studio oder Atom, um die Code-Entwicklung dynamischer und organisierter zu gestalten.
 Unser Test wurde mit der React-Bibliothek entwickelt, um diese Bibliothek zu verwenden  ist es notwendig  Node.js und NPM installiert zu haben.
@@ -64,8 +75,14 @@ REACT_APP_BACKENDURL=************`
 
 4.`npm start` oder `npm run start` in die Kommandozeile eingeben.
 
+#### Verwendung nur des Backends
+
+1. Repository klonen  mit `https://github.com/khaled-alhamoud/backend.git`.
+2. MongoDB starten
+3. `node server.js` in die Kommandozeile eingeben.
+
 ## Funktionen
-Die beiden Hauptfunktionen sind die Simulation des Einbürgerungstests und die Vorbereitung auf den Test, bei dem der Benutzer interaktiv auf über 400 Fragen zum Lernen zugreifen kann.
+Die beiden Hauptfunktionen sind die Simulation des Einbürgerungstests und die Vorbereitung auf den Test, bei dem der Benutzer interaktiv auf über 210 Fragen zum Lernen zugreifen kann.
 
 ![Screenshot from 2021-05-05 13-47-42](https://user-images.githubusercontent.com/61413894/117136542-ca97f780-ada8-11eb-8dd4-d1cedba52aa1.png)
 
@@ -102,14 +119,8 @@ Wenn der Benutzer auf Beende den Test klickt, wird er auf eine andere Seite weit
 ![Screenshot from 2021-05-05 15-44-24](https://user-images.githubusercontent.com/61413894/117157472-e908ed80-adbe-11eb-8096-9a54bc591924.png)
 ![Screenshot from 2021-05-05 15-57-17](https://user-images.githubusercontent.com/61413894/117157488-ec03de00-adbe-11eb-8e45-3e993489b4a2.png)
 
-## Probleme 
 
-Verzögerung beim Laden der Anwendung im Browser.
-Auftreten von Verzögerungen beim Aufruf von Serverfragen.
-
-## Verbesserungen
-
-Geschwindigkeitsoptimierung mit dem Server.
+## Weiterentwicklungsideen 
 
 Hinzufügen von neuen Funktionen wie:
 
@@ -118,15 +129,12 @@ Hinzufügen von neuen Funktionen wie:
 
 Die App Responsive zu machen.
 
-## Dank und Quellen
+## Dank 
 
 Unser aufrichtiger Dank gilt Nathalie Abendroth Scherf und André Kleinschmidt für ihre wertvolle Anleitung, ihre Geduld und ihr Engagement.
-Es ist auch wichtig, das Engagement und die Hingabe aller Mitglieder der Wordcode-Gruppe hervorzuheben.
 
-Unsere primäre Forschungsquelle war :
-<https://reactjs.org/docs/getting-started.html>
 
-Das DCI-Lernmaterial.
+
 
 
 
