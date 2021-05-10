@@ -3,7 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 981px;
+    height: auto;
+    min-height: 100vh;
+
 }
 h1 {
     color:white;

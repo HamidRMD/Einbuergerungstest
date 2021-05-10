@@ -1,9 +1,11 @@
+
 .startSeite-body {
     background-image: url("../../img/bundestag.jpeg");
     background-repeat: no-repeat;
     background-size:cover;
     width: 100%;
-    height:981px;
+    height:auto;
+    min-height: 100vh;
     display:flex;
     justify-content:center;
     

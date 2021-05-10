@@ -6,12 +6,11 @@
 .bodyBewertung {
     background-image: url("../../img/backgroundBewertung.jpeg");
     background-repeat: no-repeat;
-    height: 981px;
+    height: auto;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-
 }
 
 .container-bewertung {

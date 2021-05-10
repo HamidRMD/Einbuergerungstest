@@ -5,7 +5,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 981px;
+    height: auto;
+
+    min-height: 100vh;
+    
 }
 
 
@@ -222,10 +225,16 @@ color: white;
 
 }
 .FragenAngaben{
-   width:1000px;
-   height:600px;
-   padding:80px;
+   /* width: 1000px;
+   height: 600px; */
+   width:auto;
+   max-width: 60vw;
+   height:auto;
+   min-height: 60vh;
+   /* padding:80px; */
+   padding:1rem 1rem 3rem 3rem;
    background-color: rgba(43, 21, 21, 0.46);
+   margin: 3rem 3rem auto;
    
 }
 
