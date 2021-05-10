@@ -14,11 +14,12 @@ body {
     /* background-size: cover; */
     width: 100%;
     /* height: 120vh; */
-    height: auto;
+    
     /* min-height: 120vh;  */
     /* overflow-y: hidden; */
     color: white;
     font-size: x-large;
+    
 }
 .FooterStyle {
     display: flex;

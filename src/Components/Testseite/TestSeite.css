@@ -6,9 +6,7 @@
     justify-content: center;
     align-items: center;
     height: auto;
-
-    min-height: 100vh;
-    
+     min-height: 100vh;
 }
 
 
@@ -154,7 +152,7 @@ color: white;
  display: flex;
  width: 100%;
  justify-content:space-between;
- padding-top: 100px;
+ padding-top: 1rem;
 
 }
 
@@ -177,7 +175,7 @@ color: white;
 }
 
 .bundesländer {
-   position: absolute;
+   /* position: absolute; */
    left: 40rem;
    top: 25rem;
    font-family: 'Rowdies', cursive;
@@ -232,9 +230,9 @@ color: white;
    height:auto;
    min-height: 60vh;
    /* padding:80px; */
-   padding:1rem 1rem 3rem 3rem;
+   padding:1rem 3rem;
    background-color: rgba(43, 21, 21, 0.46);
-   margin: 3rem 3rem auto;
+   margin: 1rem auto;
    
 }
 

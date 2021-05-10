@@ -11,9 +11,10 @@
 .ergebnisContent {
     font-family: 'Rowdies', cursive;
     color: white;
-    width:1300px;
-    height:700px;
-    padding:50px;
+    /* width:1300px; */
+    max-width: 80vw;
+    height: 550px;
+    padding:1rem;
     background-color: rgba(196, 196, 196, 0.23);
 
 }

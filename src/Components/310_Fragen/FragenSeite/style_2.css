@@ -53,14 +53,15 @@
 
 .zurFragen {
     color: black;
-    margin: 4rem;
+    margin: 3rem; 
     border-radius: 1rem;
-    padding: 15px;
+    padding: 0.7rem 1rem;
     z-index: 10;
     font-family: 'Rowdies', cursive;
     background-color: greenyellow;
     border:none;
     position: relative;
+    /* margin: 40rem 0rem 17rem 90rem; */
     left:72vh;
     top:17vh;
     cursor: pointer;
