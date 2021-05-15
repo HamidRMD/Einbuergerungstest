@@ -15,7 +15,7 @@ Jakob - Projektmanager
 
 Khaled - Backend Leader
 
-Hamid - Git manager
+Hamid - Git manager & Frontend
 
 Elahe - Backend
 
